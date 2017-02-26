@@ -121,10 +121,19 @@
                border-top: 1px solid #c3c3c3;
                background:hsl(0, 0%, 85%);
                width: 100%;
+               p{
+                   text-align:center;
+               }
                h2{
                    font-family:"Helvetica Neue", Helvetica;
                    text-align:center;
                }
+            #map {
+               padding-top:50px;
+               margin: auto;
+               width:60%;
+               height:500px;
+            }
            }
            
            

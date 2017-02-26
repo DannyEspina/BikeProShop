@@ -36,22 +36,13 @@
                </div>
              </div>
              
-      <%= image_tag "IMG_2629", id: "shopImage", alt: "The Bicycle Shop" %>
+      <%= image_tag "store1.JPG", id: "shopImage", alt: "The Bicycle Shop" %>
       
       <div class=location>
         <h2>Store location</h2>
-           
-      <div id="map" style="width:80%;height:400px;left:100px;"></div>
-  </div> 
-    <script>
-        function myMap() {
-    var mapCanvas = document.getElementById("map");
-    var mapOptions = {
-        center: new google.maps.LatLng(51.5, -0.2),
-        zoom: 10
-    };
-    var map = new google.maps.Map(mapCanvas, mapOptions);
-}
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVEeIy4h0J09C0PdQTIb8-erOyTa6yRIs&callback=myMap"></script>
-    
+         <p>Barnyard Flea Market Greer, 2000 SC-101, Greer, SC 29651</p>
+         <p id="lastP">Located at J51 & J52</p>
+      <div id="map"></div>
+       </div> 
+  
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_Zu6BWfCvXHlP9HYcX0IeueqdToRVKRk&callback=myMap"></script>
