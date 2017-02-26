@@ -1,0 +1,57 @@
+
+    
+
+
+        <ul id="navBar">
+            <li id="logo">BikeProShop</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Repairs</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    
+        <div class="shopDrop">
+            <ul>
+                <li  id="shop"><a href="#">Shop</a></li>
+            </ul>
+            <div id="shopPanel">
+                  <div id="shop_titles">
+                  <ul>
+                      <li id="bikes">Bikes</li>
+                      <li id="acsor">Accessories</li>
+                      <li id="parts">Parts</li>
+                  </ul>
+                  </div>
+                  
+                  <div id="bicyle_list">
+                   <ul>
+                       <li><a href="#">Mountain bikes</a></li>
+                       <li><a href="#">Road bikes</a></li>
+                       <li><a href="#">Beach Bikes</a></li>
+                       <li><a href="#">BMX</a></li>
+                       <li><a href="#">Kids bikes</a></li>
+                   </ul>
+                   </div>
+                   
+               </div>
+             </div>
+             
+      <%= image_tag "IMG_2629", id: "shopImage", alt: "The Bicycle Shop" %>
+      
+      <div class=location>
+        <h2>Store location</h2>
+           
+      <div id="map" style="width:80%;height:400px;left:100px;"></div>
+  </div> 
+    <script>
+        function myMap() {
+    var mapCanvas = document.getElementById("map");
+    var mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.2),
+        zoom: 10
+    };
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVEeIy4h0J09C0PdQTIb8-erOyTa6yRIs&callback=myMap"></script>
+    
