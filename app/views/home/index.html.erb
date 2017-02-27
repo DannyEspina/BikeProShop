@@ -1,41 +1,34 @@
 
-    
-
-
-        <ul id="navBar">
-            <li id="logo">BikeProShop</li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Repairs</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    
-        <div class="shopDrop">
-            <ul>
-                <li  id="shop"><a href="#">Shop</a></li>
+        <div id="navBar">
+            <ul id="menu">
+                <li id="logo">BikeProShop</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Repairs</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                
+                <li id="shopDrop" style="position:absolute; top:0; left:935px;">
+                    <a id="shop" href="#">Shop</a>
+                        <div id="shopPanel">
+                          <ul id="shop_titles">
+                              <li id="bikes">Bikes</li>
+                              <li id="acsor">Accessories</li>
+                              <li id="parts">Parts</li>
+                          </ul>
+                          <ul id="bicyle_list">
+                               <li><a href="#">Mountain bikes</a></li>
+                               <li><a href="#">Road bikes</a></li>
+                               <li><a href="#">Beach Bikes</a></li>
+                               <li><a href="#">BMX</a></li>
+                               <li><a href="#">Kids bikes</a></li>
+                          </ul> 
+                    </div>
+                </li>
             </ul>
-            <div id="shopPanel">
-                  <div id="shop_titles">
-                  <ul>
-                      <li id="bikes">Bikes</li>
-                      <li id="acsor">Accessories</li>
-                      <li id="parts">Parts</li>
-                  </ul>
-                  </div>
-                  
-                  <div id="bicyle_list">
-                   <ul>
-                       <li><a href="#">Mountain bikes</a></li>
-                       <li><a href="#">Road bikes</a></li>
-                       <li><a href="#">Beach Bikes</a></li>
-                       <li><a href="#">BMX</a></li>
-                       <li><a href="#">Kids bikes</a></li>
-                   </ul>
-                   </div>
-                   
-               </div>
-             </div>
+               
              
+        </div> 
+        
       <%= image_tag "store1.JPG", id: "shopImage", alt: "The Bicycle Shop" %>
       
       <div class=location>

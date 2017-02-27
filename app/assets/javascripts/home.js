@@ -1,8 +1,8 @@
 $(document).ready(function(){
-    $(".shopDrop").mouseenter(function(){
+    $("#shopDrop").mouseenter(function(){
         $("#shopPanel").fadeIn()
         
-        $(".shopDrop").mouseleave(function(){
+        $("#shopDrop").mouseleave(function(){
             $("#shopPanel").fadeOut()
         });
         
