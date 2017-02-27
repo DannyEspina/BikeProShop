@@ -1,9 +1,10 @@
 $(document).ready(function(){
     $("#shopDrop").mouseenter(function(){
-        $("#shopPanel").fadeIn()
-        
+        $("#shopPanel").fadeIn("fast")
+        $("#shopDisplay").fadeIn("fast")
         $("#shopDrop").mouseleave(function(){
-            $("#shopPanel").fadeOut()
+            $("#shopPanel").fadeOut("fast")
+             $("#shopDisplay").fadeOut("fast")
         });
         
    });

@@ -7,8 +7,10 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
                 
+                
                 <li id="shopDrop" style="position:absolute; top:0; left:935px;">
-                    <a id="shop" href="#">Shop</a>
+                    <a href="#">Shop</a>
+                    <div style="display: none;" id="shopDisplay">Shop</div>
                         <div id="shopPanel">
                           <ul id="shop_titles">
                               <li id="bikes">Bikes</li>
@@ -16,11 +18,18 @@
                               <li id="parts">Parts</li>
                           </ul>
                           <ul id="bicyle_list">
-                               <li><a href="#">Mountain bikes</a></li>
-                               <li><a href="#">Road bikes</a></li>
-                               <li><a href="#">Beach Bikes</a></li>
+                               <li id="first"><a href="#">Mountain Bikes</a></li>
+                               <li><a href="#">Road Bikes</a></li>
+                               <li><a href="#">Hybrid Bikes</a></li>
+                               <li><a href="#">Cruiser Bikes</a></li>
+                               <li><a href="#">Tandem Bikes</a></li>
+                               <li><a href="#">Trail-a-Bike</a></li>
                                <li><a href="#">BMX</a></li>
+                               <li><a href="#">Adult Tricycles</a></li>
+                               <li><a href="#">Kids Tricycles</a></li>
                                <li><a href="#">Kids bikes</a></li>
+                               <li><a href="#">Custom Bikes</a></li>
+                               <li><a href="#">Scooters</a></li>
                           </ul> 
                     </div>
                 </li>
@@ -29,7 +38,7 @@
              
         </div> 
         
-      <%= image_tag "store1.JPG", id: "shopImage", alt: "The Bicycle Shop" %>
+      <div id="shopImage"></div>
       
       <div class=location>
         <h2>Store location</h2>
