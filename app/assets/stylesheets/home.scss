@@ -46,7 +46,7 @@
                     }
                 }
                #shopPanel {
-                   left: 110px;
+                   left: 160px;
                    width: 75%;
                    z-index: 1;
                    background: hsl(240, 6%, 10%); /* For browsers that do not support gradients */
@@ -55,6 +55,8 @@
                    background: -moz-linear-gradient(hsl(240, 6%, 10%),  hsl(240, 4%, 25%)); /* For Firefox 3.6 to 15 */
                    background: linear-gradient(hsl(240, 6%, 10%),  hsl(240, 4%, 25%)); /* Standard syntax */
                    
+                   
+
                    padding-bottom: 20px;
                    border: solid 1px hsl(240, 6%, 30%);
                    border-top: solid 2px hsl(179, 100%, 66%);
@@ -62,6 +64,8 @@
                    position: fixed;
                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
                    #shop_titles {
+                       -webkit-column-span: all; /* Chrome, Safari, Opera */
+                       column-span: all;
                        border-bottom: solid 3px hsl(240, 6%, 20%);
                        padding-top: 10px;
                        padding-bottom: 10px;
@@ -75,16 +79,27 @@
                            padding-left: 40px;
                         }
                        #acsor{
-                           padding-left: 120px;
+                           padding-left: 150px;
                         }
                        #parts{
-                           padding-left: 120px;
+                           padding-left: 150px;
                        }
                    }
+                   #list {
+                       -webkit-column-count: 4; /* Chrome, Safari, Opera */
+                   -moz-column-count: 4; /* Firefox */
+                   column-count: 4;
+                   
+    -webkit-column-rule: 4px outset #ff00ff; /* Chrome, Safari, Opera */
+    -moz-column-rule: 4px outset #ff00ff; /* Firefox */
+    column-rule: 4px outset #ff00ff;
                    #bicyle_list {
+                       
                        padding-top: 5px;
+                       padding-bottom: 900px;
                        position: relative;
                        left: -30px;
+                       
                        li {
                            line-height: 1px;
                            list-style-type: none;
@@ -96,7 +111,25 @@
                            }
                        }
                    }
+                  #acsor_list{
+                     
+                      padding-top: 5px;
+                       position: relative;
+                       left: -130px;
+                       li {
+                           line-height: 1px;
+                           list-style-type: none;
+                           font-family: "Helvetica Neue", Arial;
+                           font-size: 10px;
+                           a {
+                            color: white;
+                            text-decoration: none;
+                           }
+                       }
+                  }
                }
+            }
+               
             #shop {
                 position: relative;
                 top: 9px;
@@ -121,9 +154,15 @@
                p{
                    text-align: center;
                }
-               h2{
+               h1{
                    font-family:"Helvetica Neue", Helvetica;
                    text-align: center;
+                   background-color: #565656;
+                   color: transparent;
+                   text-shadow: 0px 2px 3px rgba(255,255,255,0.6);
+                   -webkit-background-clip: text;
+                   -moz-background-clip: text;
+                   background-clip: text;
                }
             #map {
                
