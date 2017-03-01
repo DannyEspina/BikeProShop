@@ -117,13 +117,11 @@
            .menuShadow {
                box-shadow: inset 0 -10px 12px -10px hsl(179, 100%, 66%);
            }
-        #photoSlide {
-            width: 100%;
-        }  
+       
            .carousel-inner > .item > img,
           .carousel-inner > .item > a > img {
               width: 100%;
-              
+              height: 80%;
               
           }
         //This will make the carousel fade
