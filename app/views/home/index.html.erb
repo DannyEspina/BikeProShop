@@ -13,29 +13,72 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav" id="navList">
             <li id="home"><a href="#">Home</a></li>
-            <li id="shopDrop">
-                    <a id ="shop" href="#">Shop<span class="caret"></span></a>
-                        <div id="shopPanel">
-                          <ul id="shop_titles">
-                              <li id="bikes">Bikes</li>
-                              <li id="acsor">Accessories</li>
-                              <li id="parts">Parts</li>
-                          </ul>
-                          <ul id="bicyle_list">
-                               <li id="first"><a href="#">Mountain Bikes</a></li>
-                               <li><a href="#">Road Bikes</a></li>
-                               <li><a href="#">Hybrid Bikes</a></li>
-                               <li><a href="#">Cruiser Bikes</a></li>
-                               <li><a href="#">Tandem Bikes</a></li>
-                               <li><a href="#">Trail-a-Bike</a></li>
-                               <li><a href="#">BMX</a></li>
-                               <li><a href="#">Adult Tricycles</a></li>
-                               <li><a href="#">Kids Tricycles</a></li>
-                               <li><a href="#">Kids bikes</a></li>
-                               <li><a href="#">Custom Bikes</a></li>
-                               <li><a href="#">Scooters</a></li>
-                          </ul> 
-                    </div>
+            <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Shop<span class="caret"></span></a>
+                      <ul id="shopPanel" class="dropdown-menu">
+                          <!--creating row for the headers of the panel -->
+                            <div id="shopHeader" class="row">
+                              <!-- xs-samll phones, sm-tablets, md-desktops lg-large desktops -->
+                              <div class= "col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <li style="color:white; padding-left:100px;">Bikes</li>
+                              </div>
+                              <div class= "col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <li style="color:white; padding-left:100px;">Accessories</li>
+                              </div>
+                              <div class= "col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <li style="color:white; padding-left:100px;">Parts</li>
+                              </div>
+                              
+                          </div>
+                          
+                          <div class="row">
+                            <div class= "col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                              <ul class="menuList">
+                                   <li><a href="#">Mountain Bikes</a></li>
+                                   <li><a href="#">Women Bikes</a></li>
+                                   <li><a href="#">Road Bikes</a></li>
+                                   <li><a href="#">Hybrid Bikes</a></li>
+                                   <li><a href="#">Cruiser Bikes</a></li>
+                                   <li><a href="#">Tandem Bikes</a></li>
+                                   <li><a href="#">BMX</a></li>
+                                   <li><a href="#">Tricycles</a></li>
+                                   <li><a href="#">Kids bikes</a></li>
+                                   <li><a href="#">Custom Bikes</a></li>
+                                   <li><a href="#">More</a></li>
+                              </ul> 
+                            </div>
+                            <div class= "col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                              <ul class="menuList">
+                                   <li><a href="#">Pumps</a></li>
+                                   <li><a href="#">Lights</a></li>
+                                   <li><a href="#">Bells</a></li>
+                                   <li><a href="#">Baskets</a></li>
+                                   <li><a href="#">Bottles</a></li>
+                                   <li><a href="#">Bottle Cages</a></li>
+                                   <li><a href="#">BMX Pegs</a></li>
+                                   <li><a href="#">Pad Locks</a></li>
+                                   <li><a href="#">Computers</a></li>
+                                   <li><a href="#">Kickstands</a></li>
+                                   <li><a href="#">More</a></li>
+                              </ul> 
+                            </div>
+                            <div class= "col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                              <ul class="menuList">
+                                   <li><a href="#">Grips & Bartapes</a></li>
+                                   <li><a href="#">Brake Levers/Pads/Cables</a></li>
+                                   <li><a href="#">Gear Cables</a></li>
+                                   <li><a href="#">Shifters</a></li>
+                                   <li><a href="#">Saddles</a></li>
+                                   <li><a href="#">Tires</a></li>
+                                   <li><a href="#">Wheels</a></li>
+                                   <li><a href="#">Cassettes/Freewheel</a></li>
+                                   <li><a href="#">Chains</a></li>
+                                   <li><a href="#">Petals</a></li>
+                                   <li><a href="#">More</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                      </ul>
                 </li>
             <li><a href="#">Repairs</a></li>
             <li><a href="#">About</a></li>

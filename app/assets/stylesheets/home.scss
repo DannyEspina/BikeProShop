@@ -37,57 +37,42 @@
             .nav .active {
                  background-color:blue;
             }
-               #shopPanel {
-                   left: 110px;
-                   width: 75%;
-                   
+               #shopPanel  {
+                   //left: 110px;
+                   width: 1100px;
+                   overflow: hidden;
                    background: hsl(240, 6%, 10%); /* For browsers that do not support gradients */
                    background: -webkit-linear-gradient(hsl(240, 6%, 10%),  hsl(240, 4%, 25%)); /* For Safari 5.1 to 6.0 */
                    background: -o-linear-gradient(hsl(240, 6%, 10%),  hsl(240, 4%, 25%)); /* For Opera 11.1 to 12.0 */
                    background: -moz-linear-gradient(hsl(240, 6%, 10%),  hsl(240, 4%, 25%)); /* For Firefox 3.6 to 15 */
                    background: linear-gradient(hsl(240, 6%, 10%),  hsl(240, 4%, 25%)); /* Standard syntax */
-                   margin-top:1px;
-                   padding-bottom: 20px;
+                  
                    border: solid 1px hsl(240, 6%, 30%);
                    border-top: solid 2px hsl(179, 100%, 66%);
-                   display: none;
-                   position: fixed;
+                   //display: none;
+                   //position: fixed;
                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4), inset 0 10px 10px -9px hsl(179, 100%, 66%);
-                   #shop_titles {
-                       border-bottom: solid 3px hsl(240, 6%, 20%);
+                   #shopHeader {
+                        border-bottom: solid 3px hsl(240, 6%, 20%);
+                       
                        padding-top: 10px;
                        padding-bottom: 10px;
                        font-family:"Helvetica Neue",Arial;
-                       color: white;
-                       li {
-                           display: inline;
-                           list-style-type: none;
-                        }
-                       #bikes {
-                           padding-left: 40px;
-                        }
-                       #acsor{
-                           padding-left: 120px;
-                        }
-                       #parts{
-                           padding-left: 120px;
-                       }
+                       
                    }
-                   #bicyle_list {
-                       padding-top: 5px;
-                       position: relative;
-                       left: -30px;
-                       li {
+                  
+                   .menuList li {
+                           
                            line-height: 1px;
                            list-style-type: none;
                            font-family: "Helvetica Neue", Arial;
-                           font-size: 10px;
+                           font-size: 8px;
                            a {
                             color: white;
                             text-decoration: none;
                            }
                        }
-                   }
+                   
                }
           
            .jumbotron {
