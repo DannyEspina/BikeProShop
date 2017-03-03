@@ -1,6 +1,11 @@
     
-            
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="navBar">
+    <div class="container-fluid">
+      <div class="row">
+        <%= image_tag "sunset.jpg", :class => "banner" %>
+      </div>
+    </div> 
+    
+    <nav class="navbar navbar-inverse " data-spy="affix" data-offset-top="625" id="navBar">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -12,9 +17,9 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav" id="navList">
-            <li id="home"><a href="#">Home</a></li>
-            <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Shop<span class="caret"></span></a>
+            <li id="home"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li id="shopDrop" class="dropdown">
+                    <a  class="dropdown-toggle" data-toggle="dropdown" href="#">Shop<span class="caret"></span></a>
                       <ul id="shopPanel" class="dropdown-menu">
                           <!--creating row for the headers of the panel -->
                             <div id="shopHeader" class="row">
@@ -95,8 +100,8 @@
     
     <!--Carousel-->                
       <div class="container-fluid">
-          <br>
            <div class="row">
+            
               <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -139,14 +144,31 @@
               </div>
               </div>
             </div>
-       
+            
+      <div class="jumbotron">
+      <div id="tuneUp" class="container-fluid">
+         <h2>Need a Tune Up?</h2>
+         <p>Leave your bicycle with us!</p>
+         
+         </div>
+         <!-- have a animation of someone giving the bike to the mechanic -->
+         <p>Tell us your problems and we'll do the rest!</p>
+         <p>If the repair isn't too severe you can walk around 
+         the Flea market and pick up your bicyle after you're done!</p>
+          <!-- have a animation of someone enjoying the flea market -->
+        <p>Since we are at the flea market you won't find a better price anywhere else!</p>
+        <p>For more information on our list of services <i><a href="#">Click Here</a></i></p>
+      </div>
+      
+      <div class="jumbotron">
       <div class="container-fluid">
-         <div class="jumbotron">
+         
            <div class="row">
               <div class=location>
-                <h2>Store location</h2>
+                <h1>Store location</h1>
                  <p>Barnyard Flea Market Greer, 2000 SC-101, Greer, SC 29651</p>
-                 <p id="lastP">Located at J51 & J52</p>
+                 <p>Located at J51 & J52</p>
+                 <br>
               <div id="map"></div>
            </div>
            </div>
