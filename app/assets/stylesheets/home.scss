@@ -3,14 +3,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
           body, html {
-               background: hsl(240, 6%, 10%);
+               background: hsl(24, 99%, 52%);
                height: 100%;
                margin: 0;
+               z-index:4;
            }
-           .banner {
-               width: 100%;
-               height: 620px;
-           }
+           .parallax {
+                
+              
+                /* set width and height */
+                height: 75%; 
+                width: 100%;
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-right: 0;
+                .parallax_layer_1 {
+                    
+                    position: absolute;
+                    top: -1750px;
+                    left: -1650px;
+                    transform: scale(0.2,0.2);
+                    
+                    
+                }
+                .parallax_layer_2 {
+                     
+                    transform: scale(0.2,0.2);
+                     position: absolute;
+                    top: -1750px;
+                    left: -1650px;
+                }
+            }
            //set the navbar to the top and width to 100% when the user scrolls past it
            .affix {
               top: 0;
@@ -109,19 +135,21 @@
                    font-family:"Helvetica Neue", Helvetica;
                    text-align: center;
                }
-            #map {
+            
+           }
+         #map {
                
                padding-top: 50px;
-               margin: auto;
-               width: 60%;
+               padding-bottom: 50px;
+               width: 100%;
                height: 500px;
             }
-           }
-         
            .menuShadow {
                box-shadow: inset 0 -10px 12px -10px hsl(179, 100%, 66%);
            }
-        
+        .aspect {
+            
+        }
            .carousel-inner > .item > img,
           .carousel-inner > .item > a > img {
               margin-top: 0;
@@ -156,6 +184,11 @@
                 transform: translate3d(0, 0, 0);
             }
         }
+}
 
-    
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+        background-attachment: scroll;
+    }
 }
