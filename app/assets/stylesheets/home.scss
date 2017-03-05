@@ -10,33 +10,17 @@
            }
            .parallax {
                 
-              
+                 background-image: url('LogoPart2.png'), url('LogoPart1.png');
                 /* set width and height */
-                height: 75%; 
-                width: 100%;
+                height: 94%; 
+                
                 /* Create the parallax scrolling effect */
                 background-attachment: fixed;
-                background-position: center;
+                background-position: 335px -200px, 225px 100px;
                 background-repeat: no-repeat;
-                background-size: cover;
-                margin-right: 0;
-                .parallax_layer_1 {
-                    
-                    position: absolute;
-                    top: -1750px;
-                    left: -1650px;
-                    transform: scale(0.2,0.2);
-                    
-                    
-                }
-                .parallax_layer_2 {
-                     
-                    transform: scale(0.2,0.2);
-                     position: absolute;
-                    top: -1750px;
-                    left: -1650px;
-                }
+                background-size: 1000px, 350px;
             }
+            
            //set the navbar to the top and width to 100% when the user scrolls past it
            .affix {
               top: 0;
@@ -47,14 +31,15 @@
               padding-top: 60px;
           }
            #navBar{
+               border: none;
                margin-bottom: 0;
                z-index: 1;
                border-radius: 0;
-               background: rgb(41, 41, 44); /* For browsers that do not support gradients */
-               background: -webkit-linear-gradient(hsl(240, 4%, 31%),  rgb(41, 41, 44), hsl(240, 6%, 10%)); /* For Safari 5.1 to 6.0 */
-               background: -o-linear-gradient(hsl(240, 4%, 31%),  rgb(41, 41, 44),hsl(240, 6%, 10%)); /* For Opera 11.1 to 12.0 */
-               background: -moz-linear-gradient(hsl(240, 4%, 31%),  rgb(41, 41, 44),hsl(240, 6%, 10%)); /* For Firefox 3.6 to 15 */
-               background: linear-gradient(hsl(240, 4%, 31%),  rgb(41, 41, 44),hsl(240, 6%, 10%)); /* Standard syntax */
+               background: hsl(24, 99%, 52%); /* For browsers that do not support gradients */
+               background: -webkit-linear-gradient(hsl(24, 99%, 52%), hsl(25, 98%, 46%)); /* For Safari 5.1 to 6.0 */
+               background: -o-linear-gradient(hsl(24, 99%, 52%), hsl(25, 98%, 46%)); /* For Opera 11.1 to 12.0 */
+               background: -moz-linear-gradient(hsl(24, 99%, 52%), hsl(25, 98%, 46%)); /* For Firefox 3.6 to 15 */
+               background: linear-gradient(hsl(24, 99%, 52%), hsl(25, 98%, 46%)); /* Standard syntax */
            } 
            #navList li a{
                        font-family: Verdana,Geneva,sans-serif;
@@ -62,23 +47,20 @@
                        font-size: 12px;
                        display: block;
                        padding: 16px 20px;
-                      
+                       color: white;
                        text-decoration: none;
                        }
-             #logo {
-                   font-family: impact;
-                   font-size: 18px;
-                   
-
-                 }  
-            #navList >li a:hover:not(#logo)
+            #iconsRight li a{
+                color: white;
+            }
+            #navList >li a:hover
             {
                color: hsl(173, 88%, 47%);
                text-shadow: 0 0 20px hsl(179, 100%, 66%);
             }
             
                #shopPanel  {
-                   //left: 110px;
+                  
                    width: 1100px;
                    overflow: hidden;
                    background: hsl(240, 6%, 10%); /* For browsers that do not support gradients */
@@ -89,8 +71,7 @@
                   
                    border: solid 1px hsl(240, 6%, 30%);
                    border-top: solid 2px hsl(179, 100%, 66%);
-                   //display: none;
-                   //position: fixed;
+                   
                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4), inset 0 10px 10px -9px hsl(179, 100%, 66%);
                    #shopHeader {
                        border-bottom: solid 3px hsl(240, 6%, 20%);
