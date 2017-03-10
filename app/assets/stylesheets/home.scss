@@ -8,17 +8,28 @@
                margin: 0;
                z-index:4;
            }
+           .youtube {
+               z-index: -99;
+               height: 50%;
+               #sparks {
+                   width: 100%;
+               top: 0;
+               right: 0;
+               bottom: 0; 
+               left: 0;
+               }
+           }
            .parallax {
                 
-                 background-image: url('LogoPart2.png'), url('LogoPart1.png');
+                 background-image: url('BikeProShopLogo.png');
                 /* set width and height */
                 height: 94%; 
                 
                 /* Create the parallax scrolling effect */
                 background-attachment: fixed;
-                background-position: 335px -200px, 225px 100px;
+                background-position: center;
                 background-repeat: no-repeat;
-                background-size: 1000px, 350px;
+                background-size: contain;
             }
             
            //set the navbar to the top and width to 100% when the user scrolls past it
