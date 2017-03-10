@@ -2,10 +2,9 @@ $(document).ready(function(){
     $("#shopDrop").mouseenter(function(){
         $("#shopPanel").fadeIn("fast")
         
-        $("#navBar").addClass("menuShadow")
+      
       
         $("#shopDrop").mouseleave(function(){
-            $("#navBar").removeClass("menuShadow")
           
             $("#shopPanel").fadeOut("fast")
             
@@ -13,7 +12,6 @@ $(document).ready(function(){
         
    });
 });
-
 //google maps
  function myMap() {
           var myCenter = new google.maps.LatLng(34.882067, -82.150943);

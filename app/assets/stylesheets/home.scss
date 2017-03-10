@@ -52,7 +52,7 @@
                background: -moz-linear-gradient(hsl(24, 99%, 52%), hsl(24, 99%, 46%), hsl(24, 99%, 40%)); /* For Firefox 3.6 to 15 */
                background: linear-gradient(hsl(24, 99%, 52%), hsl(24, 99%, 46%), hsl(24, 99%, 40%)); /* Standard syntax */
            } 
-           #navList li a{
+           #navList >li>a{
                        font-family: sans-serif;
                        
                        letter-spacing: 3px;
@@ -65,7 +65,7 @@
             
             #navList >li a:hover
             {
-               color: hsl(24, 98%, 16%);
+               color: hsl(24, 99%, 20%);
                
             }
             #iconsRight li a{
@@ -76,40 +76,27 @@
                     color: hsl(24, 98%, 16%);
                 }
                #shopPanel  {
-                  
-                   width: 1100px;
-                   overflow: hidden;
-                   background: hsl(240, 6%, 10%); /* For browsers that do not support gradients */
-                   background: -webkit-linear-gradient(hsl(240, 6%, 10%),  hsl(240, 4%, 25%)); /* For Safari 5.1 to 6.0 */
-                   background: -o-linear-gradient(hsl(240, 6%, 10%),  hsl(240, 4%, 25%)); /* For Opera 11.1 to 12.0 */
-                   background: -moz-linear-gradient(hsl(240, 6%, 10%),  hsl(240, 4%, 25%)); /* For Firefox 3.6 to 15 */
-                   background: linear-gradient(hsl(240, 6%, 10%),  hsl(240, 4%, 25%)); /* Standard syntax */
-                  
-                   border: solid 1px hsl(240, 6%, 30%);
-                   border-top: solid 2px hsl(179, 100%, 66%);
                    
-                   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4), inset 0 10px 10px -9px hsl(179, 100%, 66%);
-                   #shopHeader {
-                       border-bottom: solid 3px hsl(240, 6%, 20%);
-                       padding-top: 10px;
-                       padding-bottom: 10px;
-                       font-family: Futura,"Trebuchet MS",Arial,sans-serif;
-                       
-                   }
-                  
-                   .menuList li {
-                           
-                           line-height: 1px;
-                           list-style-type: none;
-                           font-family: "Helvetica Neue", Arial;
-                           font-size: 8px;
-                           a {
-                            color: white;
-                            text-decoration: none;
-                           }
-                       }
+               background: hsl(24, 99%, 52%); /* For browsers that do not support gradients */
+               background: -webkit-linear-gradient(hsl(24, 99%, 40%), hsl(24, 99%, 46%), hsl(24, 99%, 52%)); /* For Safari 5.1 to 6.0 */
+               background: -o-linear-gradient(hsl(24, 99%, 40%), hsl(24, 99%, 46%), hsl(24, 99%, 52%)); /* For Opera 11.1 to 12.0 */
+               background: -moz-linear-gradient(hsl(24, 99%, 40%), hsl(24, 99%, 46%), hsl(24, 99%, 52%)); /* For Firefox 3.6 to 15 */
+               background: linear-gradient(hsl(24, 99%, 40%), hsl(24, 99%, 46%), hsl(24, 99%, 52%)); /* Standard syntax */
+               
+               border: solid 1px hsl(240, 6%, 30%);
+               border-top: solid 2px orange;
                    
+                   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4), inset 0 10px 10px -9px orange;
+               li a{
+                   color: white; 
                }
+               .dropdown-header {
+                   color: hsl(24, 99%, 20%);
+               }
+               .divider{
+                   background-color: hsl(24, 98%, 40%);
+               }
+                   }
             #tuneUp h2, p {
                     text-align: center;
                     background: hsl(0, 0%, 85%);
@@ -141,9 +128,7 @@
                width: 100%;
                height: 500px;
             }
-           .menuShadow {
-               box-shadow: inset 0 -10px 12px -10px hsl(179, 100%, 66%);
-           }
+           
         .aspect {
             
         }
