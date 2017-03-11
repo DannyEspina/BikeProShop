@@ -22,14 +22,7 @@
                 background-size: contain;
             }
            
-                    #ytplayer {
-                    z-index: -99;
-                    position: relative;
-                    top: -100px;
-                    width: 100%;
-                    height: 810px;
-                    
-                    }
+          
                 
             
            //set the navbar to the top and width to 100% when the user scrolls past it
@@ -103,26 +96,37 @@
                    background-color: hsl(24, 98%, 40%);
                }
                    }
-            #tuneUp h2, p {
-                    text-align: center;
-                    background: hsl(0, 0%, 85%);
-                }
+           
+               
+             #ytplayer {
+                z-index: -99;
                 
+                width: 100%;
+                height: 810px;
+                margin-bottom: 0;
+            }
             
+            #tuneInfo {
+                position: absolute;
+                top: 30%;
+                left: 20%;
+                z-index: 99;
+                text-align: center;
+                 background-color:#D3D7E0;
+                 opacity: 0.8;
+                 border-radius: 10px;
+            }
            .jumbotron {
                background: hsl(0, 0%, 85%);
                margin-bottom: 0;
-               position: relative;
+               margin-top: 0;
                
            }
-           #locateJumbo {
-               top: -200px;
-           }
+          
            .location {
                
                border-top: 1px solid #c3c3c3;
-               
-               
+             
                p{
                    text-align: center;
                }
@@ -140,9 +144,6 @@
                height: 500px;
             }
            
-        .aspect {
-            
-        }
            .carousel-inner > .item > img,
           .carousel-inner > .item > a > img {
               margin-top: 0;
@@ -151,6 +152,7 @@
               
           }
           .carousel-indicators li {
+              
               border-radius: 0;
           }
         //This will make the carousel fade
