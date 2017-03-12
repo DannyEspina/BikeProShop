@@ -8,23 +8,38 @@
                margin: 0;
                z-index: 4;
            }
-           
-           .parallax {
+           .background {
+               height: 94%;
+               position: relative;
+           }
+           .logo1 {
+                position: absolute;
+                top: 18%;
+               
+                background-image: url('LogoPart2.png');
                 
-                 background-image: url('BikeProShopLogo.png');
-                /* set width and height */
-                height: 94%; 
-                
-                /* Create the parallax scrolling effect */
+                height: 1000px;
+                width: 100%;
                 background-attachment: fixed;
-                background-position: center;
+                background-position: 57% 63%;
                 background-repeat: no-repeat;
-                background-size: contain;
-            }
-           
-          
+                background-size: auto 600px;
                 
-            
+            }
+           .logo2 {
+          
+                position: absolute;
+                top: 18%;
+               
+                background-image: url('LogoPart1.png');
+                
+                height: 1000px;
+                width: 100%;
+                background-attachment: fixed;
+                background-position: 34%;
+                background-repeat: no-repeat;
+                background-size: auto 200px;
+           }
            //set the navbar to the top and width to 100% when the user scrolls past it
            .affix {
               top: 0;

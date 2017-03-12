@@ -2,8 +2,9 @@
 <!-- lang="en" specify the language to be english -->
 <html lang="en">
 <head>
-  <title>Welcome to BikeProShop!</title>
+  <title><%= yield(:title) %> | BikeProShop</title>
   
+  <%= favicon_link_tag 'favicon.ico' %>
     <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   

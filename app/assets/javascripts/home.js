@@ -11,7 +11,25 @@ $(document).ready(function(){
         });
         
    });
+   
+  
 });
+ //logo parallax
+   $(window).scroll(function(){
+       //how many pixels am i relation to the top of the page
+       var wScroll = $(this).scrollTop();
+       
+       //as the user scrolls the logo will move down slowly to give that parallax effect
+       $('.logo1').css({          
+           'transform' : 'translate(0px, -'+ wScroll/19.2 +'%)'
+           
+           
+       });
+       $('.logo2').css({          
+           'transform' : 'translate(0px, -'+ wScroll/18.5 +'%)'
+           
+       });
+   });
 //google maps
  function myMap() {
           var myCenter = new google.maps.LatLng(34.882067, -82.150943);
