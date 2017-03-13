@@ -1,12 +1,15 @@
+//fading dropdown menu when hover
 $(document).ready(function(){
     $("#shopDrop").mouseenter(function(){
-        $("#shopPanel").fadeIn("fast")
-        
+        $("#shopPanel").fadeIn("fast");
+         
+       $("#navBar").addClass("navLightBar");
       
       
         $("#shopDrop").mouseleave(function(){
           
-            $("#shopPanel").fadeOut("fast")
+            $("#shopPanel").fadeOut("fast");
+           $("#navBar").removeClass("navLightBar");
             
         });
         
@@ -15,20 +18,39 @@ $(document).ready(function(){
   
 });
  //logo parallax
+ //listening to a window scroll event
    $(window).scroll(function(){
        //how many pixels am i relation to the top of the page
        var wScroll = $(this).scrollTop();
        
        //as the user scrolls the logo will move down slowly to give that parallax effect
+       //a lot of trial and error to get the look I want
        $('.logo1').css({          
-           'transform' : 'translate(0px, -'+ wScroll/19.2 +'%)'
+           'transform' : 'translate('+ wScroll/700 +'%, -'+ wScroll/23.25 +'%)'
            
            
        });
-       $('.logo2').css({          
-           'transform' : 'translate(0px, -'+ wScroll/18.5 +'%)'
+       $('.logo2').css({     
+           //dividing wScroll will effect it exponentially not linearly
+           'transform' : 'translate(-'+ wScroll/700 +'%, -'+ wScroll/24 +'%)'
            
        });
+       
+       
+      // Landing Elements
+      if(wScroll > $('#tuneInfo').offset().top- ($(window).height()/1.35)) {
+            console.log("hi");
+            $('#tuneHeader').addClass('is-showing-header');
+            
+            setTimeout(function(){
+                $('#tuneInfo').addClass('is-showing-body');
+            }, 100);
+            
+            
+        
+       
+    
+      }
    });
 //google maps
  function myMap() {

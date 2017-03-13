@@ -3,14 +3,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
           body, html {
-               background: hsl(24, 99%, 52%);
+               background: black;
                height: 100%;
                margin: 0;
                z-index: 4;
            }
            .background {
+               background: hsl(24, 99%, 52%);
                height: 94%;
                position: relative;
+               
            }
            .logo1 {
                 position: absolute;
@@ -18,12 +20,12 @@
                
                 background-image: url('LogoPart2.png');
                 
-                height: 1000px;
+                height: 1100px;
                 width: 100%;
                 background-attachment: fixed;
-                background-position: 57% 63%;
+                background-position: 66% 65%;
                 background-repeat: no-repeat;
-                background-size: auto 600px;
+                background-size: auto 650px;
                 
             }
            .logo2 {
@@ -33,12 +35,12 @@
                
                 background-image: url('LogoPart1.png');
                 
-                height: 1000px;
+                height: 1200px;
                 width: 100%;
                 background-attachment: fixed;
-                background-position: 34%;
+                background-position: 36%;
                 background-repeat: no-repeat;
-                background-size: auto 200px;
+                background-size: auto 250px;
            }
            //set the navbar to the top and width to 100% when the user scrolls past it
            .affix {
@@ -52,14 +54,20 @@
            #navBar{
                border: none;
                margin-bottom: 0;
-               z-index: 1;
+               z-index: 99;
                border-radius: 0;
                background: hsl(24, 99%, 52%); /* For browsers that do not support gradients */
                background: -webkit-linear-gradient(hsl(24, 99%, 52%), hsl(24, 99%, 46%), hsl(24, 99%, 40%)); /* For Safari 5.1 to 6.0 */
                background: -o-linear-gradient(hsl(24, 99%, 52%), hsl(24, 99%, 4%), hsl(24, 99%, 40%)); /* For Opera 11.1 to 12.0 */
                background: -moz-linear-gradient(hsl(24, 99%, 52%), hsl(24, 99%, 46%), hsl(24, 99%, 40%)); /* For Firefox 3.6 to 15 */
                background: linear-gradient(hsl(24, 99%, 52%), hsl(24, 99%, 46%), hsl(24, 99%, 40%)); /* Standard syntax */
-           } 
+               
+           }
+           .navLightBar {
+               -webkit-box-shadow: inset 0 -8px 20px -5px orange;
+	           -moz-box-shadow: inset 0 -8px 20px -5px orange;
+	            box-shadow: inset 0 -8px 20px -5px orange;
+           }
            .navbar-toggle {
                background-color: hsl(24, 99%, 52%);
            }
@@ -100,7 +108,7 @@
                border: solid 1px hsl(240, 6%, 30%);
                border-top: solid 2px orange;
                    
-                   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4), inset 0 10px 10px -9px orange;
+               box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4), inset 0 10px 15px -8px orange;
                li a{
                    color: white; 
                }
@@ -111,25 +119,106 @@
                    background-color: hsl(24, 98%, 40%);
                }
                    }
-           
-               
+       
+         //makes the carousel indicators square 
+        .carousel-indicators li {
+              border-radius: 0;
+          }
+        //This will make the carousel fade
+          .carousel-fade {
+            .carousel-inner {
+                .item {
+                    transition-property: opacity;
+                }
+            
+            .item,
+            .active.left,
+            .active.right {
+                opacity: 0;
+            }
+    
+            .active,
+            .next.left,
+            .prev.right {
+                opacity: 1;
+            }
+    
+            .next,
+            .prev,
+            .active.left,
+            .active.right {
+                left: 0;
+                transform: translate3d(0, 0, 0);
+                }
+            }
+        }   
              #ytplayer {
                 z-index: -99;
-                
+                opacity: 0.65;
                 width: 100%;
                 height: 810px;
                 margin-bottom: 0;
             }
-            
+            #tuneHeader {
+                position: absolute;
+                top: 5%;
+                color: white;
+                font-size: 50px;
+                text-align: center;
+                font-family: 'Buenard', serif;
+                font-weight: bold;
+                text-shadow: 1px 1px 1px #000;
+                -webkit-text-shadow: 1px 1px 1px #000;
+                -moz-text-shadow: 1px 1px 1px #000;
+                
+                opacity: 0;
+                transform: translatey(30px);
+                transition: all 0.8s ease-in-out;
+            }
             #tuneInfo {
                 position: absolute;
-                top: 30%;
-                left: 20%;
-                z-index: 99;
+                font-family: 'Buenard', serif;
+                font-size: 20px;
+                top: 25%;
+                left: 5%;
+                width: 90%;
                 text-align: center;
-                 background-color:#D3D7E0;
-                 opacity: 0.8;
-                 border-radius: 10px;
+                background-color:#D3D7E0;
+                border-radius: 5px;
+                padding-bottom: 200px;
+                
+                opacity: 0;
+                transform: translatey(30px);
+                transition: all 0.8s ease-in-out;
+                
+            }
+            .is-showing-header {
+                opacity: 1 !important;
+                transform: translateX(0px) !important;
+            }
+            .is-showing-body {
+                opacity: 0.8 !important;
+                transform: translateX(0px) !important;
+            }
+            
+            .customer {
+                position: absolute;
+                height: 150px;
+                right: 65%;
+                
+            }
+            .mechanic {
+                position: absolute;
+                height: 180px;
+                left: 55%; 
+                top: 95%;
+            }
+            .cust_bicycle {
+                position: absolute; 
+                top: 80%;
+                height: 250px; 
+                right: 30%; 
+                
             }
            .jumbotron {
                background: hsl(0, 0%, 85%);
@@ -159,45 +248,8 @@
                height: 500px;
             }
            
-           .carousel-inner > .item > img,
-          .carousel-inner > .item > a > img {
-              margin-top: 0;
-              width: 100%;
-             
-              
-          }
-          .carousel-indicators li {
-              
-              border-radius: 0;
-          }
-        //This will make the carousel fade
-          .carousel-fade {
-            .carousel-inner {
-                .item {
-                    transition-property: opacity;
-                }
-            
-            .item,
-            .active.left,
-            .active.right {
-                opacity: 0;
-            }
-    
-            .active,
-            .next.left,
-            .prev.right {
-                opacity: 1;
-            }
-    
-            .next,
-            .prev,
-            .active.left,
-            .active.right {
-                left: 0;
-                transform: translate3d(0, 0, 0);
-            }
-        }
-}
+          
+          
 
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
 @media only screen and (max-device-width: 1024px) {

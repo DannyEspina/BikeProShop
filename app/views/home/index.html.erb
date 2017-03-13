@@ -1,11 +1,14 @@
     <% provide(:title, "Home") %>
     
     <div class="background">
-      <div class="logo2"></div>
-      <div class="logo1"></div>
-    </div> 
-    
-    <nav class="navbar navbar-inverse " data-spy="affix" data-offset-top="715" id="navBar">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="logo2"></div>
+          <div class="logo1"></div>
+        </div>
+      </div> 
+    </div>
+    <nav class="navbar navbar-inverse " id="navBar" data-spy="affix" data-offset-top="715">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -112,26 +115,44 @@
             </div>
             
       <div class="container-fluid">
-        <div style="position: relative;" class="row" id="tuneUp">
+        <div style="position: relative;" class="row">
+        
         
         <div id="ytplayer"></div>
-        <div class="jumbotron">
-        <div id="tuneInfo">
-         <h2>Need a Tune Up?</h2>
-         <p>Leave your bicycle with us!</p>
-       
+          <div id="tuneHeader" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            
+             <h1>Need a Tune Up?</h1>
+             <p>Leave your bicycle with us!</p>
+      
+        </div>
+        <div id="tuneInfo" class="row">
+          <div style: "position: relatvie" class="col-md-3 col">
+            <p>Tell us your problems and we'll do the rest!</p> 
+            <!-- a animation of someone giving the bike to the mechanic -->
+            <%= image_tag("customer.png", class: "customer")%>
+            <%= image_tag("bicycle.png",  class: "cust_bicycle") %>
+            <%= image_tag("mechanic.png", class: "mechanic") %>
+          </div>
+           
+        <div class="col-md-3 col">
+          <p>If the repair isn't too severe you can walk around the Flea market and pick up your bicyle after you're done!</p> 
+          <!-- have a animation of someone enjoying the flea market --> 
+        </div>
          
-         <!-- have a animation of someone giving the bike to the mechanic -->
-         <p>Tell us your problems and we'll do the rest!</p>
-         <p>If the repair isn't too severe you can walk around 
-         the Flea market and pick up your bicyle after you're done!</p>
-          <!-- have a animation of someone enjoying the flea market -->
-        <p>Since we are at the flea market you won't find a better price anywhere else!</p>
-        <p>For more information on our list of services <i><a href="#">Click Here</a></i></p>
-     </div>
-      </div>
-      </div>
-      </div>
+        <div class="col-md-3 col">
+          <p>Since we are at the flea market you won't find a better price anywhere else!</p> 
+          <!-- have a animation of money --> 
+        </div>
+        
+        <div class="col-md-3 col">
+        <p>For more information on our list of services <i><a href="#">Click Here</a></i></p> 
+        <!-- have a gear picture rotating when hovered here --> 
+        </div>
+        
+     </div> <!-- end tune info row --> 
+      </div> <!-- end row for the entire section--> 
+      </div> <!-- container-fluid end --> 
+      
       
       <div class="jumbotron">
       <div class="container-fluid">
