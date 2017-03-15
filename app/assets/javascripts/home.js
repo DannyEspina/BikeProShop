@@ -29,15 +29,15 @@ $(document).ready(function(){
  /*logo parallax
   *listening to a window scroll event */
    $(window).scroll(function(){
-       console.log("hi");
+       console.log(wScroll);
        //how many pixels am i relation to the top of the page
        var wScroll = $(this).scrollTop();
        //landing effect on logo
  
-       if(wScroll > $('.tuneHeader').offset().top-($(window).height()/3) && wScroll<=738) {
+       if(wScroll > $('.tuneHeader').offset().top-($(window).height()/3) && wScroll<=790) {
            
          $('.cust_bicycle').css({
-                'left': '8%',
+                'left': '0%',
               'transform' : 'translate('+wScroll/3+'%, 0px)' 
            });
       

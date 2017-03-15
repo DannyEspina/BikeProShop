@@ -143,7 +143,7 @@
             .tuneHeader {
                 position: relative;
                 top: 30px;
-                left: 22%;
+                left: 26%;
                 height: 250px;
                 
                  
@@ -157,7 +157,7 @@
                 width: 100%;
                 text-align: center;
                 margin: 0;  
-                margin-bottom: 10%;
+                margin-bottom: 5%;
                 padding: 0;
                 p {
                     padding-left: 20%;
@@ -167,20 +167,24 @@
 
             .customer {
                 position: relative;
-                height: 150px;
+                height: 180px;
                 right: 10%;
                 
             }
             .mechanic {
                 position: relative;
-                height: 180px;
+                
+                margin-top: 2%;
+                height: 210px;
                 left: 10%;
                 
             }
             .cust_bicycle {
                 position: absolute; 
-                left: 30%;
-                height: 250px; 
+                z-index: 1;
+                top: 7%;
+                left: 24%;
+                height: 280px; 
             }
             
             #window1 {
@@ -226,14 +230,18 @@
                
            }
           
+           .contactHeader {
+               width: 60%;
+               
+               position: relative;
+               left: 20%;
+           }
            .location p{
-                   text-align: center;
-               }
-               h1{
-                   font-family:"Helvetica Neue", Helvetica;
-                   text-align: center;
-               }
-            
+                   padding-left: 10%;
+              
+                
+           }
+           
          #map {
                
                padding-top: 50px;
