@@ -1,26 +1,30 @@
-            
-            
-            
+
             body, html {
                background: black;
+               position: relative;
+                top: -150px;
                height: 100%;
                margin: 0;
                z-index: 4;
            }
-           .background {
-               background: hsl(24, 99%, 52%);
-               height: 94%;
-               position: relative;
-               
-           }
+            #ytplayer {
+                position: relative;
+                top: 120px;
+                z-index: -1;
+                opacity: 0.65;
+                width: 100%;
+                height: 830px;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
            .logo1 {
                 position: absolute;
-                top: 18%;
+                top: 10%;
                 background-image: url('LogoPart2.png');
                 height: 1100px;
                 width: 100%;
-                background-attachment: fixed;
-                background-position: 66% 65%;
+                
+                background-position: 66% 35%;
                 background-repeat: no-repeat;
                 background-size: auto 650px;
                 
@@ -33,11 +37,11 @@
            .logo2 {
           
                 position: absolute;
-                top: 18%;
+                top: -8%;
                 background-image: url('LogoPart1.png');
                 height: 1200px;
                 width: 100%;
-                background-attachment: fixed;
+                
                 background-position: 36%;
                 background-repeat: no-repeat;
                 background-size: auto 250px;
@@ -48,14 +52,11 @@
            }
            
            .is-showing-logo {
-              transition: all 0.6s ease-in-out;
+              transition: all 0.8s ease-in-out;
               opacity: 1;
               transform: translatex(0px);  
             }
             
-            .removeTransition {
-                transition: none;
-            }
             
            //set the navbar to the top and width to 100% when the user scrolls past it
            .affix {
@@ -67,6 +68,7 @@
               padding-top: 60px;
           }
            #navBar{
+               
                border: none;
                margin-bottom: 0;
                z-index: 99;
@@ -136,119 +138,95 @@
                }
                    }
        
-         //makes the carousel indicators square 
-        .carousel-indicators li {
-              border-radius: 0;
-          }
-        //This will make the carousel fade
-          .carousel-fade {
-            .carousel-inner {
-                .item {
-                    transition-property: opacity;
-                }
+         
             
-            .item,
-            .active.left,
-            .active.right {
-                opacity: 0;
-            }
-    
-            .active,
-            .next.left,
-            .prev.right {
-                opacity: 1;
-            }
-    
-            .next,
-            .prev,
-            .active.left,
-            .active.right {
-                left: 0;
-                transform: translate3d(0, 0, 0);
-                }
-            }
-        }   
-             #ytplayer {
-                z-index: -99;
-                opacity: 0.65;
-                width: 100%;
-                height: 810px;
-                padding-bottom: 0;
-                margin-bottom: 0;
-            }
-            #tuneHeader {
-                position: absolute;
-                top: 5%;
-                color: white;
-                font-size: 50px;
-                text-align: center;
-                font-family: 'Buenard', serif;
-                font-weight: bold;
-                text-shadow: 1px 1px 1px #000;
-                -webkit-text-shadow: 1px 1px 1px #000;
-                -moz-text-shadow: 1px 1px 1px #000;
+            .tuneHeader {
+                position: relative;
+                top: 30px;
+                left: 22%;
+                height: 250px;
                 
-                opacity: 0;
-                transform: translatey(30px);
-                transition: all 0.5s ease-in-out;
+                 
             }
+            
             #tuneInfo {
-                position: absolute;
+                position: relative;
                 font-family: 'Buenard', serif;
                 font-size: 20px;
-                top: 25%;
-                left: 5%;
-                width: 90%;
+                
+                width: 100%;
                 text-align: center;
-                background-color:#D3D7E0;
-                border-radius: 5px;
-                padding-bottom: 200px;
-                
-                opacity: 0;
-                transform: translatey(30px);
-                transition: all 0.5s ease-in-out;
-                
+                margin: 0;  
+                margin-bottom: 10%;
+                padding: 0;
+                p {
+                    padding-left: 20%;
+                    width: 80%;
+                }
             }
-            .is-showing-header {
-                opacity: 1 !important;
-                transform: translateX(0px) !important;
-            }
-            .is-showing-body {
-                opacity: 0.8 !important;
-                transform: translateX(0px) !important;
-            }
-            
+
             .customer {
-                position: absolute;
+                position: relative;
                 height: 150px;
-                right: 65%;
+                right: 10%;
                 
             }
             .mechanic {
-                position: absolute;
+                position: relative;
                 height: 180px;
-                left: 55%; 
-                top: 95%;
+                left: 10%;
+                
             }
             .cust_bicycle {
                 position: absolute; 
-                top: 80%;
+                left: 30%;
                 height: 250px; 
-                right: 30%; 
-                
             }
+            
+            #window1 {
+                background-image: url('repair3.JPG');
+                height: 720px;
+                
+                background-position: bottom center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100%;
+            }
+             #window2 {
+                 background-image: url('repair4.JPG');
+                height: 720px;
+                
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100%;
+             }
+            #window3 {
+                 background-image: url('repair6.JPG');
+                height: 720px;
+                
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100%;
+             }
+             #window4 {
+                 background-image: url('repair7.JPG');
+                height: 720px;
+                
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100%;
+             }
            .jumbotron {
-               background: hsl(0, 0%, 85%);
+               background: hsl(34, 100%, 95%);
                margin-bottom: 0;
                margin-top: 0;
                
            }
           
-           .location {
-               
-               border-top: 1px solid #c3c3c3;
-             
-               p{
+           .location p{
                    text-align: center;
                }
                h1{
@@ -256,7 +234,6 @@
                    text-align: center;
                }
             
-           }
          #map {
                
                padding-top: 50px;
@@ -268,9 +245,9 @@
           
           
 
-/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed 
 @media only screen and (max-device-width: 1024px) {
     .parallax {
         background-attachment: scroll;
     }
-}
+}*/

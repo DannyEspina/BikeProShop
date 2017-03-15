@@ -1,14 +1,16 @@
     <% provide(:title, "Home") %>
     
-    <div class="background">
+  <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div id="ytplayer"></div>
           <div class="logo2"></div>
           <div class="logo1"></div>
         </div>
       </div> 
-    </div>
-    <nav class="navbar navbar-inverse " id="navBar" data-spy="affix" data-offset-top="715">
+     </div>
+     
+    <!-- navbar -->
+    <nav class="navbar navbar-inverse " id="navBar" data-spy="affix" data-offset-top="543">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -20,7 +22,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav" id="navList">
-            
+            <!-- dropdown for shop -->
             <li id="shopDrop" class="dropdown">
                     <a  class="dropdown-toggle" data-toggle="dropdown" href="#">Shop<span class="caret"></span></a>
                       <ul id="shopPanel" class="dropdown-menu">
@@ -50,110 +52,34 @@
       </div>
     </nav>
     
-    <!--Carousel-->                
-      <div class="container-fluid">
-           <div class="row">
-            
-              <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                  <li data-target="#myCarousel" data-slide-to="2"></li>
-                  <li data-target="#myCarousel" data-slide-to="3"></li>
-                  <li data-target="#myCarousel" data-slide-to="4"></li>
-                  <li data-target="#myCarousel" data-slide-to="5"></li>
-                  <li data-target="#myCarousel" data-slide-to="6"></li>
-                  <li data-target="#myCarousel" data-slide-to="7"></li>
-                </ol>
-            
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                  <div class="item active">
-                      <%= image_tag("store1.jpg") %>
-                    
-                  </div>
-            
-                  <div class="item">
-                      <%= image_tag("repair2.JPG") %>
-                    
-                  </div>
                 
-                  <div class="item">
-                      <%= image_tag("repair3.JPG") %>
-                    
-                  </div>
-                  
-                  <div class="item">
-                      <%= image_tag("repair4.JPG") %>
-                  </div>
-                  
-                  <div class="item">
-                      <%= image_tag("repair5.JPG") %>
-                  </div>
-                  
-                  <div class="item">
-                      <%= image_tag("repair6.JPG") %>
-                  </div>
-                  
-                  <div class="item">
-                      <%= image_tag("repair7.JPG") %>
-                  </div>
-                </div>
-            
-                <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-              </div>
-            </div>
-            
-      <div class="container-fluid">
-        <div style="position: relative;" class="row">
+      <!--tune up section -->     
+      <div style= "margin-top:0px; background-color: hsl(34, 100%, 95%);"class="container-fluid">
+        <div class="row">
+             <%= image_tag("tuneUpHeader.png", class: "tuneHeader")%>
+        </div> <!-- end row for tune header--> 
         
-        
-        <div id="ytplayer"></div>
-          <div id="tuneHeader" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            
-             <h1>Need a Tune Up?</h1>
-             <p>Leave your bicycle with us!</p>
-      
-        </div>
         <div id="tuneInfo" class="row">
-          <div style: "position: relatvie" class="col-md-3 col">
-            <p>Tell us your problems and we'll do the rest!</p> 
+            
             <!-- a animation of someone giving the bike to the mechanic -->
             <%= image_tag("customer.png", class: "customer")%>
             <%= image_tag("bicycle.png",  class: "cust_bicycle") %>
             <%= image_tag("mechanic.png", class: "mechanic") %>
-          </div>
-           
-        <div class="col-md-3 col">
-          <p>If the repair isn't too severe you can walk around the Flea market and pick up your bicyle after you're done!</p> 
-          <!-- have a animation of someone enjoying the flea market --> 
-        </div>
-         
-        <div class="col-md-3 col">
-          <p>Since we are at the flea market you won't find a better price anywhere else!</p> 
-          <!-- have a animation of money --> 
-        </div>
-        
-        <div class="col-md-3 col">
-        <p>For more information on our list of services <i><a href="#">Click Here</a></i></p> 
+          
+          <p>Tell us your problems and we'll do the rest!
+              If the repair isn't too severe you can walk around the Flea market and pick up your bicyle after you're done!
+              Since we are at the flea market you won't find a better price anywhere else!
+            For more information on our list of services <i><a href="#">Click Here</a></i></p> 
         <!-- have a gear picture rotating when hovered here --> 
-        </div>
-        
      </div> <!-- end tune info row --> 
-      </div> <!-- end row for the entire section--> 
       </div> <!-- container-fluid end --> 
       
-      
+      <div class="container-fluid">
+        <div id="window1" class="row"></div>
+        <div id="window2" class="row"></div>
+        <div id="window3" class="row"></div>
+        <div id="window4" class="row"></div>
+      </div>
       <div class="jumbotron">
       <div class="container-fluid">
          

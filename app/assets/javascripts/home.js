@@ -6,11 +6,7 @@ $(document).ready(function(){
          $('.logo2').addClass('is-showing-logo');
          
     }, 200);
-    setTimeout(function(){
-         $('.logo1').addClass('removeTransition');
-         $('.logo2').addClass('removeTransition');
-         
-    }, 1000);
+    
          
     $("#shopDrop").mouseenter(function(){
         
@@ -33,44 +29,22 @@ $(document).ready(function(){
  /*logo parallax
   *listening to a window scroll event */
    $(window).scroll(function(){
-       
+       console.log("hi");
        //how many pixels am i relation to the top of the page
        var wScroll = $(this).scrollTop();
        //landing effect on logo
-       
-       //as the user scrolls the logo will move down slowly to give that parallax effect
-       $('.logo1').css({          
-           'transform' : 'translate('+ wScroll/700 +'%, -'+ wScroll/21.25 +'%)'
+ 
+       if(wScroll > $('.tuneHeader').offset().top-($(window).height()/3) && wScroll<=738) {
            
-           
-       });
-       $('.logo2').css({     
-           /*dividing wScroll will effect it exponentially not linearly.
-            * meaning as you dividing with bigger and bigger numbers the 
-            * the effect it does becomes less and less*/
-           'transform' : 'translate(-'+ wScroll/700 +'%, -'+ wScroll/22 +'%)'
-           
-       });
-       
-       
-      /* Landing Elements
-       * if the amount of pixels scrolled down is bigger than a specified point in the window then... */
-      if(wScroll > $('#tuneInfo').offset().top - ($(window).height()/1.35)) {
+         $('.cust_bicycle').css({
+                'left': '8%',
+              'transform' : 'translate('+wScroll/3+'%, 0px)' 
+           });
+      
           
-            /*... add is-showing-header class which chances opacity to 1 
-             * and moves the element up 30 pixels */
-            $('#tuneHeader').addClass('is-showing-header');
-            
-            //adds delay before showing tunInfo element by 100 milliseconds
-            setTimeout(function(){
-                $('#tuneInfo').addClass('is-showing-body');
-            }, 100);
-            
-            
-        
-       
+       }
     
-      }
+      
    });
 //google maps
  function myMap() {
@@ -100,7 +74,7 @@ $(document).ready(function(){
   function onYouTubePlayerAPIReady() {
       
     player = new YT.Player('ytplayer', {
-        videoId: 'kQ5QhgEPG8o',
+        videoId: 'fsM5ZHv_8F0',
         playerVars: {
           autoplay: 1, //automatically plays video when page loads
           controls: 0, //removes controls
@@ -108,13 +82,16 @@ $(document).ready(function(){
           modestbranding: 1, //remove youtube logo
           showinfo: 0, //removes title
           autohide: 1,
-          playlist: 'kQ5QhgEPG8o', //this is required for the loop to work
+          listType:'playlist',
+          list: 'PL1Qm-Ugsa8xXAy1G0tUQZWH0lsPDruDNN', //this is required for the loop to work
           iv_load_policy: 3, // video annotations to not be shown by default
           disablekb: 1, // disables keyboard controls
-          rel: 0 //don't show related videos
+          rel: 0, //don't show related videos
+         
         },
         events: {
-            'onReady': onPlayerReady,
+            'onReady': onPlayerReady
+            
         }
     }); // end of player delcaration 
   }
@@ -122,4 +99,6 @@ $(document).ready(function(){
 //mutes the video
 function onPlayerReady(event){
     player.mute();
+    player.setPlaybackQuality('hd720') // sets quality
 }
+
