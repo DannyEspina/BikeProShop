@@ -1,6 +1,7 @@
     <% provide(:title, "Home") %>
     
-  <div class="container-fluid">
+    
+  <div id="top" class="container-fluid">
       <div class="row">
           <div id="ytplayer"></div>
           <div class="logo2"></div>
@@ -18,7 +19,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>      
           </button>
-          <a href="#"><div><%= image_tag("LogoPart1.png", alt: "BikeProShop logo", height: 50, width: 50) %></div></a>
+          <a href="#top"><div><%= image_tag("LogoPart1.png", alt: "BikeProShop logo", height: 50, width: 50) %></div></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav" id="navList">
@@ -27,21 +28,21 @@
                     <a  class="dropdown-toggle" data-toggle="dropdown" href="#">Shop<span class="caret"></span></a>
                       <ul id="shopPanel" class="dropdown-menu">
                         <li class="dropdown-header">Bicycles</li>
-                        <li><a href="#">Top 10 Bicycles of the Week</a></li>
+                        <li><a href="shop/topBikes">Top 10 Bicycles of the Week</a></li>
                         <li><a href="#">New & Used bicycles</a></li>
                         <li class="divider"></li>
                         <li class="dropdown-header">Parts</li>
-                        <li><a href="#">Shop Parts</a></li>
+                        <li><a href="shop/parts">Shop Parts</a></li>
                         <li class="divider"></li>
                         <li class="dropdown-header">Accessories</li>
-                        <li><a href="#">Shop Accessories</a></li>
+                        <li><a href="shop/accessories">Shop Accessories</a></li>
                       </ul>
                 </li>
                 
-            <li><a href="#">Repairs</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">About The Mechanic</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="repair/repair">Repairs</a></li>
+            <li><a href="photos/gallery">Gallery</a></li>
+            <li><a href="#mechanicBody">About The Mechanic</a></li>
+            <li><a href="#contactUs">Contact Us</a></li>
             
           </ul>
           <ul id="iconsRight" class="nav navbar-nav navbar-right">
@@ -53,13 +54,14 @@
     </nav>
     
                 
-      <!--tune up section -->     
-      <div style= "margin-top:0px; background-color: hsl(34, 100%, 95%);"class="container-fluid">
-        <div class="row">
-             <%= image_tag("tuneUpHeader.png", class: "tuneHeader")%>
-        </div> <!-- end row for tune header--> 
+      <!--tune up section -->    
+     
+      <div class="container-fluid headerContain">
         
-        <div id="tuneInfo" class="row">
+             <%= image_tag("tuneUpHeader.png", class: "Header")%>
+        
+         
+        <div id="tuneInfo">
             
             <!-- a animation of someone giving the bike to the mechanic -->
             <%= image_tag("customer.png", class: "customer")%>
@@ -74,6 +76,7 @@
      </div> <!-- end tune info row --> 
       </div> <!-- container-fluid end --> 
       
+      <!-- parallax pictures -->
       <div class="container-fluid">
         <div id="window1" class="row"></div>
         <div id="window2" class="row"></div>
@@ -81,23 +84,38 @@
         <div id="window4" class="row"></div>
       </div>
       
-      <div class="container-fluid">
+      
+      <div id="mechanicBody" class="container-fluid headerContain ">
+        <%= image_tag('mechanicHeader.png', alt: 'mechanic header', class:'Header') %>
+        <p></p>
+        
         
       </div>
-      <div class="jumbotron">
-      <div class="container-fluid">
-         
-           <div class="row">
-              <div class=location>
-                 <%= image_tag("contactHeader.png", alt:"contact header", class:"contactHeader") %>
-                 <p><span class="glyphicon glyphicon-phone"></span> (864) 285-8181</p>
-                 <p><span class="glyphicon glyphicon-envelope"></span> bikeproshop@gmail.com</p>
-                 <p><span class="glyphicon glyphicon-map-marker"></span> Barnyard Flea Market Greer, 2000 SC-101, Greer, SC 29651</p> 
-                 <p><span class="glyphicon glyphicon-wrench"></span> Located at J51 & J52</p>
-                 
-           </div>
-           </div>
+      <div id="contactUs" class="container-fluid headerContain">
+        <%= image_tag("contactHeader.png", alt:"contact header", class:"Header") %>
+        <div class="locationBody">
+          <p><span class="glyphicon glyphicon-phone"></span> (864) 285-8181</p>
+          <p><span class="glyphicon glyphicon-envelope"></span> bikeproshop@gmail.com</p>
+          <p><span class="glyphicon glyphicon-map-marker"></span> Barnyard Flea Market Greer, 2000 SC-101, Greer, SC 29651</p> 
+          <p><span class="glyphicon glyphicon-wrench"></span> Located at J51 & J52</p>
         </div>
     </div>
     <div id="map"></div>
+    
+  <footer class="container-fluid footer">
+    
+    <%= image_tag('facebook.png', alt:'facebook', class:'facebook') %>
+    <%= image_tag('instagram-icon.png', alt:'facebook', class:'instagram') %>
+    <div class="footerLinks">
+    <ul>
+      <li><a href="shop/topBikes">Top 10 bicycles</a></li>
+      <li><a href="repair/repair">Repairs</a></li>
+      <li><a href="photos/gallery">Gallery</a></li>
+      
+    </ul>       
+  </div>          
+  <a href="#top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  </footer>
  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_Zu6BWfCvXHlP9HYcX0IeueqdToRVKRk&callback=myMap"></script>

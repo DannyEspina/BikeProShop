@@ -1,8 +1,20 @@
 Rails.application.routes.draw do
   get 'users/signUp'
-  get 'home/index'
+
   get 'users/logIn'
+
+  get 'shop/topBikes'
+
+  get 'shop/parts'
+
+  get 'shop/accessories'
+
+  get 'repair/repair'
+
+  get 'home/index'
+  
   get 'photos/gallery'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

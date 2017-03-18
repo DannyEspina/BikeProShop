@@ -1,35 +1,13 @@
-// Place all the styles related to the photos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-//makes the carousel indicators square 
-        .carousel-indicators li {
-              border-radius: 0;
-          }
-        //This will make the carousel fade
-          .carousel-fade {
-            .carousel-inner {
-                .item {
-                    transition-property: opacity;
-                }
-            
-            .item,
-            .active.left,
-            .active.right {
-                opacity: 0;
-            }
+
+.galleryHeader {
+    height: 720px;
     
-            .active,
-            .next.left,
-            .prev.right {
-                opacity: 1;
-            }
-    
-            .next,
-            .prev,
-            .active.left,
-            .active.right {
-                left: 0;
-                transform: translate3d(0, 0, 0);
-                }
-            }
-        }   
+}
+ #headerBackground {
+    background-image: url('store1.jpg');
+    height: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
