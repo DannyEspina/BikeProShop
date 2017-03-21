@@ -1,3 +1,142 @@
-// Place all the styles related to the shop controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+  $body-theme: hsl(34, 100%, 95%);
+
+  .fix-contain {
+            padding:0; 
+            margin:0;
+        }
+.pageHeader {
+    height: 830px;
+    
+}
+ #shopHeader {
+    background-image: url('Shop/store2.JPG');
+    height: 100%;
+    background-position: center -450px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+#topTen{
+    
+    background-color: white;
+}
+#top1 {
+  margin-top: 100px;
+  margin-left: 16%;
+  height: 880px;
+  width: 68%;
+  background-image: url(Shop/topTen1.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  border-radius: 50%;
+}
+#top2 {
+  margin-top: 100px;
+  margin-left: 16%;
+  height: 880px;
+  width: 68%;
+  background-image: url(Shop/topTen2.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  border-radius: 50%;
+}
+#top3 {
+  margin-top: 100px;
+  margin-left: 16%;
+  height: 880px;
+  width: 68%;
+  background-image: url(Shop/topTen3.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  border-radius: 50%;
+}
+#top4 {
+  margin-top: 100px;
+  margin-left: 16%;
+  height: 880px;
+  width: 68%;
+  background-image: url(Shop/topTen4.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  border-radius: 50%;
+}
+#top5 {
+  margin-top: 100px;
+  margin-left: 16%;
+  height: 880px;
+  width: 68%;
+  background-image: url(Shop/topTen5.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  border-radius: 50%;
+}
+#top6 {
+  margin-top: 100px;
+  margin-left: 16%;
+  height: 880px;
+  width: 68%;
+  background-image: url(Shop/topTen6.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  border-radius: 50%;
+}
+#top7 {
+  margin-top: 100px;
+  margin-left: 16%;
+  height: 880px;
+  width: 68%;
+  background-image: url(Shop/topTen7.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  border-radius: 50%;
+}
+#top8 {
+  margin-top: 100px;
+  margin-left: 16%;
+  height: 880px;
+  width: 68%;
+  background-image: url(Shop/topTen8.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  border-radius: 50%;
+}
+#top9 {
+  margin-top: 100px;
+  margin-left: 16%;
+  height: 880px;
+  width: 68%;
+  background-image: url(Shop/topTen9.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  border-radius: 50%;
+}
+#top10 {
+  margin-top: 100px;
+  margin-left: 16%;
+  height: 880px;
+  width: 68%;
+  background-image: url(Shop/topTen10.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  border-radius: 50%;
+}

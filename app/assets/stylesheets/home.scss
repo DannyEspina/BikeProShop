@@ -1,3 +1,5 @@
+       $body-theme: hsl(34, 100%, 95%);
+       
         body,
         html {
             background: black;
@@ -7,7 +9,7 @@
             margin: 0;
             z-index: 4;
         }
-        
+      
         #ytplayer {
             position: relative;
             top: 120px;
@@ -22,7 +24,7 @@
         .logo1 {
             position: absolute;
             top: 10%;
-            background-image: url('LogoPart2.png');
+            background-image: url('Home/LogoPart2.png');
             height: 1100px;
             width: 100%;
             background-position: 66% 35%;
@@ -35,7 +37,7 @@
         .logo2 {
             position: absolute;
             top: -8%;
-            background-image: url('LogoPart1.png');
+            background-image: url('Home/LogoPart1.png');
             height: 1200px;
             width: 100%;
             background-position: 36%;
@@ -87,11 +89,12 @@
         
         .navbar-toggle {
             background-color: hsl(24, 99%, 52%);
-        }
-        
-        .navbar-toggle:hover {
+            &:hover {
             background-color: hsl(24, 99%, 22%);
         }
+        }
+        
+        
         
         #navList>li>a {
             font-family: 'Buenard', serif;
@@ -151,7 +154,7 @@
             font-family: 'Buenard', serif;
             font-size: 25px;
             color: hsl(217, 8%, 30%);
-            background-color: hsl(34, 100%, 95%);
+            background-color:  $body-theme;
         }
         
         #tuneInfo {
@@ -191,7 +194,7 @@
         }
         
         #window1 {
-            background-image: url('repair3.JPG');
+            background-image: url('Home/repair3.JPG');
             height: 720px;
             border-bottom: black solid 4px;
             background-position: bottom center;
@@ -201,7 +204,7 @@
         }
         
         #window2 {
-            background-image: url('repair4.JPG');
+            background-image: url('Home/repair4.JPG');
             height: 720px;
             border-bottom: black solid 4px;
             background-position: bottom;
@@ -211,7 +214,7 @@
         }
         
         #window3 {
-            background-image: url('repair6.JPG');
+            background-image: url('Home/repair6.JPG');
             height: 720px;
             border-bottom: black solid 4px;
             background-position: top center;
@@ -221,7 +224,7 @@
         }
         
         #window4 {
-            background-image: url('repair7.JPG');
+            background-image: url('Home/repair7.JPG');
             height: 720px;
             background-position: top center;
             background-repeat: no-repeat;
@@ -240,36 +243,57 @@
             height: 500px;
         }
         
-        .footer {
-            background-color: hsl(220, 8%, 15%);
-            padding-bottom: 100px;
+       
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 66px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+            &:hover {
+            color: white;
+            opacity: 0.7;
+        }
         }
         
-        .facebook {
-            position: relative;
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
             margin-top: 1%;
+            position: relative;
             left: 47%;
-            height: 45px;
+            
+            
         }
         
-        .instagram {
+        .fa-instagram {
+            background: #125688;
+            color: white;
             margin-top: 1%;
             position: relative;
             left: 48%;
-            height: 45px;
+            
+        }
+        
+         .footer {
+            background-color: hsl(220, 8%, 15%);
+            padding-bottom: 100px;
+            
         }
         
         .footerLinks {
             width: 100%;
-            ul {
+            >ul {
                 text-align: center;
-                li {
+                >li {
                     display: inline-block;
                     padding: 20px;
                     list-style-type: none;
                     color: white;
                     text-align: center;
-                    a {
+                    >a {
                         text-decoration: none;
                         color: white;
                         font-family: sans-serif;

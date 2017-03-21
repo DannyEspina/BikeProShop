@@ -1,21 +1,14 @@
 Rails.application.routes.draw do
-  get 'users/signUp'
-
-  get 'users/logIn'
-
-  get 'shop/topBikes'
-
-  get 'shop/parts'
-
-  get 'shop/accessories'
-
-  get 'repair/repair'
-
-  get 'home/index'
   
-  get 'photos/gallery'
+  get '/signUp', to: 'users#signUp'
+  get '/logIn', to: 'users#logIN'
+  get '/topBikes', to: 'shop#topBikes'
+  get '/parts', to: 'shop#parts'
+  get '/accessories', to: 'shop#accessories'
+  get '/repair', to: 'repair#repair'
+  get '/index', to: 'home#index'
+  get '/gallery', to:'photos#gallery'
   
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
