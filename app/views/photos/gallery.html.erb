@@ -1,9 +1,12 @@
 <% provide(:title, "Gallery") %>
-<div class="container-fluid row">
-<header class="pageHeader">
-  <div id="galleryHeader"></div>
-</header>
-</div>
+<div  class="container-fluid" style="padding:0">
+    <iframe id="ytplayer"
+      src="https://www.youtube.com/embed/HereF6ee0Fc?autoplay=1&loop=1&list=PL1Qm-Ugsa8xXAy1G0tUQZWH0lsPDruDNN&controls=0&modestbranding=1&showinfo=0&autohide=1&disablekb=1&rel=0&index=2"
+      frameborder="0" allowfullscreen>
+      </iframe>
+       <div class="logo2"></div>
+       <div class="logo1"></div> 
+     </div>
 
  <!-- navbar -->
     <nav class="navbar navbar-inverse " id="navBar" data-spy="affix" data-offset-top="543">
@@ -14,7 +17,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>      
           </button>
-          <a href="/index"><div><%= image_tag("LogoPart1.png", alt: "BikeProShop logo", height: 50, width: 50) %></div></a>
+          <a href="/index"><div><%= image_tag("Home/LogoPart1.png", alt: "BikeProShop logo", height: 50, width: 50) %></div></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav" id="navList">
@@ -48,7 +51,11 @@
       </div>
     </nav>
     
-
+<div class="container-fluid">
+  <div class="row">
+    
+  </div>
+</div>
 
 
 

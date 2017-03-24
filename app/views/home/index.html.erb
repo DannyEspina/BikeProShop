@@ -1,12 +1,12 @@
     <% provide(:title, "Home") %>
     
-  <div id="top" class="container-fluid">
-      <div class="row">
-          <div id="ytplayer"></div>
-          <div class="logo2"></div>
-          <div class="logo1"></div>
-        </div>
-      </div> 
+  <div  class="container-fluid" style="padding:0">
+    <iframe id="ytplayer"
+      src="https://www.youtube.com/embed/HereF6ee0Fc?autoplay=1&loop=1&list=PL1Qm-Ugsa8xXAy1G0tUQZWH0lsPDruDNN&controls=0&modestbranding=1&showinfo=0&autohide=1&disablekb=1&rel=0&"
+      frameborder="0" allowfullscreen>
+      </iframe>
+       <div class="logo2"></div>
+       <div class="logo1"></div> 
      </div>
      
     <!-- navbar -->
@@ -84,7 +84,7 @@
       </div>
       
       
-      <div id="mechanicBody" class="container-fluid headerContain ">
+      <div id="mechanicBody"class="container-fluid headerContain">
         <%= image_tag('Home/mechanicHeader.png', alt: 'mechanic header', class:'Header') %>
         <p></p>
          

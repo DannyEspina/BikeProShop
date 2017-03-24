@@ -1,45 +1,6 @@
 //fading dropdown menu when hover
 $(document).on('turbolinks:load', function() {
     
-// Loads the IFrame Player API code asynchronously.
-  var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/player_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  // Replaces the 'ytplayer' element with an <iframe> and
-  // YouTube player after the API code downloads.
-  var player;
-  window.onYouTubePlayerAPIReady = function() {
-      
-    player = new YT.Player('ytplayer', {
-        videoId: 'mHDWmUWLqo8', //first video that plays
-        playerVars: {
-          autoplay: 1, //automatically plays video when page loads
-          controls: 0, //removes controls
-          loop: 1,
-          modestbranding: 1, //remove youtube logo
-          showinfo: 0, //removes title
-          autohide: 1,
-          listType:'playlist',
-          list: 'PL1Qm-Ugsa8xXAy1G0tUQZWH0lsPDruDNN', //this will link to the youtube playlist. figure out the order there.
-          iv_load_policy: 3, // video annotations to not be shown by default
-          disablekb: 1, // disables keyboard controls
-          rel: 0, //don't show related videos
-         
-        },
-        events: {
-            'onReady': onPlayerReady
-            
-        }
-    }); // end of player delcaration 
-  }
-
-//sets the video quality
-function onPlayerReady(event){
-    
-    player.setPlaybackQuality('hd720') // sets quality
-}
 
 
 /*logo parallax

@@ -1,3 +1,43 @@
-// Place all the styles related to the repair controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$body-theme: hsl(34, 100%, 95%);
+
+#repairHeader1 {
+    position: relative;
+    background-image: url('Repairs/repairBackground.png');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    z-index: -99;
+}
+#repairHeader2 {
+    background-image: url('Repairs/repairTitle.png');
+    position: absolute;
+    top: 0%;
+    left: -11%;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    z-index: -2;
+}
+#repairHeader3 {
+    background-image: url('Repairs/WD-40.png');
+    position: absolute;
+    left: -2%;
+    top: 30%;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -1;
+ 
+}
+
+#repairInfo {
+    z-index: 99;
+    background: $body-theme;
+    height: 100%;
+}

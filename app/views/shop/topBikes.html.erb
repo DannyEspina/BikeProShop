@@ -1,10 +1,13 @@
 <% provide(:title, "Shop") %>
 
-<div class="container-fluid fix-contain">
-<header class="pageHeader">
-  <div id="shopHeader"></div>
-</header>
-</div>
+<div  class="container-fluid" style="padding:0">
+    <iframe id="ytplayer"
+      src="https://www.youtube.com/embed/HereF6ee0Fc?autoplay=1&loop=1&list=PL1Qm-Ugsa8xXAy1G0tUQZWH0lsPDruDNN&controls=0&modestbranding=1&showinfo=0&autohide=1&disablekb=1&rel=0&index=4"
+      frameborder="0" allowfullscreen>
+      </iframe>
+       <div class="logo2"></div>
+       <div class="logo1"></div> 
+     </div>
 
  <!-- navbar -->
     <nav class="navbar navbar-inverse " id="navBar" data-spy="affix" data-offset-top="543">
@@ -49,7 +52,10 @@
       </div>
     </nav>
     
-
+<div class="container-fluid headerContain fix-contain">
+        <br><br>
+        <%= image_tag('Shop/topTenTitle.png', alt: 'top 10 title', class:'Header') %>
+</div>
 <div id="topTen" class="container-fluid fix-contain">
         <div id="top1" class="row"></div>
         <div id="top2" class="row"></div>
