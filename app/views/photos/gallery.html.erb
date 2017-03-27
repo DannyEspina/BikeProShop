@@ -56,8 +56,8 @@
     <%= image_tag "Gallery/galleryTitle.png", alt:"gallery title", class:"galleryTitle" %>
   </div>
   <div class="row" style="margin: 0">
-    <div class="col-md-3">
-      <%= image_tag("Gallery/accounting.JPG", alt:"accounting", class:"galleryImage") %>
+    <div id="first" class="col-md-3">
+      <%= image_tag("Gallery/accounting.JPG", alt:"accounting", id:"hello", class:"galleryImage") %>
     </div>
     <div class="col-md-3">
       <%= image_tag("Gallery/bicycle1.JPG", alt:"bicycle", class:"galleryImage") %>
@@ -157,7 +157,7 @@
     
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
-      <img class="modal-content" id="img01">  
+      <%= image_tag("", id:"modalImg") %>
     </div>
 </div>
 

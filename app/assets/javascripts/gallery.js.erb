@@ -1,15 +1,16 @@
-
 window.onload = function () {
-    // Get the modal
+// Get the modal
 var modal = document.getElementById('myModal');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementsByClassName("galleryImage");
-var modalImg = document.getElementById("img01");
+var img = document.getElementById("first")
+var modalImg = document.getElementById("modalImg");
 img.onclick = function(){
     modal.style.display = "block";
-    modalImg.src = image_path('Gallery/tuneUp1.JPG');
+    modalImg.setAttribute("src", '<%= asset_path 'Shop/topTen6.JPG' %>')
+    
 }
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
