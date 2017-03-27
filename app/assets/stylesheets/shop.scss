@@ -16,110 +16,15 @@
     background-attachment: fixed;
     background-size: 100%;
 }
-#topTen{
-    
-    background-color: $body-theme;
+.col-md-6 {
+  padding: 0;
+  p {
+    color: black;
+    text-align: center;
+    padding: auto;
+  }
 }
-#top1 {
-  margin-top: 50px;
-  background-image: url(Shop/topTen1.JPG);
-    height: 680px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-
-}
-#top2 {
-
-  margin-top: 35px;
-  background-image: url(Shop/topTen2.JPG);
-    height: 680px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-
-}
-#top3 {
-  margin-top: 35px;
-
-  background-image: url(Shop/topTen3.JPG);
-  height: 680px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-
-}
-#top4 {
-  margin-top: 35px;
-
-  background-image: url(Shop/topTen4.JPG);
- height: 680px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-}
-#top5 {
-  margin-top: 35px;
-  background-image: url(Shop/topTen5.JPG);
- height: 680px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-}
-#top6 {
-  margin-top: 35px;
-
-  background-image: url(Shop/topTen6.JPG);
- height: 680px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-}
-#top7 {
-  margin-top: 35px;
-
-  background-image: url(Shop/topTen7.JPG);
- height: 680px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-}
-#top8 {
-  margin-top: 35px;
- 
-  background-image: url(Shop/topTen8.JPG);
- height: 680px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-}
-#top9 {
-  margin-top: 35px;
-
-
-  background-image: url(Shop/topTen9.JPG);
- height: 680px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-}
-#top10 {
-  margin-top: 35px;
-  margin-bottom: 50px;
-  background-image: url(Shop/topTen10.JPG);
-  height: 680px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-    
+.topTenPic, .row {
+  width: 100%;
+  margin-bottom: 10px;
 }

@@ -1,0 +1,73 @@
+
+
+$mineShaft: #333333;
+$gallery: #F0F0F0;
+$body-theme: hsl(34, 100%, 95%);
+
+.signUpTitle {
+  width: 30%;
+    position: relative;
+}
+form{
+  padding-top: 15%;
+  padding-bottom: 5%;
+  position: relative;
+  top: 100px;
+  text-align: center;
+  background: url('Login & Sign up/WD-40.JPG');
+  opacity: 0.9;
+  background-position: right center;
+  background-size: 138%;
+  background-repeat: no-repeat;
+}
+label {
+  opacity: 1;
+  display: block;
+  letter-spacing: 4px;
+  padding-top: 30px;
+  text-align: center;
+
+  .label-text {
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+    cursor: text;
+    font-size: 25px;
+    line-height: 20px;
+    text-transform: uppercase;
+    transform: translateY(-34px);
+    transition: all 0.3s;
+  }
+  input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid hsl(0, 0%, 85%);
+   
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+    font-size: 36px;
+    letter-spacing: -1px;
+    outline: 0;
+    padding: 5px 20px;
+    text-align: center;
+    transition: all 0.3s;
+    width: 200px;
+    
+    &:focus {
+      max-width: 100%;
+      width: 400px;
+    
+      & + .label-text {
+        color: $gallery;
+        font-size: 13px;
+        transform: translateY(-74px);
+      }
+    }
+    &:valid + .label-text {
+      font-size: 13px;
+      transform: translateY(-74px);
+    }
+  }
+}     
+

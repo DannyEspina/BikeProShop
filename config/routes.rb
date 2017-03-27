@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
-  get '/signUp', to: 'users#signUp'
-  get '/logIn', to: 'users#logIN'
+  get '/new', to: 'users#new'
+  get '/login', to: 'users#login'
   get '/topBikes', to: 'shop#topBikes'
   get '/parts', to: 'shop#parts'
   get '/accessories', to: 'shop#accessories'

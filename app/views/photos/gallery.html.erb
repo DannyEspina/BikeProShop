@@ -50,12 +50,134 @@
         </div>
       </div>
     </nav>
-    
-<div class="container-fluid">
-  <div class="row">
-    
+   
+<div class="container-fluid fix-contain" id="galleryBody">
+  <div class ="row">
+    <%= image_tag "Gallery/galleryTitle.png", alt:"gallery title", class:"galleryTitle" %>
   </div>
+  <div class="row" style="margin: 0">
+    <div class="col-md-3">
+      <%= image_tag("Gallery/accounting.JPG", alt:"accounting", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/bicycle1.JPG", alt:"bicycle", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/bicycle2.JPG", alt:"bicycle", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/bicycleRim2.JPG", alt:"bicycle rims", class:"galleryImage") %>
+    </div>
+  </div>
+  <div class="row" style="margin: 0">
+    <div class="col-md-3">
+      <%= image_tag("Gallery/gallery1.JPG", alt:"red bicycle", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/gallery2.JPG", alt:"a line up of bicycles", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/gallery3.JPG", alt:"a line up of bicycles", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/gallery4.JPG", alt:"a line up of bicycles", class:"galleryImage") %>
+    </div>
+  </div>
+
+  <div class="row" style="margin: 0">
+    <div class="col-md-3">
+      <%= image_tag("Gallery/gallery5.JPG", alt:"wall of kids bicycles", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/gallery6.JPG", alt:"line up of bicycles", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/gallery7.JPG", alt:"bicycle on stand", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/gallery8.JPG", alt:"bicycle finishing getting repaired", class:"galleryImage") %>
+    </div>
+  </div>
+  <div class="row" style="margin: 0">
+    <div class="col-md-3">
+      <%= image_tag("Gallery/gallery9.JPG", alt:"wall of kids bicycles", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/store2.JPG", alt:"the store from inside", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/galleryHeader.JPG", alt:"fat tire kid bicycle", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/headerBike1.JPG", alt:"a red bicycle", class:"galleryImage") %>
+    </div>
+  </div>
+  <div class="row" style="margin: 0">
+    <div class="col-md-3">
+      <%= image_tag("Gallery/inventory1.JPG", alt:"line up of bicycles", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/itemRack1.JPG", alt:"item rack", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/paintCans.JPG", alt:"paint cans", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/repair2.JPG", alt:"mechanic repairing", class:"galleryImage") %>
+    </div>
+    </div>
+  <div class="row" style="margin: 0">
+    <div class="col-md-3">
+      <%= image_tag("Gallery/repair5.JPG", alt:"mechanic repairing", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/repair8.JPG", alt:"mechanic repairing", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/showcase.JPG", alt:"glass table showcasing parts", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/smallParts.JPG", alt:"small parts", class:"galleryImage") %>
+    </div>
+    </div>
+  <div class="row" style="margin: 0">
+    <div class="col-md-3">
+      <%= image_tag("Gallery/store3.JPG", alt:"the store", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/tools1.JPG", alt:"mechanic's tools", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/tools5.JPG", alt:"bench grinder", class:"galleryImage") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag("Gallery/tuneUp1.JPG", alt:"repair bicycle for customers", class:"galleryImage") %>
+    </div>
+    </div>
+    
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">  
+    </div>
 </div>
 
 
-
+ <div class="container-fluid footer headerContain">
+   
+    <!-- Add font awesome icons -->
+    <div class="row">
+   <a href="https://www.facebook.com/bikeproshop864/?ref=aymt_homepage_panel" class=" fa fa-lg fa-facebook"></a>
+    <a href="#" class="fa fa-lg fa-instagram"></a>
+    </div>
+    <div class="footerLinks">
+    <ul>
+      <li><a href="shop/topBikes">Top 10 bicycles</a></li>
+      <li><a href="repair/repair">Repairs</a></li>
+      <li><a href="photos/gallery">Gallery</a></li>
+      
+    </ul>       
+  </div>          
+  <a href="#top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  </div>
