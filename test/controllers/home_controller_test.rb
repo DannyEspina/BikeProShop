@@ -6,7 +6,7 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
   # end
   
   test "should get home" do
-   get home_index_url
+   get index_url
    assert_response :success 
    assert_select "title", "Home | BikeProShop"
   end
