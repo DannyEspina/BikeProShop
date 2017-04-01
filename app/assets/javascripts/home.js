@@ -1,8 +1,7 @@
 //fading dropdown menu when hover
 $(document).on('turbolinks:load', function() {
     
-
-
+console.log(window.location.href.indexOf("/gallery")>-1);
 /*logo parallax
   *listening to a window scroll event */
    $(window).scroll(function(){
@@ -26,7 +25,7 @@ $(document).on('turbolinks:load', function() {
     // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#top']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
+    if (this.hash !== "" && window.location.href.indexOf("/index")>-1) {
       // Prevent default anchor click behavior
       event.preventDefault();
 

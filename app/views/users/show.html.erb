@@ -1,0 +1,12 @@
+
+<% provide(:title, @user.name) %>
+ <%= render 'shared/navbar' %>
+<div class="container-fluid showBody">
+  <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+<h1>
+  <%= gravatar_for @user %>
+  <%= @user.name %>
+</h1>
+</div>

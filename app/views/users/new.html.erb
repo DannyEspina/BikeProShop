@@ -1,24 +1,39 @@
-<div class ="container-fluid fix-contain">
-    
-    <form>
-        <%= image_tag("Login & Sign up/SignUpTitle.png", alt:"Sign up title", class:"signUpTitle") %>
-        <label>
-            <input type="text" required />
-            <div class="label-text">Email Address</div>
-        </label>
-        <label>
-            <input type="text" required />
-            <div class="label-text">Name</div>
-        </label>
-  <label>
-    <input type="text" required />
-    <div class="label-text">Password</div>
-  </label>
-  <label>
-    <input type="text" required />
-    <div class="label-text">Confirmation</div>
-  </label>
-  <button type="button" class="btn btn-warning btn-lg" style="margin-right: 10px;"><span class="glyphicon glyphicon-home"></span></button>
-  <button type="button" class="btn btn-success btn-lg">Submit</button>
-</form>
+<% provide(:title, "Sign up") %>
+<div class ="container-fluid fix-contain form">
+  
+  <%= image_tag("Login & Sign up/SignUpTitle.png", alt:"Sign up title", class:"signUpTitle") %>
+    <%= form_for(@user, url: new_path) do |f| %>
+      
+      <%= render 'shared/error_messages' %>
+      
+      <%= f.label :name do%>
+       
+        <%= f.text_field :name  %>
+        <div class="label-text">Name</div>
+        
+      <% end %>
+      
+      <%= f.label :email do%>
+       
+        <%= f.email_field :email  %>
+        <div class="label-text">Email</div>
+      <% end %>
+     
+      <%= f.label :password do%>
+      
+        <%= f.password_field  :password  %>
+        <div class="label-text">Password</div>
+      <% end %>
+      
+      <%= f.label :password_confirmation, "Confirmation" do%>
+        
+        <%= f.password_field  :password_confirmation %>
+        <div class="label-text">Confirmation</div>
+      <% end %>
+      
+      <button class="sumbit" type="button" onclick="window.location.href= '/index' "> Home</button>
+      <%= f.submit "Create my account", class:"sumbit" %>
+      
+    <% end %>
+
 </div>
