@@ -58,30 +58,19 @@
         </div>
     </div>
     <div id="map"></div>
-  
-  <div class="container-fluid footer headerContain">
-   
-    <!-- Add font awesome icons -->
     
-    <footer class="footerLinks">
-     
-        <ul>
-          <li><a href="shop/topBikes">Shop |</a></li>
-          <li><a href="repair/repair">Repairs |</a></li>
-          <li><a href="photos/gallery">Gallery</a></li>
-        </ul> 
-      <a href="https://www.facebook.com/bikeproshop864/?ref=aymt_homepage_panel" class="fa fa-facebook-official" 
-      style="text-decoration: none; font-size: 36px; margin-left: 47%"></a>
-      
-     <a href="#" class="fa fa-lg fa-instagram" style="text-decoration: none; font-size: 36px; 
-     margin-left: 1%;"></a>
-         
-
-  <a href="#top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  </footer>  
+    <!-- The Modal -->
+  <div id="myModal2" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+  <form id="loginForm">
+  <h1><%= image_tag("Login & Sign up/Login.png", alt:"Login", class:"loginImg") %></h1>
+    <input class="input" placeholder="Username" type="text" required="">
+    <input class="input" placeholder="Password" type="password" required="">
+  <button id="loginSumbit">Submit</button>
+ </form> 
   </div>
-  
+
+</div>
   
  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_Zu6BWfCvXHlP9HYcX0IeueqdToRVKRk&callback=myMap"></script>

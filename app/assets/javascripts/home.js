@@ -1,7 +1,17 @@
 //fading dropdown menu when hover
 $(document).on('turbolinks:load', function() {
     
-console.log(window.location.href.indexOf("/gallery")>-1);
+    var modal2 = document.getElementById("myModal2");
+    $("#login").click(function(){
+         modal2.style.display = "block";
+         
+        window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+    });
+
 /*logo parallax
   *listening to a window scroll event */
    $(window).scroll(function(){

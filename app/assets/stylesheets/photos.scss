@@ -45,15 +45,13 @@ $body-theme: hsl(34, 100%, 95%);
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+     -webkit-animation-name: smoothBack;
+    -webkit-animation-duration: 0.3s;
+    animation-name: smoothBack;
+    animation-duration: 0.3s;
 }
 
-/* Modal Content (image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
+
 
 
 
@@ -66,32 +64,27 @@ $body-theme: hsl(34, 100%, 95%);
 }
 
 @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0.2)} 
-    to {-webkit-transform:scale(1)}
+    from {-webkit-transform:scale(0);opacity:1} 
+    to {-webkit-transform:scale(1);opacity:1}
 }
 
 @keyframes zoom {
-    from {transform:scale(0.2)} 
-    to {transform:scale(1)}
+    from {transform:scale(0);opacity:1} 
+    to {transform:scale(1);opacity:1}
 }
 
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
+@-webkit-keyframes smoothBack{
+    from {opacity:0} 
+    to {opacity:1}
 }
 
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+@keyframes smoothBack {
+    from {opacity:0} 
+    to {opacity:1}
 }
+
+
+
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
