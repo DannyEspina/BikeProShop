@@ -10,14 +10,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+     log_in @user
      redirect_to @user
      flash[:success] = "Welcome to BikeProShop!"
     else
       render 'new'
     end
-  end
-  
-  def login
   end
   
   private

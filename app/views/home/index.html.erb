@@ -10,11 +10,10 @@
      </div>
      
     <%= render 'shared/navbar' %>
-                
+           
       <!--tune up section -->    
      
       <div class="container-fluid headerContain">
-        
              <%= image_tag("Home/tuneUpHeader.png", class: "Header")%>
         
          
@@ -58,19 +57,6 @@
         </div>
     </div>
     <div id="map"></div>
-    
-    <!-- The Modal -->
-  <div id="myModal2" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-  <form id="loginForm">
-  <h1><%= image_tag("Login & Sign up/Login.png", alt:"Login", class:"loginImg") %></h1>
-    <input class="input" placeholder="Username" type="text" required="">
-    <input class="input" placeholder="Password" type="password" required="">
-  <button id="loginSumbit">Submit</button>
- </form> 
-  </div>
-
-</div>
+  
   
  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_Zu6BWfCvXHlP9HYcX0IeueqdToRVKRk&callback=myMap"></script>

@@ -44,6 +44,11 @@ html {
    z-index: 4;
 }
 
+#navLogo, .loginImg1, #loginHeader, input::-webkit-input-placeholder, button {
+  font-family: 'roboto', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
 #ytplayer {
    position: relative;
    top: -100px;
@@ -81,6 +86,9 @@ html {
    transform: translatex(-30px);
 }
 
+#navLogo:hover {
+    transform: translateY(-3px);
+}
 .is-showing-logo {
    transition: all 0.8s ease-in-out;
    opacity: 1;
@@ -136,10 +144,7 @@ html {
 #iconsRight li a {
    color: white;
 }
-#iconsRight li {
-    position: relative;
-    right: 10px;
-}
+
 #login {
   color: white;
   font-size: 15px;
@@ -151,7 +156,7 @@ html {
    color: hsl(24, 98%, 16%);
 }
 
-#shopPanel {
+#shopPanel, #userPanel {
    @include shopPanelGradient;
    border: solid 1px hsl(240, 6%, 30%);
    border-top: solid 2px orange;
@@ -166,7 +171,6 @@ html {
        background-color: hsl(24, 98%, 40%);
    }
 }
-
 .Header {
    width: 60%;
    position: relative;
@@ -255,46 +259,56 @@ html {
    height: 500px;
 }
 
-/* Modal Content (image) */
+
 .modal-content {
     margin: auto;
     display: block;
     width: 260px;
     max-width: 700px;
-    
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.65s;
+    animation-name: animatetop;
+    animation-duration: 0.65s
    
 }
 
-h1, input::-webkit-input-placeholder, button {
-  font-family: 'roboto', sans-serif;
-  transition: all 0.3s ease-in-out;
+
+
+#loginHeader {
+  font-size: 30px;
+  position: relative;
+  top: 10px;
+  padding-bottom: 0;
+  
 }
 
-h1 {
-  height: 100px;
-  width: 100%;
-  font-size: 18px;
+#logintop {
+  height: 55px;
+  width: 258px;
+
   background: darken($bike-theme, 4%);
-  color: white;
-  line-height: 150%;
-  border-radius: 3px 3px 0 0;
-  box-shadow: 0 2px 5px 1px rgba(0,0,0,0.2);
-}
 
+
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 2px 5px 1px rgba(0,0,0,0.2);;
+}
 #loginForm {
   box-sizing: border-box;
-  width: 258px;
+ 
+  width: 260px;
   margin: -20px auto 0;
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
-  padding-bottom: 40px;
+  
   border-radius: 3px;
   h1 {
     box-sizing: border-box;
     padding: 20px;
+    
   }
 }
 
 .input {
+  z-index: 99;
   margin: 40px 25px;
   width: 200px;
   display: block;
@@ -302,11 +316,13 @@ h1 {
   padding: 10px 0;
   border-bottom: solid 1px $bike-theme;
   transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  font-size: 11px;
   background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $bike-theme 4%);
   background-position: -200px 0;
   background-size: 200px 100%;
   background-repeat: no-repeat;
-  color: darken($bike-theme, 20%);
+  color: black;
+  
   &:focus, &:valid {
     box-shadow: none;
     outline: none;
@@ -335,9 +351,55 @@ h1 {
     box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
   }
 }
-.loginImg {
-    height: 80px;
+.loginImg1 { 
+    z-index: 98;
+    height: 85px;
     position: relative;
-    left: 10px;
-    top: -15px;
+    left: 33%;
+    top: 17%;
+     &:hover { 
+    transform: translateY(-5px);
+     
+  }
+}
+
+#newUser {
+    margin: 0;
+    padding: 28px;
+    
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: 300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: 300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: -7%;
+    right: 2%;
+    color: black;
+    font-size: 38px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color:#383838;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#flash-notice {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    position: absolute;
 }
