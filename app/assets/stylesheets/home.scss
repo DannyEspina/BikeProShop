@@ -46,7 +46,7 @@ html {
 
 #navLogo, .loginImg1, #loginHeader, input::-webkit-input-placeholder, button {
   font-family: 'roboto', sans-serif;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.275s ease-in-out;
 }
 
 #ytplayer {
@@ -112,12 +112,14 @@ html {
    z-index: 98;
    border-radius: 0;
    @include navBarGradient;
+   transition: all 0.3s ease-in-out;
 }
 
 .navLightBar {
-   -webkit-box-shadow: inset 0 -8px 20px -5px orange; //Safari
-   -moz-box-shadow: inset 0 -8px 20px -5px orange; //Firefox
-   box-shadow: inset 0 -8px 20px -5px orange; //Standard syntax
+   -webkit-box-shadow: inset 0 -8px 20px -5px hsl(32, 100%, 60%); //Safari
+   -moz-box-shadow: inset 0 -8px 20px -5px hsl(32, 100%, 60%); //Firefox
+   box-shadow: inset 0 -8px 20px -5px hsl(32, 100%, 60%); //Standard syntax
+   transition: all 0.3s ease-in-out;
 }
 
 .navbar-toggle {
@@ -315,7 +317,7 @@ html {
   border: none;
   padding: 10px 0;
   border-bottom: solid 1px $bike-theme;
-  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.275s cubic-bezier(.64,.09,.08,1);
   font-size: 11px;
   background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $bike-theme 4%);
   background-position: -200px 0;

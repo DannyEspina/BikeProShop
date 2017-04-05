@@ -1,0 +1,19 @@
+.editForm{
+  height: 140%;
+  
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.editForm:before {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: url('Gallery/accounting.JPG');
+  opacity: 0.45;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

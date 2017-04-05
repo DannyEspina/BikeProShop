@@ -31,6 +31,8 @@ $body-theme: hsl(34, 100%, 95%);
     bottom: 8%;
     left: 20%;
     width: 60%;
+    transform: scale(1);
+    -webkit-transform: scale(1);
 }
 /* The Modal (background) */
 .modal {

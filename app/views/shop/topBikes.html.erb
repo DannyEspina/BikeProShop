@@ -2,159 +2,130 @@
 
 <div  class="container-fluid" style="padding:0">
     <iframe id="ytplayer"
-      src="https://www.youtube.com/embed/HereF6ee0Fc?autoplay=1&loop=1&list=PL1Qm-Ugsa8xXAy1G0tUQZWH0lsPDruDNN&controls=0&modestbranding=1&showinfo=0&autohide=1&disablekb=1&rel=0&index=4"
+      src="https://www.youtube.com/embed/HereF6ee0Fc?autoplay=1&loop=1&list=PL1Qm-Ugsa8xXAy1G0tUQZWH0lsPDruDNN&controls=0&modestbranding=1&showinfo=0&autohide=1&disablekb=1&rel=0&index=3"
       frameborder="0" allowfullscreen>
       </iframe>
        <div class="logo2"></div>
        <div class="logo1"></div> 
      </div>
 
- <!-- navbar -->
-    <nav class="navbar navbar-inverse " id="navBar" data-spy="affix" data-offset-top="543">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>      
-          </button>
-          <a href="/index"><div><%= image_tag("Home/LogoPart1.png", alt: "BikeProShop logo", height: 50, width: 50) %></div></a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav" id="navList">
-            <!-- dropdown for shop -->
-            <li id="shopDrop" class="dropdown">
-                    <a  class="dropdown-toggle" data-toggle="dropdown" href="#">Shop<span class="caret"></span></a>
-                      <ul id="shopPanel" class="dropdown-menu">
-                        <li class="dropdown-header">Bicycles</li>
-                        <li><a href="/topBikes">Top 10 Bicycles of the Week</a></li>
-                        <li><a href="#">New & Used bicycles</a></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Parts</li>
-                        <li><a href="/parts">Shop Parts</a></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Accessories</li>
-                        <li><a href="/accessories">Shop Accessories</a></li>
-                      </ul>
-                </li>
-                
-            <li><a href="/repair">Repairs</a></li>
-            <li><a href="/gallery">Gallery</a></li>
-            <li><a href="#mechanicBody">About The Mechanic</a></li>
-            <li><a href="#contactUs">Contact Us</a></li>
-            
-          </ul>
-          <ul id="iconsRight" class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <%= render 'shared/navbar' %>
     
 <div class="container-fluid headerContain fix-contain">
   <br>
   <%= image_tag('Shop/topTenTitle.png', alt: 'top 10 title', class:'Header') %>
   <br><br>
   <div class="row">
-    <div class="col-md-6">
-      <%= image_tag('Shop/topTen1.JPG', alt:"Top ten bicycle", class:'topTenPic') %>
+    <div class="col-md-6 zoomIn">
+      <%= image_tag('Shop/topTen1.JPG', alt:"Top ten bicycle", id:"1", class:'topTenPic') %>
+      <div class="caption"><strong>Learn More</strong></div>
+      <div class="bicycleInfo" id="info1">
+        <p>[Type of bicycle 1]</p>
+        <p>[Specs of bicycle]</p>
+        <p>[price]</p>
+      </div>
     </div>
-    <div class="col-md-6">
-      <p>[Type of bicycle]</p>
+    
+    <div class="col-md-6 zoomIn">
+     
+     
+      <div class="bicycleInfo" id="info2">
+        <p>[Type of bicycle 2]</p>
+        <p>[Specs of bicycle]</p>
+        <p>[price]</p>
+      </div>
+      <%= image_tag('Shop/topTen2.JPG', alt:"Top ten bicycle", id:"2",class:'topTenPic') %>
+      <div class="caption"><strong>Learn More</strong></div>
+    </div>
+    
+  </div>
+  <div class="row">
+    <div class="col-md-6 zoomIn">
+      <%= image_tag('Shop/topTen3.JPG', alt:"Top ten bicycle", id:"3",class:'topTenPic') %>
+      <div class="caption"><strong>Show More</strong></div>
+      <div class="bicycleInfo" id="info3">
+        <p>[Type of bicycle 2]</p>
+        <p>[Specs of bicycle]</p>
+        <p>[price]</p>
+      </div>
+    </div>
+    
+    <div class="col-md-6 zoomIn">
+      <%= image_tag('Shop/topTen4.JPG', alt:"Top ten bicycle", id:"4",class:'topTenPic') %>
+      <div class="caption"><strong>Show More</strong></div>
+      <div class="bicycleInfo" id="info4">
+        <p>[Type of bicycle 2]</p>
+        <p>[Specs of bicycle]</p>
+        <p>[price]</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6 zoomIn">
+      <%= image_tag('Shop/topTen5.JPG', alt:"Top ten bicycle", id:"5",class:'topTenPic') %>
+      <div class="caption"><strong>Show More</strong></div>
+      <div class="bicycleInfo" id="info5">
+      <p>[Type of bicycle 2]</p>
       <p>[Specs of bicycle]</p>
       <p>[price]</p>
+    </div>
+    </div>
+    
+    <div class="col-md-6 zoomIn">
+      <%= image_tag('Shop/topTen6.JPG', alt:"Top ten bicycle", id:"6",class:'topTenPic') %>
+      <div class="caption"><strong>Show More</strong></div>
+      <div class="bicycleInfo" id="info6">
+        <p>[Type of bicycle 2]</p>
+        <p>[Specs of bicycle]</p>
+        <p>[price]</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6 zoomIn">
+      <%= image_tag('Shop/topTen7.JPG', alt:"Top ten bicycle", id:"7",class:'topTenPic') %>
+      <div class="caption"><strong>Show More</strong></div>
+      <div class="bicycleInfo" id="info7">
+      <p>[Type of bicycle 2]</p>
+      <p>[Specs of bicycle]</p>
+      <p>[price]</p>
+    </div>
+    </div>
+    <div class="col-md-6 zoomIn">
+      <%= image_tag('Shop/topTen8.JPG', alt:"Top ten bicycle", id:"8",class:'topTenPic') %>
+      <div class="caption"><strong>Show More</strong></div>
+      <div class="bicycleInfo" id="info8">
+      <p>[Type of bicycle 2]</p>
+      <p>[Specs of bicycle]</p>
+      <p>[price]</p>
+    </div>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6">
-      <%= image_tag('Shop/topTen2.JPG', alt:"Top ten bicycle", class:'topTenPic') %>
-    </div>
-    <div class="col-md-6">
-      <p>[Type of bicycle]</p>
+    <div class="col-md-6 zoomIn">
+      <%= image_tag('Shop/topTen9.JPG', alt:"Top ten bicycle", id:"9",class:'topTenPic') %>
+      <div class="caption"><strong>Show More</strong></div>
+      <div class="bicycleInfo" id="info9">
+      <p>[Type of bicycle 2]</p>
       <p>[Specs of bicycle]</p>
       <p>[price]</p>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <%= image_tag('Shop/topTen3.JPG', alt:"Top ten bicycle", class:'topTenPic') %>
     </div>
-    <div class="col-md-6">
-      <p>[Type of bicycle]</p>
+    <div class="col-md-6 zoomIn">
+      <%= image_tag('Shop/topTen10.JPG', alt:"Top ten bicycle", id:"10",class:'topTenPic') %>
+      <div class="caption"><strong>Show More</strong></div>
+      <div class="bicycleInfo" id="info10">
+      <p>[Type of bicycle 21212]</p>
       <p>[Specs of bicycle]</p>
       <p>[price]</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <%= image_tag('Shop/topTen4.JPG', alt:"Top ten bicycle", class:'topTenPic') %>
-    </div>
-    <div class="col-md-6">
-      <p>[Type of bicycle]</p>
-      <p>[Specs of bicycle]</p>
-      <p>[price]</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <%= image_tag('Shop/topTen5.JPG', alt:"Top ten bicycle", class:'topTenPic') %>
-    </div>
-    <div class="col-md-6">
-      <p>[Type of bicycle]</p>
-      <p>[Specs of bicycle]</p>
-      <p>[price]</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <%= image_tag('Shop/topTen6.JPG', alt:"Top ten bicycle", class:'topTenPic') %>
-    </div>
-    <div class="col-md-6">
-      <p>[Type of bicycle]</p>
-      <p>[Specs of bicycle]</p>
-      <p>[price]</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <%= image_tag('Shop/topTen7.JPG', alt:"Top ten bicycle", class:'topTenPic') %>
-    </div>
-    <div class="col-md-6">
-      <p>[Type of bicycle]</p>
-      <p>[Specs of bicycle]</p>
-      <p>[price]</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <%= image_tag('Shop/topTen8.JPG', alt:"Top ten bicycle", class:'topTenPic') %>
-    </div>
-    <div class="col-md-6">
-      <p>[Type of bicycle]</p>
-      <p>[Specs of bicycle]</p>
-      <p>[price]</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <%= image_tag('Shop/topTen9.JPG', alt:"Top ten bicycle", class:'topTenPic') %>
-    </div>
-    <div class="col-md-6">
-      <p>[Type of bicycle]</p>
-      <p>[Specs of bicycle]</p>
-      <p>[price]</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <%= image_tag('Shop/topTen10.JPG', alt:"Top ten bicycle", class:'topTenPic') %>
-    </div>
-    <div class="col-md-6">
-      <p>[Type of bicycle]</p>
-      <p>[Specs of bicycle]</p>
-      <p>[price]</p>
+      </div>
     </div>
   </div>
 </div>
 
+ <div id="myModal3" class="modal3">
+      <%= image_tag("", id:"shopModalImg") %>
+      <div id="infoBox"><div id="organeTop"></div></div>
+  </div>

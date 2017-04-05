@@ -1,5 +1,5 @@
   $body-theme: hsl(34, 100%, 95%);
-
+  $bike-theme: hsl(24, 99%, 52%); 
   .fix-contain {
             padding:0; 
             margin:0;
@@ -24,7 +24,138 @@
     padding: auto;
   }
 }
-.topTenPic, .row {
-  width: 100%;
-  margin-bottom: 10px;
+.row {
+  margin: 0;
 }
+.topTenPic{
+  
+  width: 100%;
+  transform: scale(1);
+  transition: all 0.45s ease-in-out;
+}
+
+.zoomIn {
+  cursor: pointer;
+  border: 2px solid black;
+  overflow: hidden;
+  background-color: black;
+  transition: all 0.45s ease-in-out;
+  &:hover{
+    .topTenPic{
+    transform: scale(1.05);
+    opacity: 0.7;
+    transition: all 0.45s ease-in-out;
+    }
+    .caption{
+    opacity: 0.9;
+    transition: all 0.45s ease-in-out;
+    }
+}
+}
+.caption{
+  color: white;
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 5px;
+  left: 42%;
+  bottom: 45%;
+  font-size: 20px;
+  font-family: 'roboto', sans-serif;
+  opacity: 0;
+  transition: all 0.45s ease-in-out;
+}
+
+#shopModalImg {
+    position: relative;
+    top: 5%;
+    left: -5%;
+    width: 60%;
+    z-index: 99;
+    transform: scale(0.8);
+}
+/* The Modal (background) */
+.modal3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.bicycleInfo {
+  background: $body-theme;
+  height: 391px;
+  z-index: 97;
+  width: 48%;
+  font-size: 25px;
+  font-family: 'roboto', sans-serif;
+
+  display: none;
+  position: absolute;
+  top: 0;
+  border: 1px solid black;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+#infoBox{
+  position: absolute;
+    top: 24%;
+    left: 1%;
+    width: 100%;
+    z-index: 97;
+    opacity: 0;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  p:first-child{
+    margin-top: 60px;
+  }
+}
+#organeTop {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 98;
+
+  height: 49px;
+  width: 47.95%;
+  background: darken($bike-theme, 4%);
+  border-top-right-radius: 3px;
+  box-shadow: 0 2px 5px 1px rgba(0,0,0,0.2);
+}
+
+
+
+/* Add Animation */
+#shopModalImg {    
+    -webkit-animation-name: zoom1;
+    -webkit-animation-duration: 0.4s;
+    animation-name: zoom1;
+    animation-duration: 0.4s;
+}
+
+@-webkit-keyframes zoom1 {
+    from {-webkit-transform:scale(0);opacity:1} 
+    to {-webkit-transform:scale(0.8);opacity:1}
+}
+
+@keyframes zoom1 {
+    from {transform:scale(0);opacity:1} 
+    to {transform:scale(0.8);opacity:1}
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    #shopModalImg {
+        width: 100%;
+    }
+    .bicycleInfo {
+      height: 200px;
+    }
+}
+

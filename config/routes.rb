@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get '/new', to: 'users#new'
   post '/new',  to: 'users#create'
+  get '/edit', to: 'users#edit'
   
   get '/topBikes', to: 'shop#topBikes'
   get '/parts', to: 'shop#parts'
