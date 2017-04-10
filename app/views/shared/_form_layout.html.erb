@@ -1,4 +1,4 @@
-<%= form_for(@user, url: new_path) do |f| %>
+<%= form_for(@user, url: @path) do |f| %>
       
       <%= render 'shared/error_messages' %>
       
@@ -21,6 +21,8 @@
         <div class="label-text">Password</div>
       <% end %>
       
+      
+    
       <%= f.label :password_confirmation, "Confirmation" do%>
         
         <%= f.password_field  :password_confirmation %>
@@ -28,6 +30,6 @@
       <% end %>
       
       <button class="sumbit" type="button" onclick="window.location.href= '/index' "> Home</button>
-      <%= f.submit "Submit", class:"sumbit" %>
+      <%= f.submit yield(:button_text), class:"sumbit" %>
       
     <% end %>

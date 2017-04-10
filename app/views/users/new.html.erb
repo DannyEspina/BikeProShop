@@ -1,7 +1,7 @@
 <% provide(:title, "Sign up") %>
-
+<% provide(:button_text, 'Create my account') %>
 <div class ="container-fluid fix-contain form">
   
   <%= image_tag("Login & Sign up/SignUpTitle.png", alt:"Sign up title", class:"signUpTitle") %>
-    <%= render "shared/form_layout" %>
+    <%= render "shared/form_layout", path: new_path %>
 </div>

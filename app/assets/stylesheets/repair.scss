@@ -36,8 +36,8 @@ $body-theme: hsl(34, 100%, 95%);
  
 }
 
-#repairInfo {
-    z-index: 99;
+.divContain{
+    z-index: 100;
     background: $body-theme;
     height: 100%;
 }

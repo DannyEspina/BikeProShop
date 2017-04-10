@@ -27,34 +27,7 @@
 </head>
 <body>
   <%= render 'shared/login_error' %> 
-<%= yield %>
-<%= debug(params) if Rails.env.development? %>
-  
-    <!-- The Modal -->
-  <div id="myModal2" class="modal">
-  
-  <!-- Modal content -->
-  <div class="modal-content">
-    
-  <%= form_for :session, url: index_path, :html =>{ id: "loginForm" } do %>
-  <div id="logintop">
-    <!-- The Close Button -->
-  <span class="close" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
-    <%= image_tag("Home/LogoPart1.png", alt:"logo", class:"loginImg1") %>
-  </div>
-  <input class="input" id="session_email" placeholder="Email"
-         name="session[email]" type="text" required=""/>
-
-  <input class="input" id="session_password" name="session[password]" placeholder="Password"
-         type="password" required=""/>
-  
-  <button id="loginSumbit">Submit</button>
-  <p id="newUser">New user? <a href="/new">Create an account</a></p>
-  <% end %>
-  
-  
-  </div>
-
-</div>
+  <%= yield %>
+  <%= render 'shared/login_modal'%>
 </body>
 </html>

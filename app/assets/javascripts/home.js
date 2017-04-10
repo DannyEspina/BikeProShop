@@ -2,7 +2,7 @@
 $(document).on('turbolinks:load', function() {
 
 
-
+    $('.dropdown-toggle').removeClass('active');
     /*logo parallax
      *listening to a window scroll event */
     $(window).scroll(function() {

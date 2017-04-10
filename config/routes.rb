@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
   
   root 'home#index'
-
+  get '/edit', to: 'users#edit'
   get '/new', to: 'users#new'
   post '/new',  to: 'users#create'
-  get '/edit', to: 'users#edit'
-  
+ 
   get '/topBikes', to: 'shop#topBikes'
   get '/parts', to: 'shop#parts'
   get '/accessories', to: 'shop#accessories'
   get '/repair', to: 'repair#repair'
   get '/gallery', to:'photos#gallery'
-  
   get '/index', to: 'home#index'
   post '/index',   to: 'home#create'
   delete '/logout',  to: 'home#destroy'

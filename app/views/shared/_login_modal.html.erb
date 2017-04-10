@@ -1,0 +1,30 @@
+  
+    <!-- The Modal -->
+  <div id="myModal2" class="modal">
+  
+  <!-- Modal content -->
+  <div class="modal-content">
+    
+  <%= form_for :session, url: index_path, :html =>{ id: "loginForm" } do |f| %>
+  <div id="logintop">
+    <!-- The Close Button -->
+  <span class="close" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
+    <%= image_tag("Home/LogoPart1.png", alt:"logo", class:"loginImg1") %>
+  </div>
+  <input class="input" id="session_email" placeholder="Email"
+         name="session[email]" type="text" required=""/>
+
+  <input class="input" id="session_password" name="session[password]" placeholder="Password"
+         type="password" required=""/>
+    <%= f.label :remember_me, class: "checkbox inline" do %>
+          <%= f.check_box :remember_me %>
+          <span>Remember me on this computer</span>
+        <% end %>
+  <button id="loginSumbit">Submit</button>
+  <p id="newUser">New user? <a href="/new">Sign up now!</a></p>
+  <% end %>
+  
+  
+  </div>
+
+</div>

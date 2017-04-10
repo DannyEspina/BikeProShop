@@ -120,3 +120,20 @@ label {
     left: 25%;
   }
 }
+
+
+.checkbox {
+  margin-top: -25px;
+  margin-bottom: 15px;
+  span {
+    margin-left: 18px;
+    font-weight: normal;
+    font-family: 'roboto', sans-serif;
+    font-size: 11px;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: -2px;
+}
