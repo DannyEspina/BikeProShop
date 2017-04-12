@@ -1,5 +1,5 @@
 .editForm{
-  height: 110%;
+  height: 130%;
   
   text-align: center;
   position: relative;
@@ -16,4 +16,19 @@
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.gravatar_edit{
+  margin: auto;
+  padding: 20px;
+  img {
+    width: 16%;
+    border-radius: 115px;
+  }
+}
+
+.updateTitle{
+   width: 40%;
+  margin-top: 20px;
+
 }

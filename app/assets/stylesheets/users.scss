@@ -1,9 +1,16 @@
 $body-theme: hsl(34, 100%, 95%);
 
+.userTitle {
+   width: 35%;
+    position: relative;
+    left: 30%;
+    padding: 20px;
+}
 .userContain{
-    z-index: 100;
+
+    z-index: 200;
     background: $body-theme;
-    height: 403%;
+
 }
 
 .users {
@@ -14,4 +21,8 @@ $body-theme: hsl(34, 100%, 95%);
     padding: 20px;
     border-bottom: 1px solid gray;
   }
+}
+
+.titleContain{
+    background: $body-theme;
 }

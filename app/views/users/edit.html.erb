@@ -3,15 +3,16 @@
 
 
 <div class ="container-fluid fix-contain editForm">
-<%= image_tag("Login & Sign up/Update.png", alt:"update title", class:"signUpTitle") %>
+<%= image_tag("Login & Sign up/Update.png", alt:"update title", class:"updateTitle") %>
 
-
+<div class="gravatar_edit">
+      <%= gravatar_for @user, size: 600 %>
+      
+    </div>
+    
 <%= render "shared/form_layout", path: edit_path %>
 
-<br><br>
-    <div class="gravatar_edit">
-      <%= gravatar_for @user %>
-      <a href="http://gravatar.com/emails" target="_blank">change</a>
-    </div>  
+
+      
 
 </div>
