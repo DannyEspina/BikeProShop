@@ -18,13 +18,11 @@ $body-theme: hsl(34, 100%, 95%);
     padding: 10px;
 }
 .profileTitle{
-     width: 35%;
-    margin: auto;
+     width: 32%;
+    margin-left: 25%;
     padding: 10px;
 }
-.row {
-    height: 100%;
-}
+
 .users {
   list-style: none;
   margin: 0;
@@ -37,4 +35,12 @@ $body-theme: hsl(34, 100%, 95%);
 
 .titleContain{
     background: $body-theme;
+}
+
+.noPost {
+    width: 45%;
+    margin-top: 30px;
+    margin-left: 20%;
+
+    opacity: 0.8;
 }

@@ -1,6 +1,6 @@
 
 <% provide(:title, @user.name) %>
- <%= render 'shared/navbar' %>
+ <%= render 'shared/navbar_no_yt' %>
 <div class="container-fluid showBody">
   <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
@@ -9,18 +9,23 @@
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
-        <%= gravatar_for @user %>
+        <%= link_to gravatar_for(current_user, size: 100), current_user %>
         <%= @user.name %>
       </h1>
       </section>
   </aside>
   <div class="col-md-8">
+     <%= image_tag('Users/Profile.png', alt:'profile title', class: 'profileTitle') %>
+     
     <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">
         <%= render @microposts %>
       </ol>
       <%= will_paginate @microposts %>
+      <% else %>
+      <br>
+     <%= image_tag('Users/noPost.png', alt:"no post", class:"noPost") %>
     <% end %>
   </div>
 </div>

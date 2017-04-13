@@ -1,43 +1,8 @@
 $body-theme: hsl(34, 100%, 95%);
         
-#repairHeader1 {
-    position: relative;
-    background-image: url('Repairs/repairBackground.png');
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
-    z-index: -99;
-}
-#repairHeader2 {
-    background-image: url('Repairs/repairTitle.png');
-    position: absolute;
-    top: 0%;
-    left: -11%;
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    z-index: -2;
-}
-#repairHeader3 {
-    background-image: url('Repairs/WD-40.png');
-    position: absolute;
-    left: -2%;
-    top: 30%;
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    z-index: -1;
- 
-}
 
 .divContain{
-    z-index: 100;
+    
     background: $body-theme;
-    height: 100%;
+    min-height: 300px;
 }
