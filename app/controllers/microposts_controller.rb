@@ -1,7 +1,8 @@
 class MicropostsController < ApplicationController
      before_action :logged_in_user, only: [:create, :destroy, :blog]
      before_action :correct_user,   only: :destroy
-  def blog
+     
+  def index
     @micropost = current_user.microposts.build
     @feed_items = current_user.feed.paginate(page: params[:page])
   end
@@ -9,15 +10,14 @@ class MicropostsController < ApplicationController
   def create
         @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
-      redirect_to blog_url
+      redirect_to microposts_path
       flash[:success] = "Micropost created!"
-      
     else
       @feed_items =  current_user.feed.paginate(page: params[:page])
-      render 'blog'
+      render action: "index"
     end
   end
-
+  
   def destroy
       @micropost.destroy
     flash[:success] = "Micropost deleted"

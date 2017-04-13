@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get '/new', to: 'users#new'
   post '/new',  to: 'users#create'
  
-  get '/blog', to: 'microposts#blog'
+  
+  
   get '/topBikes', to: 'shop#topBikes'
   get '/parts', to: 'shop#parts'
   get '/accessories', to: 'shop#accessories'
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'home#destroy'
   
   resources :users
-  resources :microposts,          only: [:create, :destroy]
+  resources :microposts,          only: [:index, :create, :destroy]
   
   
   # The priority is based upon order of creation: first created -> highest priority.
