@@ -123,7 +123,6 @@ label {
 
 
 .checkbox {
-  margin-top: -25px;
   margin-bottom: 15px;
   span {
     margin-left: 18px;
@@ -136,4 +135,22 @@ label {
 #session_remember_me {
   width: auto;
   margin-left: -2px;
+}
+
+#session_password {
+  margin-bottom: 10px;
+}
+
+#forgotPass {
+  color: #0645AD;
+  margin-left: 25px;
+  font-weight: normal;
+  font-family: 'roboto', sans-serif;
+  font-size: 12px;
+  padding-bottom: 20px;
+  
+}
+
+#newUser{
+  padding-top: 15px;
 }
