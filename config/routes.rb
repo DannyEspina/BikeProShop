@@ -4,9 +4,6 @@ Rails.application.routes.draw do
   get '/edit', to: 'users#edit'
   get '/new', to: 'users#new'
   post '/new',  to: 'users#create'
- 
-  
-  
   get '/topBikes', to: 'shop#topBikes'
   get '/parts', to: 'shop#parts'
   get '/accessories', to: 'shop#accessories'
@@ -17,6 +14,7 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'home#destroy'
   
   resources :users
+  resources :account_activations, only: [:edit]
   resources :microposts,          only: [:index, :create, :destroy]
   
   

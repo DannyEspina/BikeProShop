@@ -10,7 +10,7 @@ $body-theme: hsl(34, 100%, 95%);
     min-height: 800px;
     z-index: 100;
     background: $body-theme;
-
+    box-shadow: 0px 6px 15px #888888;
 }
 .feedTitle{
     width: 60%;
@@ -35,6 +35,7 @@ $body-theme: hsl(34, 100%, 95%);
 
 .titleContain{
     background: $body-theme;
+   
 }
 
 .noPost {

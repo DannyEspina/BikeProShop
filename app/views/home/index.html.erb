@@ -27,7 +27,17 @@
           <p>Tell us your problems and we'll do the rest!
               If the repair isn't too severe you can walk around the Flea market and pick up your bicyle after you're done!
               Since we are at the flea market you won't find a better price anywhere else!
-            For more information on our list of services <i><a href="/repair">Click Here</a></i></p> 
+            For more information on our list of services <span>
+            <div class="cont">
+                <a href="/repair"> Click Here</a>
+                <svg id="fancyBtn" height="40" width="120">
+                  <% (1..120).each do |i| %>
+                    <line id="line" x1=<%=i%> y1="0" x2=<%=i%> y2="40"/>
+                  <% end %>
+                </svg>
+              </div>
+              </span>
+</p>
         <!-- have a gear picture rotating when hovered here --> 
      </div> <!-- end tune info row --> 
       </div> <!-- container-fluid end --> 
@@ -57,6 +67,6 @@
         </div>
     </div>
     <div id="map"></div>
-  
+  <%= render 'shared/footer' %>
   
  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_Zu6BWfCvXHlP9HYcX0IeueqdToRVKRk&callback=myMap"></script>
