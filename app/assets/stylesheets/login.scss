@@ -28,25 +28,25 @@ $body-theme: hsl(34, 100%, 90%);
 }
 
 label {
-
+  
   display: block;
   letter-spacing: 1px;
   text-align: center;
 
- .label-text {
-    position: relative;
-    top: -99px;
-    color: white;
-    cursor: text;
-    font-size: 28px;
-    margin-top: 30px;
-    
-    line-height: 20px;
-    text-transform: uppercase;
-    transition: all 0.3s;
-    
-    -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: black;
+  .label-text {
+      position: relative;
+      top: -99px;
+      color: white;
+      cursor: text;
+      font-size: 28px;
+      margin-top: 30px;
+      
+      line-height: 20px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
  }
   input {
   

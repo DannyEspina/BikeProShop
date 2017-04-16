@@ -2,9 +2,8 @@
 <% provide(:title, @user.name) %>
  <%= render 'shared/navbar_no_yt' %>
 <div class="container-fluid showBody">
-  <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
+  
+ <%= render 'shared/flash' %>
 <div class="row ">
   <aside class="col-md-4">
     <section class="user_info">

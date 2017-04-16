@@ -1,7 +1,33 @@
 // 'use strict';
 
+ $(document).on('turbolinks:load', function() {
+     
+ // Design / Dribbble by:
+// Adam Whitcroft
+// URL: https://dribbble.com/shots/969445-The-Double-Delete
+
+$("button").click(function(){
+    if($(this).hasClass("confirm")){
+        $(this).addClass("done");
+        $("#spanDelete").text("Deleted");
+        $("#linkDelete").click();
+    } else {
+        $(this).addClass("confirm");
+        $("#spanDelete").text("Are you sure?");
+    }
+});
+
+// Reset
+$("button").on('mouseout', function(){
+    if($(this).hasClass("confirm") || $(this).hasClass("done")){
+        setTimeout(function(){
+            $("button").removeClass("confirm").removeClass("done");
+            $("#spanDelete").text("Delete");
+        }, 3000);
+    }
+});
 // var docStyle = document.documentElement.style;
-// var aElem = document.querySelector('a');
+// var aElem = document.getElementById("postBlog");
 // var boundingClientRect = aElem.getBoundingClientRect();
 
 // aElem.onmousemove = function (e) {
@@ -11,12 +37,13 @@
 
 //     var xc = boundingClientRect.width / 2;
 //     var yc = boundingClientRect.height / 2;
-
+    
 //     var dx = x - xc;
 //     var dy = y - yc;
-
+   
 //     docStyle.setProperty('--rx', dy / -1 + 'deg');
 //     docStyle.setProperty('--ry', dx / 10 + 'deg');
+    
 // };
 
 // aElem.onmouseleave = function (e) {
@@ -35,3 +62,4 @@
 
 //     docStyle.setProperty('--tz', '-12px');
 // };
+});

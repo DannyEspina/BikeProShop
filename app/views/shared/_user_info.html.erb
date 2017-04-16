@@ -1,6 +1,6 @@
 
-<%= link_to gravatar_for(current_user, size: 100), current_user %>
-<h1><%= current_user.name %></h1>
-
-<span><%= link_to "view my profile", current_user %></span>
+<h1 style="font-family: 'Signika Negative', sans-serif;">
+    <%= link_to gravatar_for(current_user, size: 150), current_user, id: "gravPost"%>
+    <%= current_user.name %>
+</h1>
 <span><%= pluralize(current_user.microposts.count, "micropost") %></span>
