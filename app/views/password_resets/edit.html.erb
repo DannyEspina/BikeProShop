@@ -1,7 +1,6 @@
 <% provide(:title, 'Reset password') %>
-<%= render 'shared/navbar_no_yt' %>
 <div class ="container-fluid fix-contain resetForm">
-<h1>Password reset</h1>
+<%= image_tag("Users/passReset", alt:"password reset", id: "passReset")
 <%= render 'shared/flash' %>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -19,7 +18,7 @@
         <%= f.password_field :password_confirmation %>
         <div class="label-text">Confirmation</div>
       <% end %>
-      <%= f.submit "Update password", class: "btn btn-primary" %>
+      <%= f.submit "Update password", class: "submit" %>
     <% end %>
   </div>
 </div>
