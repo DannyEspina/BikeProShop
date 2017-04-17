@@ -1,7 +1,7 @@
 <% provide(:title, "Shop") %>
 
 <div  class="container-fluid" style="padding:0">
-  <%= render 'shared/flash' %>
+  
     <iframe id="ytplayer"
       src="https://www.youtube.com/embed/HereF6ee0Fc?autoplay=1&loop=1&list=PL1Qm-Ugsa8xXAy1G0tUQZWH0lsPDruDNN&controls=0&modestbranding=1&showinfo=0&autohide=1&disablekb=1&rel=0&index=3"
       frameborder="0" allowfullscreen>
@@ -13,6 +13,7 @@
   <%= render 'shared/navbar' %>
     
 <div class="container-fluid headerContain fix-contain">
+  <%= render 'shared/flash' %>
   <br>
   <%= image_tag('Shop/topTenTitle.png', alt: 'top 10 title', class:'Header') %>
   <br><br>
@@ -21,31 +22,33 @@
       <%= image_tag('Shop/topTen1.JPG', alt:"Top ten bicycle", id:"1", class:'topTenPic') %>
       <div class="caption"><strong>Learn More</strong></div>
       <div class="bicycleInfo" id="info1">
-        <p>[Type of bicycle 1]</p>
+        <p>Schwinn Mountain Bike</p>
         <p>[Specs of bicycle]</p>
         <p>[price]</p>
+
       </div>
     </div>
     
     <div class="col-md-6 zoomIn">
-     
-     
+     <%= image_tag('Shop/topTen2.JPG', alt:"Top ten bicycle", id:"2",class:'topTenPic') %>
+     <div class="caption"><strong>Learn More</strong></div>
       <div class="bicycleInfo" id="info2">
-        <p>[Type of bicycle 2]</p>
+        <p>Mongoose Mountain Bike</p>
         <p>[Specs of bicycle]</p>
         <p>[price]</p>
+        
       </div>
-      <%= image_tag('Shop/topTen2.JPG', alt:"Top ten bicycle", id:"2",class:'topTenPic') %>
-      <div class="caption"><strong>Learn More</strong></div>
+      
+      
     </div>
     
   </div>
   <div class="row">
     <div class="col-md-6 zoomIn">
       <%= image_tag('Shop/topTen3.JPG', alt:"Top ten bicycle", id:"3",class:'topTenPic') %>
-      <div class="caption"><strong>Show More</strong></div>
+      <div class="caption"><strong>Learn More</strong></div>
       <div class="bicycleInfo" id="info3">
-        <p>[Type of bicycle 2]</p>
+        <p>Mongoose Beach Bike</p>
         <p>[Specs of bicycle]</p>
         <p>[price]</p>
       </div>
@@ -53,9 +56,9 @@
     
     <div class="col-md-6 zoomIn">
       <%= image_tag('Shop/topTen4.JPG', alt:"Top ten bicycle", id:"4",class:'topTenPic') %>
-      <div class="caption"><strong>Show More</strong></div>
+      <div class="caption"><strong>Learn More</strong></div>
       <div class="bicycleInfo" id="info4">
-        <p>[Type of bicycle 2]</p>
+        <p>Mongoose Fat Tire Bike</p>
         <p>[Specs of bicycle]</p>
         <p>[price]</p>
       </div>
@@ -65,9 +68,9 @@
   <div class="row">
     <div class="col-md-6 zoomIn">
       <%= image_tag('Shop/topTen5.JPG', alt:"Top ten bicycle", id:"5",class:'topTenPic') %>
-      <div class="caption"><strong>Show More</strong></div>
+      <div class="caption"><strong>Learn More</strong></div>
       <div class="bicycleInfo" id="info5">
-      <p>[Type of bicycle 2]</p>
+      <p>Mongoose Fat Tire Bike</p>
       <p>[Specs of bicycle]</p>
       <p>[price]</p>
     </div>
@@ -75,9 +78,9 @@
     
     <div class="col-md-6 zoomIn">
       <%= image_tag('Shop/topTen6.JPG', alt:"Top ten bicycle", id:"6",class:'topTenPic') %>
-      <div class="caption"><strong>Show More</strong></div>
+      <div class="caption"><strong>Learn More</strong></div>
       <div class="bicycleInfo" id="info6">
-        <p>[Type of bicycle 2]</p>
+        <p>Monterey Adult Tricycle</p>
         <p>[Specs of bicycle]</p>
         <p>[price]</p>
       </div>
@@ -87,18 +90,18 @@
   <div class="row">
     <div class="col-md-6 zoomIn">
       <%= image_tag('Shop/topTen7.JPG', alt:"Top ten bicycle", id:"7",class:'topTenPic') %>
-      <div class="caption"><strong>Show More</strong></div>
+      <div class="caption"><strong>Learn More</strong></div>
       <div class="bicycleInfo" id="info7">
-      <p>[Type of bicycle 2]</p>
+      <p>Schwinn City Bike</p>
       <p>[Specs of bicycle]</p>
       <p>[price]</p>
     </div>
     </div>
     <div class="col-md-6 zoomIn">
       <%= image_tag('Shop/topTen8.JPG', alt:"Top ten bicycle", id:"8",class:'topTenPic') %>
-      <div class="caption"><strong>Show More</strong></div>
+      <div class="caption"><strong>Learn More</strong></div>
       <div class="bicycleInfo" id="info8">
-      <p>[Type of bicycle 2]</p>
+      <p>Mongoose Fat Tire Bike</p>
       <p>[Specs of bicycle]</p>
       <p>[price]</p>
     </div>
@@ -107,18 +110,18 @@
   <div class="row">
     <div class="col-md-6 zoomIn">
       <%= image_tag('Shop/topTen9.JPG', alt:"Top ten bicycle", id:"9",class:'topTenPic') %>
-      <div class="caption"><strong>Show More</strong></div>
+      <div class="caption"><strong>Learn More</strong></div>
       <div class="bicycleInfo" id="info9">
-      <p>[Type of bicycle 2]</p>
+      <p>Hyperbikeco BMX</p>
       <p>[Specs of bicycle]</p>
       <p>[price]</p>
     </div>
     </div>
     <div class="col-md-6 zoomIn">
       <%= image_tag('Shop/topTen10.JPG', alt:"Top ten bicycle", id:"10",class:'topTenPic') %>
-      <div class="caption"><strong>Show More</strong></div>
+      <div class="caption"><strong>Learn More</strong></div>
       <div class="bicycleInfo" id="info10">
-      <p>[Type of bicycle 21212]</p>
+      <p>Mongoose Fat Tire Bike</p>
       <p>[Specs of bicycle]</p>
       <p>[price]</p>
       </div>
@@ -128,5 +131,5 @@
 <%= render 'shared/footer' %>
  <div id="myModal3" class="modal3">
       <%= image_tag("", id:"shopModalImg") %>
-      <div id="infoBox"><div id="organeTop"></div></div>
+      <div id="infoBox"></div>
   </div>

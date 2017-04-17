@@ -31,3 +31,44 @@
   margin-top: 20px;
 
 }
+
+.zoomInGrav {
+  position: relative;
+  img{
+  z-index: 100;
+  cursor: pointer;
+  overflow: hidden;
+  background: black;
+  transition: all 0.45s ease-in-out;
+}
+}
+.change{
+  z-index: 101;
+  color: white;
+  position: absolute;
+  
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 5px;
+  left: 46.6%;
+  bottom: 10%;
+  font-size: 27px;
+  font-family: 'Signika Negative', sans-serif;
+  opacity: 0;
+  transition: all 0.45s ease-in-out;
+   a{
+    color: white;
+    text-decoration: none;
+  }
+}
+.displayChange {
+   opacity: 0.9;
+   transition: all 0.45s ease-in-out;
+   
+}
+.zoomIn1 {
+  filter: brightness(70%);
+    position: relative;
+    transform: scale(1.05);
+    transition: all 0.45s ease-in-out;
+}

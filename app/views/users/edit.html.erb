@@ -1,4 +1,4 @@
-<% provide(:title, "Edit user") %>
+<% provide(:title, "Edit User") %>
 <% provide(:button_text, 'Save changes') %>
 
 
@@ -7,8 +7,10 @@
 <%= image_tag("Login & Sign up/Update.png", alt:"update title", class:"updateTitle") %>
 
 <div class="gravatar_edit">
-      <%= gravatar_for @user, size: 600 %>
-      
+      <div class="zoomInGrav">
+            <%= link_to gravatar_for(@user, size: 600), 'http://gravatar.com/emails', target:'_blank'%>
+            <div class="change"><a href="http://gravatar.com/emails" target="_blank">change</a></div>
+      </div>
     </div>
     
 <%= render "shared/form_layout", path: edit_path %>

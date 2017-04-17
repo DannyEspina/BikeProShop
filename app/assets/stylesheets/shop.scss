@@ -62,7 +62,7 @@
   left: 42%;
   bottom: 45%;
   font-size: 20px;
-  font-family: 'roboto', sans-serif;
+  font-family: 'Signika Negative', sans-serif;
   opacity: 0;
   transition: all 0.45s ease-in-out;
 }
@@ -85,60 +85,103 @@
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    
+    background-color: rgb(31, 29, 29); /* Fallback color */
 }
 
 .bicycleInfo {
-  background: $body-theme;
-  height: 391px;
   z-index: 97;
   width: 48%;
-  font-size: 25px;
-  font-family: 'roboto', sans-serif;
-
+  font-size: 32px;
+  font-family: 'Signika Negative', sans-serif;
+  color: white;
   display: none;
   position: absolute;
   top: 0;
-  border: 1px solid black;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+   background-color: rgb(31, 29, 29);
 }
 #infoBox{
   position: absolute;
-    top: 24%;
-    left: 1%;
+  left: 50%;
+  bottom: 75%;
     width: 100%;
     z-index: 97;
-    opacity: 0;
+  opacity: 1;
   text-align: center;
+   background-color: rgb(31, 29, 29);
+}
+.bicycleInfo p {
+  border: 0;
+  margin: 0;
+  padding-bottom: 10px;
+  position: relative;
+ background-color: rgb(31, 29, 29);
   transition: all 0.5s ease-in-out;
-  p:first-child{
-    margin-top: 60px;
-  }
+  opacity: 0;
+
+  
 }
-#organeTop {
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  z-index: 98;
-
-  height: 49px;
-  width: 47.95%;
-  background: darken($bike-theme, 4%);
-  border-top-right-radius: 3px;
-  box-shadow: 0 2px 5px 1px rgba(0,0,0,0.2);
-}
-
-
-
 /* Add Animation */
 #shopModalImg {    
+    box-shadow: 0px 0px 10px 3px black;
     -webkit-animation-name: zoom1;
     -webkit-animation-duration: 0.4s;
     animation-name: zoom1;
     animation-duration: 0.4s;
 }
+//awesome buttons
+// #shopBtn {
+  
+//   position: relative;
+// 	display: inline-block;
+// 	padding: 1.2em 2em;
+// 	text-decoration: none;
+// 	text-align: center;
+// 	cursor: pointer;
+// 	user-select: none;
+// 	color: white;
+    
+//     &::before {
+//         content: '';
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         bottom: 0;
+//         right: 0;
+//         background: linear-gradient(135deg, #6e8efb, #a777e3);
+//         border-radius: 4px;
+//         transition: box-shadow .5s ease, transform .2s ease; 
+//         box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    
+//         will-change: transform;
+//         transform:
+//             translateY(var(--ty, 0))
+//             rotateX(var(--rx, 0))
+//             rotateY(var(--ry, 0))
+//             translateZ(var(--tz, -12px));
+//     }
+    
+//     &:hover::before {
+//         box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+//     }
+    
+//     &::after {
+//         position: relative;
+//         display: inline-block;
+        
+//         transition: transform .2s ease; 
+//         font-weight: bold;
+//         letter-spacing: .01em;
+        
+        
+//         will-change: transform;
+//         transform:
+//             translateY(var(--ty, 0))
+//             rotateX(var(--rx, 0))
+//             rotateY(var(--ry, 0));
+//     }
+// }
+
 
 @-webkit-keyframes zoom1 {
     from {-webkit-transform:scale(0);opacity:1} 

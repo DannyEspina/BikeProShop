@@ -11,7 +11,6 @@ class MicropostsController < ApplicationController
         @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
       redirect_to microposts_path
-      
       flash[:success] = "Micropost created!"
     else
       @feed_items =  current_user.feed.paginate(page: params[:page])
