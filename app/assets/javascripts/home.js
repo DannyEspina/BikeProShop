@@ -1,37 +1,36 @@
 //fading dropdown menu when hover
 $(document).on('turbolinks:load', function() {
 
-    //edit gravatar 
+    //edit gravatar
     $(".zoomInGrav img, .change").hover(function(){
         $(".change").toggleClass("displayChange");
         $(".zoomInGrav img").toggleClass("zoomIn1");
     });
-    
+
     $('.dropdown-toggle').removeClass('active');
     /*logo parallax
      *listening to a window scroll event */
+
     $(window).scroll(function() {
-        console.log(wScroll);
+
         //how many pixels am i relation to the top of the page
         var wScroll = $(this).scrollTop();
         //landing effect on logo
-
-        if (wScroll > $('.Header').offset().top - ($(window).height() / 3) && wScroll <= 790) {
-
-            $('.cust_bicycle').css({
-                'left': '0%',
-                'transform': 'translate(' + wScroll / 3.2 + '%, 0px)'
-            });
-
-
-        }
-
-
+      
+          if (wScroll > $('.Header').offset().top - ($(window).height() / 3) && wScroll <= 790) {
+          console.log("hi");
+          $('.cust_bicycle').css({
+              'left': '0%',
+              'transform': 'translate(' + wScroll / 3.2 + '%, 0px)'
+          });
+          }
     });
+
     // Add smooth scrolling to all links in navbar + footer link
     $(".navbar a, footer a[href='#top']").on('click', function(event) {
         // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "" && window.location.href.indexOf("/index") > -1) {
+        if (this.hash !== "" && window.location.href.indexOf("/index") > -1
+        ||this.hash !== "" && window.location.href.indexOf("") > -1) {
             // Prevent default anchor click behavior
             event.preventDefault();
 
@@ -66,7 +65,7 @@ $(document).on('turbolinks:load', function() {
     $("#shopDrop").mouseenter(function() {
 
         $("#shopPanel").fadeIn("fast");
-        
+
         $("#shopDrop").mouseleave(function() {
 
             $("#shopPanel").fadeOut("fast");
@@ -78,7 +77,7 @@ $(document).on('turbolinks:load', function() {
     $("#userDrop").mouseenter(function() {
 
         $("#userPanel").fadeIn("fast");
-        
+
         $("#userDrop").mouseleave(function() {
 
             $("#userPanel").fadeOut("fast");
@@ -102,7 +101,7 @@ function myMap() {
         zoom: 15,
         scrollwheel: false
     };
-    //creates the map 
+    //creates the map
     var map = new google.maps.Map(mapCanvas, mapOptions);
     //places the marker on the barnyard flea market
     var marker = new google.maps.Marker({

@@ -6,11 +6,11 @@
       frameborder="0" allowfullscreen>
       </iframe>
        <div class="logo2"></div>
-       <div class="logo1"></div> 
+       <div class="logo1"></div>
      </div>
 
  <%= render 'shared/navbar' %>
- 
+
 <div class="container-fluid fix-contain" id="galleryBody">
   <div class ="row">
     <%= image_tag "Gallery/galleryTitle.png", alt:"gallery title", class:"galleryTitle"  %>
@@ -114,12 +114,23 @@
       <%= image_tag("Gallery/tuneUp1.JPG", alt:"repair bicycle for customers", id:"28",class:"galleryImage") %>
     </div>
     </div>
- 
+
     <div id="myModal" class="modal">
-     
       <%= image_tag("", id:"modalImg") %>
+      <div id="myTumb">
+        <span class="fa fa-chevron-left" id="tumbLeft"></span>
+        <%= image_tag("", id:"tumbImg1", class:"tumbImgs notLast") %>
+        <%= image_tag("", id:"tumbImg2", class:"tumbImgs notFirst notLast") %>
+        <%= image_tag("", id:"tumbImg3", class:"tumbImgs notFirst notLast") %>
+        <%= image_tag("", id:"tumbImg4", class:"tumbImgs notFirst notLast") %>
+        <%= image_tag("", id:"tumbImg5", class:"tumbImgs notFirst notLast") %>
+        <%= image_tag("", id:"tumbImg6", class:"tumbImgs notFirst notLast") %>
+        <%= image_tag("", id:"tumbImg7", class:"tumbImgs notFirst notLast") %>
+        <%= image_tag("", id:"tumbImg8", class:"tumbImgs notFirst notLast") %>
+        <%= image_tag("", id:"tumbImg9", class:"tumbImgs notFirst") %>
+        <span class="fa fa-chevron-right" id="tumbRight"></span>
     </div>
-    
+
 </div>
 
 <%= render 'shared/footer' %>

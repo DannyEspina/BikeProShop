@@ -1,5 +1,5 @@
 $body-theme: hsl(34, 100%, 95%);
-$bike-theme: hsl(24, 99%, 52%); 
+$bike-theme: hsl(24, 99%, 52%);
 $c1: #035e7b;
 $c2: #fff;
 $c3: #eff1c5;
@@ -50,19 +50,21 @@ html {
    margin: 0;
    z-index: 4;
    margin-bottom: 100px;
-   
+
 }
 
 //fancy button
+#clickMe {
+  display: block;
+  margin-top: 30px
+}
 .cont, .cont > a {
   position: absolute;
   height: 40px;
   width: 120px;
 }
 .cont {
-  
-  top: 42vh;
-  left: 48vw;
+  left: 49vw;
   margin: -20px 0 0 -60px;
   a{
      font-family: 'Signika Negative', sans-serif;
@@ -174,7 +176,7 @@ html {
    width: 100%;
 }
 
-//makes the transition smoother 
+//makes the transition smoother
 .affix+.container-fluid {
    padding-top: 60px;
 }
@@ -263,9 +265,9 @@ html {
    font-size: 20px;
    width: 100%;
    text-align: center;
-   
+
    margin-bottom: 5%;
-   
+
    padding-bottom: 30px;
    p {
        padding-left: 20%;
@@ -343,7 +345,7 @@ html {
     -webkit-animation-duration: 0.65s;
     animation-name: animatetop;
     animation-duration: 0.65s
-   
+
 }
 
 
@@ -353,7 +355,7 @@ html {
   position: relative;
   top: 10px;
   padding-bottom: 0;
-  
+
 }
 
 #logintop {
@@ -368,16 +370,16 @@ html {
 }
 #loginForm {
   box-sizing: border-box;
- 
+
   width: 260px;
   margin: -20px auto 0;
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
-  
+
   border-radius: 3px;
   h1 {
     box-sizing: border-box;
     padding: 20px;
-    
+
   }
 }
 
@@ -396,7 +398,7 @@ html {
   background-size: 200px 100%;
   background-repeat: no-repeat;
   color: black;
-  
+
   &:focus, &:valid {
     box-shadow: none;
     outline: none;
@@ -420,31 +422,31 @@ html {
   color: white;
   margin-left: 25px;
   box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
-  &:hover { 
+  &:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
   }
 }
-.loginImg1 { 
+.loginImg1 {
     z-index: 98;
     height: 85px;
     position: relative;
     left: 33%;
     top: 17%;
-     &:hover { 
+     &:hover {
     transform: translateY(-5px);
-     
+
   }
 }
 
 #newUser {
     margin: 0;
     padding: 28px;
-    
+
 }
 /* Add Animation */
 @-webkit-keyframes animatetop {
-    from {top: 300px; opacity: 0} 
+    from {top: 300px; opacity: 0}
     to {top: 0; opacity: 1}
 }
 
@@ -470,5 +472,3 @@ html {
     text-decoration: none;
     cursor: pointer;
 }
-
-
