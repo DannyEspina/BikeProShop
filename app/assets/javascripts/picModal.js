@@ -2,9 +2,11 @@ $(document).on('turbolinks:load', function() {
 var countLeft = 10;
 var countRight = 0;
 var targetID
+
 window.onclick = function(e) {
 if (event.target ==  document.getElementById("myModal")) {
      document.getElementById("myModal").style.display = "none";
+     $("#tumbImg9").removeClass("appearTumb");
      countLeft = 10;
      countRight = 0;
 }
@@ -12,19 +14,21 @@ if (event.target ==  document.getElementById("myModal")) {
 $(".galleryImage").click(function(e){
     targetID = e.target.id;
     displayModal(e);
+
 });
  $(".tumbImgs").click(function(e) {
    var imgSrc = document.getElementById(e.target.id).src;
    var modalImg = document.getElementById("modalImg");
    modalImg.setAttribute("src", imgSrc);
  });
-
+// rotate to the previous image left
  $("#tumbLeft").click(function(e) {
    var tumbs= document.getElementsByClassName("tumbImgs");
+   $(".tumbImgs").removeClass("displayTumb");
    //add animations
    $("#tumbImg1").fadeOut(300);
    $(".notFirst").addClass("moveTumbLeft");
-   $("#tumbImg9").css("opacity", "0").addClass("appearTumb").css("opacity", "1");
+   $("#tumbImg9").addClass("appearTumb");
    setTimeout(function(){
    $("#tumbImg1").css("opacity", "1");
 
@@ -57,13 +61,14 @@ $(".galleryImage").click(function(e){
  }, 280);
 
  });
-
+//rotate to the next image right
  $("#tumbRight").click(function(e) {
    var tumbs= document.getElementsByClassName("tumbImgs");
-
+   $(".tumbImgs").removeClass("displayTumb");
    $("#tumbImg9").fadeOut(300);
    $(".notLast").addClass("moveTumbRight");
-   $("#tumbImg1").css("opacity", "0").addClass("appearTumb").css("opacity", "1");
+   $("#tumbImg1").addClass("appearTumb").css("opacity", "1");
+
    setTimeout(function(){
    id = parseInt(targetID) - countRight;
    countRight++;
@@ -96,48 +101,10 @@ $(".galleryImage").click(function(e){
  });
 //for top 10 bicycle page
 var modal3 = document.getElementById("myModal3");
-// Get the image and insert it inside the modal - use its "alt" text as a caption
+
+
+// Get the image and insert it inside the modal
 $('.topTenPic, strong').click(function(e){
-
-    //fancy button
-    // var docStyle = document.documentElement.style;
-    // var aElem = document.getElementById("shopBtn");
-
-    // var boundingClientRect = aElem.getBoundingClientRect();
-
-    // aElem.onmousemove = function (e) {
-
-    //     var x = e.clientX - boundingClientRect.left;
-    //     var y = e.clientY - boundingClientRect.top;
-    //     console.log(boundingClientRect.left);
-    //     var xc = boundingClientRect.width / 2;
-    //     var yc = boundingClientRect.height / 2;
-
-    //     var dx = x - xc;
-    //     var dy = y - yc;
-
-    //     docStyle.setProperty('--rx', dy / -1 + 'deg');
-    //     docStyle.setProperty('--ry', dx / 10 + 'deg');
-
-    // };
-
-    // aElem.onmouseleave = function (e) {
-
-    //     docStyle.setProperty('--ty', '0');
-    //     docStyle.setProperty('--rx', '0');
-    //     docStyle.setProperty('--ry', '0');
-    // };
-
-    // aElem.onmousedown = function (e) {
-
-    //     docStyle.setProperty('--tz', '-25px');
-    // };
-
-    // document.body.onmouseup = function (e) {
-
-    //     docStyle.setProperty('--tz', '-12px');
-    // };
-
 
     var imgSrc3 = document.getElementById(e.target.id).src;
     var modalImg3 = document.getElementById("shopModalImg");
@@ -146,7 +113,7 @@ $('.topTenPic, strong').click(function(e){
 
     var info = document.getElementById("info"+e.target.id); //im a genius
     var p =  document.getElementById("info"+e.target.id).childNodes;
-    console.log(p[1]);
+    //console.log(p[1]);
 
     info.style.display = "block";
     $("#infoBox").append(info);
@@ -183,7 +150,7 @@ $('.topTenPic, strong').click(function(e){
 function displayModal(e){
   var modal = document.getElementById("myModal");
   modal.style.display = "block";
-  //tumb.style.display = "block";
+
 
   var imgSrc = document.getElementById(e.target.id).src;
   var modalImg = document.getElementById("modalImg");
@@ -194,7 +161,7 @@ function displayModal(e){
   var id;
   var maxid = 28;
 
-  //adds 9 additional images for the lightbox
+  //adds 9 additional images for the lightbox. starting from the image after the source
   for (i = 1; i <= 9; i++) {
     id = parseInt(e.target.id) + i;
     //wraps back to the first image
@@ -204,5 +171,39 @@ function displayModal(e){
     tumbImgSrc = document.getElementById(id).src;
     tumbModal = document.getElementById("tumbImg" + i);
     tumbModal.setAttribute("src", tumbImgSrc);
+    tumbModal.style.opacity = "0";
+    $("#tumbLeft").css("opacity", "0");
+    $("#tumbRight").css("opacity", "0");
   }
+  //adds animation for tumb images
+
+  /* By using a function we can have distinct values of i for setTimeout. In
+  other words, doScaledTimeout will be called mulitple times throughout the
+  loop with it's own private value i. Otherwise if we didn't have the function,
+  the loop will finish before the first timeout ends, thus all of the timer
+  handler functions will share the same value i, 9. */
+
+  for (i = 1; i <= 9; i++) {
+    doScaledTimeout(i)
+  }
+
+//remove classes to restart animation when the user exits out and reclick an image.
+$(".tumbImgs").removeClass("displayTumb")
+$("#tumbLeft").removeClass("displayArrows");
+$("#tumbRight").removeClass("displayArrows");
+}
+
+//sets a delay on each tumb image as it appears
+function doScaledTimeout(i) {
+  setTimeout(function() {
+    if(i == 1){
+      $("#tumbLeft").addClass("displayArrows").css("opacity", "1");
+    }
+    if (i == 9) {
+      $("#tumbRight").addClass("displayArrows").css("opacity", "1");
+    }
+    $("#tumbImg" + i).addClass("displayTumb").css("opacity", "1");
+
+  }, i * 55);
+
 }
