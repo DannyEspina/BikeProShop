@@ -1,5 +1,6 @@
 
-$body-theme: hsl(34, 100%, 90%);
+$body-theme: hsl(34, 100%, 95%);
+$bike-theme: hsl(24, 99%, 52%);
 
 .signUpTitle {
   width: 30%;
@@ -9,7 +10,7 @@ $body-theme: hsl(34, 100%, 90%);
 
 .form{
   height: 140%;
-  
+
   text-align: center;
   position: relative;
   z-index: 1;
@@ -26,65 +27,6 @@ $body-theme: hsl(34, 100%, 90%);
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-label {
-  
-  display: block;
-  letter-spacing: 1px;
-  text-align: center;
-
-  .label-text {
-      position: relative;
-      top: -99px;
-      color: white;
-      cursor: text;
-      font-size: 28px;
-      margin-top: 30px;
-      
-      line-height: 20px;
-      text-transform: uppercase;
-      transition: all 0.3s;
-      
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: black;
- }
-  input {
-  
-    background-color: transparent;
-    border: 0;
-    border-bottom: 2px solid white;
-    -webkit-text-fill-color: white;
-   -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: black;
-    font-size: 36px;
-    letter-spacing: -1px;
-    outline: 0;
-    margin-top: 20px;
-    padding: 5px 20px;
-    text-align: center;
-    transition: all 0.3s;
-    width: 300px;
-    
-    &:focus {
-      max-width: 100%;
-      width: 500px;
-     
-      & + .label-text {
-      
-        font-size: 35px;
-        top: -135px ;
-        
-        
-      }
-    }
-    &:not(:focus) {
-      font-size: 27px;
-      
-    }
-    
-  }
-    
-}
 .sumbit{
   background-color: transparent;
   border: 2px solid white;
@@ -96,12 +38,12 @@ label {
   padding: 15px 30px;
   text-transform: uppercase;
   transition: all 200ms;
- 
+
   &:hover, &:focus {
     background-color: white;
     color: #333333;
     outline: 0;
-  }  
+  }
 }
 #error_explanation {
   background: hsl(0, 43%, 96%);
@@ -120,7 +62,19 @@ label {
     left: 25%;
   }
 }
+/* The Modal (background) */
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
 
+    background-color: rgba(0,0,0,0.9); /* Fallback color */
+}
 
 .checkbox {
   margin-bottom: 15px;
@@ -148,9 +102,144 @@ label {
   font-family: 'roboto', sans-serif;
   font-size: 12px;
   padding-bottom: 20px;
-  
+
 }
 
-#newUser{
-  padding-top: 15px;
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 260px;
+    max-width: 700px;
+    position: relative;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.65s;
+    animation-name: animatetop;
+    animation-duration: 0.65s
+
+}
+
+
+
+#loginHeader {
+  font-size: 30px;
+  position: relative;
+  top: 10px;
+  padding-bottom: 0;
+
+}
+
+#logintop {
+  height: 55px;
+  width: 258px;
+
+  background: darken($bike-theme, 4%);
+
+
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 2px 5px 1px rgba(0,0,0,0.2);;
+}
+#loginForm {
+  box-sizing: border-box;
+
+  width: 260px;
+  margin: -20px auto 0;
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+
+  border-radius: 3px;
+  h1 {
+    box-sizing: border-box;
+    padding: 20px;
+
+  }
+}
+
+.input {
+  z-index: 99;
+  margin: 40px 25px;
+  width: 200px;
+  display: block;
+  border: none;
+  padding: 10px 0;
+  border-bottom: solid 1px $bike-theme;
+  transition: all 0.275s cubic-bezier(.64,.09,.08,1);
+  font-size: 11px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $bike-theme 4%);
+  background-position: -200px 0;
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  color: black;
+
+  &:focus, &:valid {
+    box-shadow: none;
+    outline: none;
+    background-position: 0 0;
+    &::-webkit-input-placeholder {
+      color: $bike-theme;
+      font-size: 11px;
+      transform: translateY(-20px);
+      visibility: visible !important;
+    }
+  }
+}
+
+#loginSumbit {
+  border: none;
+  background: $bike-theme;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px;
+  width: 200px;
+  color: white;
+  margin-left: 25px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
+  }
+}
+.loginImg1 {
+    z-index: 98;
+    height: 85px;
+    position: relative;
+    left: 33%;
+    top: 17%;
+     &:hover {
+    transform: translateY(-5px);
+
+  }
+}
+
+#newUser {
+    margin: 0;
+    padding: 28px;
+
+}
+/* The Close Button */
+.closeLogin {
+    position: absolute;
+    top: -10%;
+    right: 2px;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    opacity: 0.45;
+}
+
+.closeLogin:hover,
+.closeLogin:focus {
+    color:black;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.7;
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: 300px; opacity: 0}
+    to {top: 0px; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: 300px; opacity: 0}
+    to {top: 0px; opacity: 1}
 }

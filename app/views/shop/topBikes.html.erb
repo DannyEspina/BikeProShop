@@ -1,17 +1,17 @@
 <% provide(:title, "Shop") %>
 
 <div  class="container-fluid" style="padding:0">
-  
+
     <iframe id="ytplayer"
       src="https://www.youtube.com/embed/HereF6ee0Fc?autoplay=1&loop=1&list=PL1Qm-Ugsa8xXAy1G0tUQZWH0lsPDruDNN&controls=0&modestbranding=1&showinfo=0&autohide=1&disablekb=1&rel=0&index=3"
       frameborder="0" allowfullscreen>
       </iframe>
        <div class="logo2"></div>
-       <div class="logo1"></div> 
+       <div class="logo1"></div>
      </div>
 
   <%= render 'shared/navbar' %>
-    
+
 <div class="container-fluid headerContain fix-contain">
   <%= render 'shared/flash' %>
   <br>
@@ -28,7 +28,7 @@
 
       </div>
     </div>
-    
+
     <div class="col-md-6 zoomIn">
      <%= image_tag('Shop/topTen2.JPG', alt:"Top ten bicycle", id:"2",class:'topTenPic') %>
      <div class="caption"><strong>Learn More</strong></div>
@@ -36,12 +36,12 @@
         <p>Mongoose Mountain Bike</p>
         <p>[Specs of bicycle]</p>
         <p>[price]</p>
-        
+
       </div>
-      
-      
+
+
     </div>
-    
+
   </div>
   <div class="row">
     <div class="col-md-6 zoomIn">
@@ -53,7 +53,7 @@
         <p>[price]</p>
       </div>
     </div>
-    
+
     <div class="col-md-6 zoomIn">
       <%= image_tag('Shop/topTen4.JPG', alt:"Top ten bicycle", id:"4",class:'topTenPic') %>
       <div class="caption"><strong>Learn More</strong></div>
@@ -64,7 +64,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="row">
     <div class="col-md-6 zoomIn">
       <%= image_tag('Shop/topTen5.JPG', alt:"Top ten bicycle", id:"5",class:'topTenPic') %>
@@ -75,7 +75,7 @@
       <p>[price]</p>
     </div>
     </div>
-    
+
     <div class="col-md-6 zoomIn">
       <%= image_tag('Shop/topTen6.JPG', alt:"Top ten bicycle", id:"6",class:'topTenPic') %>
       <div class="caption"><strong>Learn More</strong></div>
@@ -86,7 +86,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="row">
     <div class="col-md-6 zoomIn">
       <%= image_tag('Shop/topTen7.JPG', alt:"Top ten bicycle", id:"7",class:'topTenPic') %>
@@ -130,6 +130,7 @@
 </div>
 <%= render 'shared/footer' %>
  <div id="myModal3" class="modal3">
+   <i class="material-icons close" style="font-size:50px">close</i>
       <%= image_tag("", id:"shopModalImg") %>
       <div id="infoBox"></div>
   </div>

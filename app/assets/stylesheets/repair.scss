@@ -1,8 +1,202 @@
 $body-theme: hsl(34, 100%, 95%);
-        
+
 
 .divContain{
      box-shadow: 0px 6px 15px #888888;
     background: $body-theme;
     min-height: 300px;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+// ------------- MIXINS ------------- //
+@mixin transition($time, $property: all, $easing: ease-in) {
+    transition: $property $time $easing;
+}
+
+// ------------- VARIABLES ------------- //
+$parallax-offset: 30vh;
+$content-offset: 40vh;
+$transition-speed: 1.2s;
+$slide-number: 3;
+#navBarRepair {
+   border: none;
+   margin-bottom: 0;
+   z-index: 98;
+   border-radius: 0;
+   background-color: rgba(0,0,0,0.5);
+   transition: all 0.3s ease-in-out;
+}
+#navListRepair>li>a {
+   font-family: 'Buenard', serif;
+   letter-spacing: 3px;
+   font-size: 12px;
+   display: block;
+   padding: 16px 20px;
+   color: rgb(195,195,195);
+   text-decoration: none;
+}
+#navListRepair>li a:hover {
+   color: white;
+}
+#iconsRightRepair li a {
+   color: rgb(195,195,195);
+}
+
+#loginRepair {
+  color: rgb(195,195,195);
+  font-size: 15px;
+  position: relative;
+  top: 15px;
+}
+
+#iconsRightRepair li:hover, #iconsRightRepair li a:hover, {
+   color: white;
+}
+#shopPanelRepair, #userPanelRepair {
+    top: 51px;
+    background-color: rgba(0,0,0,0.5);
+
+   li a {
+       color: white;
+      &:hover, {
+        background-color: rgba(63, 63, 63,0.5);
+
+      }
+   }
+   .dropdown-header {
+       color: rgb(195,195,195);
+   }
+
+}
+/* Show the dropdown menu on hover */
+.overflowRepair {
+  overflow: hidden;
+}
+.background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  will-change: transform;
+  backface-visibility: hidden;
+  height: 100vh + $parallax-offset;
+  position: fixed; //problem
+  width: 100%;
+  -webkit-transform: translateY($parallax-offset);
+  transform: translateY($parallax-offset);
+  @include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.3);
+  }
+  &:first-child {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("Home/repair3.JPG");
+    -webkit-transform: translateY(-$parallax-offset / 2);
+    transform: translateY(-$parallax-offset / 2);
+    .content-wrapper {
+      -webkit-transform: translateY($parallax-offset /2);
+      transform: translateY($parallax-offset /2);
+    }
+  }
+  &:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("Repairs/tools2.JPG");
+  }
+  &:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("Home/repair4.JPG");
+  }
+}
+
+/* Set stacking context of slides */
+@for $i from 1 to ($slide-number + 1) {
+    .background:nth-child(#{$i}) {
+        z-index: ($slide-number + 1) - $i;
+    }
+}
+
+.content {
+  &-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-flow: column nowrap;
+  color: #fff;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  -webkit-transform:translateY($content-offset);
+  transform: translateY($content-offset);
+  will-change: transform;
+  backface-visibility: hidden;
+  @include transition($transition-speed + .5, all, cubic-bezier(0.22, 0.44, 0, 1));
+  }
+  &-title {
+    font-size: 12vh;
+    line-height: 1.4;
+  }
+  &-medium {
+    font-size: 7vh;
+    line-height: 1.4;
+  }
+  &-list {
+    font-size: 3.5vh;
+    text-align: left;
+    line-height: 1.4;
+    list-style-type: circle;
+  }
+}
+
+// ------------- SET TRANSFORM VALUES ------------- //
+
+.background.up-scroll {
+  -webkit-transform: translate3d(0,-$parallax-offset / 2,0);
+  transform: translate3d(0,-$parallax-offset / 2,0);
+  .content-wrapper {
+    -webkit-transform: translateY($parallax-offset / 2);
+    transform: translateY($parallax-offset / 2);
+  }
+  + .background {
+    -webkit-transform: translate3d(0,$parallax-offset,0);
+    transform: translate3d(0,$parallax-offset,0);
+      .content-wrapper {
+        -webkit-transform: translateY($parallax-offset);
+        transform: translateY($parallax-offset);
+      }
+    }
+}
+
+.background.down-scroll {
+  -webkit-transform:translate3d(0,-(106.5vh + $parallax-offset),0);
+  transform: translate3d(0,-(106.5vh + $parallax-offset),0);
+  .content-wrapper {
+    -webkit-transform:translateY($content-offset);
+    transform: translateY($content-offset);
+  }
+  + .background:not(.down-scroll) {
+    -webkit-transform:translate3d(0,-$parallax-offset / 2,0);
+    transform: translate3d(0,-$parallax-offset / 2,0);
+      .content-wrapper {
+        -webkit-transform: translateY($parallax-offset / 2);
+        transform: translateY($parallax-offset / 2);
+      }
+  }
+}
+.table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }

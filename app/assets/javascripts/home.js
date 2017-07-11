@@ -16,7 +16,7 @@ $(document).on('turbolinks:load', function() {
         //how many pixels am i relation to the top of the page
         var wScroll = $(this).scrollTop();
         //landing effect on logo
-      
+
           if (wScroll > $('.Header').offset().top - ($(window).height() / 3) && wScroll <= 790) {
           console.log("hi");
           $('.cust_bicycle').css({
@@ -27,13 +27,14 @@ $(document).on('turbolinks:load', function() {
     });
 
     // Add smooth scrolling to all links in navbar + footer link
-    $(".navbar a, footer a[href='#top']").on('click', function(event) {
+    $(".mechanicLink, .contactLink, footer a[href='#top']").on('click', function(event) {
         // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "" && window.location.href.indexOf("/index") > -1
-        ||this.hash !== "" && window.location.href.indexOf("") > -1) {
+
+        if (this.hash !== "" && location.pathname == "/index"
+            ||this.hash !== "" && location.pathname == "/") {
             // Prevent default anchor click behavior
             event.preventDefault();
-
+            
             // Store hash
             var hash = this.hash;
 
@@ -86,7 +87,6 @@ $(document).on('turbolinks:load', function() {
         });
 
     });
-
 });
 
 //google maps

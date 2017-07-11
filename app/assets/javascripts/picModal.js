@@ -101,7 +101,7 @@ $(".galleryImage").click(function(e){
  });
 //for top 10 bicycle page
 var modal3 = document.getElementById("myModal3");
-
+var span = document.getElementsByClassName("close")[0]
 
 // Get the image and insert it inside the modal
 $('.topTenPic, strong').click(function(e){
@@ -131,6 +131,18 @@ $('.topTenPic, strong').click(function(e){
          p[5].style.bottom ="69%";
          p[5].style.opacity="1";
   }, 530);
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      modal3.style.display = "none";
+      p[1].style.bottom ="62%";
+      p[1].style.opacity="0";
+      p[3].style.bottom ="69%";
+      p[3].style.opacity="0";
+      p[5].style.bottom ="66%";
+      p[5].style.opacity="0";
+  }
+//when user clicks anywhere outside, close the modal
     window.onclick = function(event) {
     if (event.target == modal3) {
         modal3.style.display = "none";
@@ -144,13 +156,13 @@ $('.topTenPic, strong').click(function(e){
 }
 });
 
+
 });
 
 // Get the image and insert it inside the modal
 function displayModal(e){
   var modal = document.getElementById("myModal");
   modal.style.display = "block";
-
 
   var imgSrc = document.getElementById(e.target.id).src;
   var modalImg = document.getElementById("modalImg");

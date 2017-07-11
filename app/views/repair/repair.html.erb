@@ -1,19 +1,60 @@
 <% provide(:title, "Repair") %>
+<%= render 'shared/navbar_repair' %>
+<div class="container-fluid" style="padding:0">
+ <section class="background">
+   <div class="content-wrapper">
+     <p class="content-title">Need a Tune Up?</p>
+     <p class="content-title">We can Help.</p>
+     <p class="content-subtitle">Scroll down for More</p>
+   </div>
+ </section>
+ <section class="background">
+   <div class="content-wrapper">
+     <p class="content-title">Tune ups are $45</p>
+     <p class="content-medium">This inculdes: </p>
+     <div style="margin-left: auto; margin-right: auto;">
+     <ul class="content-list">
+       <li>Wheel alignment</li>
+       <li>Brake and gear services</li>
+       <li>Bottom crank check</li>
+       <li>Headset check</li>
+       <li>Clean up and lubrication</li>
+     </ul>
+   </div>
+   <p class="content-subtitle" style="margin-top: 15px;">Scroll down for individual repair options</p>
 
- <div  class="container-fluid" style="padding:0">
-     <%= render 'shared/flash' %>
-    <iframe id="ytplayer"
-      src="https://www.youtube.com/embed/HereF6ee0Fc?autoplay=1&loop=1&list=PL1Qm-Ugsa8xXAy1G0tUQZWH0lsPDruDNN&controls=0&modestbranding=1&showinfo=0&autohide=1&disablekb=1&rel=0&index=1"
-      frameborder="0" allowfullscreen>
-      </iframe>
-       <div class="logo2"></div>
-       <div class="logo1"></div> 
+   </div>
+ </section>
+ <section class="background">
+   <div class="content-wrapper">
+     <p class="content-medium">Looking for a specific repair?</p>
+     <p class="content-medium">We got you covered.</p>
+
+       <table class="table">
+      <tbody>
+        <tr>
+          <td>Wheel alignment</td>
+          <td>$14 for one or $20 for both</td>
+        </tr>
+        <tr>
+          <td>Brake services</td>
+          <td>$12</td>
+        </tr>
+        <tr>
+          <td>Gear services</td>
+          <td>$12</td>
+        </tr>
+        <tr>
+          <td>Flat tire</td>
+          <td>$14</td>
+        </tr>
+        <tr>
+          <td>Respoke wheel</td>
+          <td>$50</td>
+        </tr>
+      </tbody>
+    </table>
      </div>
 
- <%= render 'shared/navbar' %>
-    
-<div class="container-fluid divContain">
-    <p>infromation</p>
-    
+ </section>
 </div>
-<%= render 'shared/footer' %>
