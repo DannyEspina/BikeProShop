@@ -34,7 +34,7 @@ $(document).on('turbolinks:load', function() {
             ||this.hash !== "" && location.pathname == "/") {
             // Prevent default anchor click behavior
             event.preventDefault();
-            
+
             // Store hash
             var hash = this.hash;
 
@@ -55,33 +55,26 @@ $(document).on('turbolinks:load', function() {
 
     }, 600);
 
-    $(".navLightItem").mouseenter(function() {
-        $("#navBar").addClass("navLightBar");
 
-        $(".navLightItem").mouseleave(function() {
-            $("#navBar").removeClass("navLightBar");
-        });
-    });
+    $("#shopDrop, #shopDropTrans").mouseenter(function() {
 
-    $("#shopDrop").mouseenter(function() {
+        $("#shopPanel, #shopPanelTrans").fadeIn("fast");
 
-        $("#shopPanel").fadeIn("fast");
+        $("#shopDrop, #shopDropTrans").mouseleave(function() {
 
-        $("#shopDrop").mouseleave(function() {
-
-            $("#shopPanel").fadeOut("fast");
+            $("#shopPanel, #shopPanelTrans").fadeOut("fast");
 
 
         });
 
     });
-    $("#userDrop").mouseenter(function() {
+    $("#userDrop, #userDropTrans").mouseenter(function() {
 
-        $("#userPanel").fadeIn("fast");
+        $("#userPanel, #userPanelTrans").fadeIn("fast");
 
-        $("#userDrop").mouseleave(function() {
+        $("#userDrop, #userDropTrans").mouseleave(function() {
 
-            $("#userPanel").fadeOut("fast");
+            $("#userPanel, #userPanelTrans").fadeOut("fast");
 
 
         });

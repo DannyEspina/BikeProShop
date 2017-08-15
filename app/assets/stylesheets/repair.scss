@@ -19,7 +19,7 @@ $parallax-offset: 30vh;
 $content-offset: 40vh;
 $transition-speed: 1.2s;
 $slide-number: 3;
-#navBarRepair {
+#navBarRepair, #navBarTrans {
    border: none;
    margin-bottom: 0;
    z-index: 98;
@@ -27,33 +27,33 @@ $slide-number: 3;
    background-color: rgba(0,0,0,0.5);
    transition: all 0.3s ease-in-out;
 }
-#navListRepair>li>a {
+#navListRepair>li>a , #navListTrans>li>a{
    font-family: 'Buenard', serif;
    letter-spacing: 3px;
    font-size: 12px;
    display: block;
    padding: 16px 20px;
-   color: rgb(195,195,195);
+   color: rgb(230,230,230);
    text-decoration: none;
 }
-#navListRepair>li a:hover {
+#navListRepair>li a:hover, #navListTrans>li a:hover {
    color: white;
 }
 #iconsRightRepair li a {
-   color: rgb(195,195,195);
+ color: rgb(230,230,230);
 }
 
 #loginRepair {
-  color: rgb(195,195,195);
+  color: rgb(230,230,230);
   font-size: 15px;
   position: relative;
   top: 15px;
 }
 
-#iconsRightRepair li:hover, #iconsRightRepair li a:hover, {
+#iconsRightRepair li:hover, #iconsRightRepair li a:hover, #iconsRightTrans li:hover, #iconsRightTrans li a:hover{
    color: white;
 }
-#shopPanelRepair, #userPanelRepair {
+#shopPanelRepair, #userPanelRepair, #shopPanelTrans, #userPanelTrans {
     top: 51px;
     background-color: rgba(0,0,0,0.5);
 
@@ -65,7 +65,7 @@ $slide-number: 3;
       }
    }
    .dropdown-header {
-       color: rgb(195,195,195);
+       color: rgb(230,230,230);
    }
 
 }

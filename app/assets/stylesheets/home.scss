@@ -74,7 +74,7 @@ html {
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    color: $body-theme;
+    color: rgb(252, 252, 252);
     transition: all $t;
 
     &:hover {
@@ -190,12 +190,7 @@ html {
    transition: all 0.3s ease-in-out;
 }
 
-.navLightBar {
-   -webkit-box-shadow: inset 0 -8px 20px -5px hsl(32, 100%, 60%); //Safari
-   -moz-box-shadow: inset 0 -8px 20px -5px hsl(32, 100%, 60%); //Firefox
-   box-shadow: inset 0 -8px 20px -5px hsl(32, 100%, 60%); //Standard syntax
-   transition: all 0.3s ease-in-out;
-}
+
 
 .navbar-toggle {
    background-color: hsl(24, 99%, 52%);
@@ -256,7 +251,7 @@ html {
 
 .headerContain {
    margin: 0;
-   background-color: $body-theme;
+   background-color: rgb(252, 252, 252);
 }
 
 #tuneInfo {
@@ -332,5 +327,5 @@ html {
    padding-bottom: 50px;
    width: 100%;
    height: 500px;
-   box-shadow: 0px 6px 15px #888888;
+
 }

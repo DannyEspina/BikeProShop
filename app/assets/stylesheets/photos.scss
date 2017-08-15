@@ -1,15 +1,15 @@
-$body-theme: hsl(34, 100%, 95%);
+
 
 .galleryTitle{
-    width: 35%;
+    width: 25%;
     position: relative;
-    left: 30%;
+    left: 36%;
 }
 #galleryBody {
     margin: 0;
     padding-top: 20px;
-    background: $body-theme;
-     box-shadow: 0px 6px 15px #888888;
+    background: rgb(252,252,252);
+
 }
 .galleryImage {
     cursor: pointer;

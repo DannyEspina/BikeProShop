@@ -10,11 +10,90 @@
        <div class="logo1"></div>
      </div>
 
-  <%= render 'shared/navbar' %>
+  <%= render 'shared/navbarTrans' %>
 
 <div class="container-fluid headerContain fix-contain">
   <%= render 'shared/flash' %>
   <br>
-  <%= image_tag('Shop/topTenTitle.png', alt: 'top 10 title', class:'Header') %>
-  <br><br>
+  <%= image_tag('Parts/PartsTitle.png', alt: 'parts title', class:'partsTitle') %>
+  <br>
+  <!-- row 1 -->
+  <div class="row">
+    <div class="col-md-3">
+      <%= image_tag('Parts/bicycleRims1.JPG', alt:"Bicycle Rim", class: "partsPic") %>
+    </div>
+
+    <div class="col-md-3">
+      <%= image_tag('Parts/bicycleTires1.JPG', alt:"Bicycle Tires", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Parts/bicycleTube2.JPG', alt:"Bicycle tubes", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Parts/BMX freewheel.JPG', alt:"BMX freewheel", class: "partsPic") %>
+    </div>
+  </div>
+  <!-- row 2 -->
+  <div class="row">
+    <div class="col-md-3">
+      <%= image_tag('Parts/brake pads.JPG', alt:"Brake pads", class: "partsPic") %>
+    </div>
+
+    <div class="col-md-3">
+      <%= image_tag('Parts/brakeLevers.jpg', alt:"Brake levers", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Parts/chains1.JPG', alt:"Chain", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Parts/disc brake caliper.JPG', alt:"disc brake caliper", class: "partsPic") %>
+    </div>
+  </div>
+  <!-- row 3 -->
+  <div class="row">
+    <div class="col-md-3">
+      <%= image_tag('Parts/forks.JPG', alt:"Forks", class: "partsPic") %>
+    </div>
+
+    <div class="col-md-3">
+      <%= image_tag('Parts/freeWheel1.JPG', alt:"Free Wheel", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Parts/front derailleur.JPG', alt:"Front derailleur", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Parts/gear shifters.JPG', alt:"Gear Shifters", class: "partsPic") %>
+    </div>
+  </div>
+  <!-- row 4 -->
+  <div class="row">
+    <div class="col-md-3">
+      <%= image_tag('Parts/forks.JPG', alt:"Forks", class: "partsPic") %>
+    </div>
+
+    <div class="col-md-3">
+      <%= image_tag('Parts/grips1.jpg', alt:"Grips", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Parts/petals1.JPG', alt:"Regular Petals", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Parts/rearDerailleur2.JPG', alt:"SunRace Rear Dearilleur", class: "partsPic") %>
+    </div>
+  </div>
+  <!-- row 5 -->
+  <div class="row">
+    <div class="col-md-3">
+      <%= image_tag('Parts/seat.JPG', alt:"Seat", class: "partsPic") %>
+    </div>
+
+    <div class="col-md-3">
+      <%= image_tag('Parts/seatPost.jpg', alt:"Seat Post", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Parts/stem.JPG', alt:"Stem", class: "partsPic") %>
+    </div>
+
+  </div>
 </div>
+<%= render 'shared/footer' %>
