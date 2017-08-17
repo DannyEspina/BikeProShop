@@ -1,4 +1,4 @@
-$body-theme: hsl(34, 100%, 95%);
+$body-theme: rgb(252, 252, 252);
 
 label {
 
@@ -69,7 +69,6 @@ label {
     background-color:  $body-theme;
     min-height: 800px;
     margin: 0;
-     box-shadow: 0px 6px 15px #888888;
 }
 
 .userContain{
@@ -78,7 +77,7 @@ label {
     min-height: 800px;
     z-index: 100;
     background: $body-theme;
-    box-shadow: 0px 6px 15px #888888;
+    
 }
 .feedTitle{
     width: 60%;

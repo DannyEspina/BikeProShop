@@ -1,5 +1,6 @@
 <% provide(:title, 'Reset password') %>
 <div class ="container-fluid fix-contain resetForm">
+  <%= render 'shared/navbarTrans' %>
 <%= image_tag("Users/passReset", alt:"password reset", id: "passReset") %>
 <%= render 'shared/flash' %>
 <div class="row">
@@ -13,7 +14,7 @@
         <%= f.password_field :password %>
         <div class="label-text">Password</div>
       <% end %>
-      
+
       <%= f.label :password_confirmation do %>
         <%= f.password_field :password_confirmation %>
         <div class="label-text">Confirmation</div>

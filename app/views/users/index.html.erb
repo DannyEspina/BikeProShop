@@ -1,12 +1,12 @@
 <% provide(:title, 'All users') %>
 
- <%= render 'shared/navbar_no_yt' %>
+ <%= render 'shared/navbarTrans' %>
  <div class="container-fluid titleContain">
   <%= render 'shared/flash' %>
   <%= image_tag('Users/allUser.png', class:"userTitle") %>
 </div>
 <div class="container-fluid userContain">
-   
+
 <%= will_paginate %>
 <ul class="users">
   <%= render @users %>

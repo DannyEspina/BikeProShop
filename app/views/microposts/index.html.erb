@@ -1,25 +1,26 @@
 <% provide(:title, 'Blog') %>
 
-<%= render 'shared/navbar_no_yt' %>
+   <%= render 'shared/navbarTrans' %>
 <div class="container-fluid userContain">
+
     <%= render 'shared/flash' %>
-    
+
       <div class="row">
     <aside class="col-md-4">
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
-      
+
       <section class="micropost_form">
         <%= render 'shared/micropost_form' %>
       </section>
     </aside>
-    
+
      <div class="col-md-8">
       <%= image_tag('Users/MircopostFeed.png', alt: 'Mircopost feed title', class:'feedTitle') %>
       <%= render 'shared/feed' %>
     </div>
   </div>
-  
+
 </div>
 <%= render 'shared/footer' %>

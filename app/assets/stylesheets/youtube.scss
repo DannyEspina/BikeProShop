@@ -1,0 +1,60 @@
+navLogo, .loginImg1, #loginHeader, input::-webkit-input-placeholder, button {
+  font-family: 'roboto', sans-serif;
+  transition: all 0.275s ease-in-out;
+}
+.youtubeBox {
+  position: absolute;
+  top: -100px;
+  background-color: black;
+  z-index: -1;
+  opacity: 0.45;
+  width: 100%;
+  height: 830px;
+}
+#ytplayer {
+   position: relative;
+   top: -100px;
+   z-index: -2;
+   //opacity: 0.65;
+   width: 100%;
+   height: 830px;
+   padding: 0;
+   margin-bottom: -293px;
+}
+
+.logo1 {
+   position: absolute;
+   top: -220px;
+    z-index: -1;
+   background-image: url('Home/LogoPart2.png');
+   height: 1100px;
+   width: 100%;
+   background-position: 66% 35%;
+   background-repeat: no-repeat;
+   background-size: auto 650px;
+   opacity: 0;
+   transform: translatex(30px);
+}
+
+.logo2 {
+   position: absolute;
+   top: -360px;
+    z-index: -1;
+   background-image: url('Home/LogoPart1.png');
+   height: 1200px;
+   width: 100%;
+   background-position: 36%;
+   background-repeat: no-repeat;
+   background-size: auto 250px;
+   opacity: 0;
+   transform: translatex(-30px);
+}
+
+#navLogo:hover {
+    transform: translateY(-3px);
+}
+.is-showing-logo {
+   transition: all 0.8s ease-in-out;
+   opacity: 1;
+   transform: translatex(0px);
+}

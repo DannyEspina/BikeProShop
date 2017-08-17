@@ -17,19 +17,6 @@ $d: $t / 121;
    background-size: cover;
 }
 
-@mixin navBarGradient {
-   /* For browsers that do not support gradients */
-   background: hsl(24, 99%, 52%);
-   /* For Safari 5.1 to 6.0 */
-   background: -webkit-linear-gradient(hsl(24, 99%, 52%), hsl(24, 99%, 46%), hsl(24, 99%, 40%));
-   /* For Opera 11.1 to 12.0 */
-   background: -o-linear-gradient(hsl(24, 99%, 52%), hsl(24, 99%, 4%), hsl(24, 99%, 40%));
-   /* For Firefox 3.6 to 15 */
-   background: -moz-linear-gradient(hsl(24, 99%, 52%), hsl(24, 99%, 46%), hsl(24, 99%, 40%));
-   /* Standard syntax */
-   background: linear-gradient(hsl(24, 99%, 52%), hsl(24, 99%, 46%), hsl(24, 99%, 40%));
-}
-
 @mixin shopPanelGradient {
    /* For browsers that do not support gradients */
    background: hsl(24, 99%, 52%);
@@ -117,60 +104,7 @@ html {
 
 }
 
-#navLogo, .loginImg1, #loginHeader, input::-webkit-input-placeholder, button {
-  font-family: 'roboto', sans-serif;
-  transition: all 0.275s ease-in-out;
-}
 
-#ytplayer {
-   position: relative;
-   top: -100px;
-   z-index: -1;
-   opacity: 0.65;
-   width: 100%;
-   height: 830px;
-   padding: 0;
-   margin-bottom: -293px;
-}
-
-.logo1 {
-   position: absolute;
-   top: -220px;
-    z-index: -1;
-   background-image: url('Home/LogoPart2.png');
-   height: 1100px;
-   width: 100%;
-   background-position: 66% 35%;
-   background-repeat: no-repeat;
-   background-size: auto 650px;
-   opacity: 0;
-   transform: translatex(30px);
-}
-
-.logo2 {
-   position: absolute;
-   top: -360px;
-    z-index: -1;
-   background-image: url('Home/LogoPart1.png');
-   height: 1200px;
-   width: 100%;
-   background-position: 36%;
-   background-repeat: no-repeat;
-   background-size: auto 250px;
-   opacity: 0;
-   transform: translatex(-30px);
-}
-
-#navLogo:hover {
-    transform: translateY(-3px);
-}
-.is-showing-logo {
-   transition: all 0.8s ease-in-out;
-   opacity: 1;
-   transform: translatex(0px);
-}
-
-//set the navbar to the top and width to 100% when the user scrolls past it
 .affix {
    top: 0;
    width: 100%;
@@ -180,54 +114,6 @@ html {
 .affix+.container-fluid {
    padding-top: 60px;
 }
-
-#navBar {
-   border: none;
-   margin-bottom: 0;
-   z-index: 98;
-   border-radius: 0;
-   @include navBarGradient;
-   transition: all 0.3s ease-in-out;
-}
-
-
-
-.navbar-toggle {
-   background-color: hsl(24, 99%, 52%);
-   &:hover {
-       background-color: hsl(24, 99%, 22%);
-   }
-}
-
-#navList>li>a {
-   font-family: 'Buenard', serif;
-   letter-spacing: 3px;
-   font-size: 12px;
-   display: block;
-   padding: 16px 20px;
-   color: white;
-   text-decoration: none;
-}
-
-#navList>li a:hover {
-   color: hsl(24, 99%, 20%);
-}
-
-#iconsRight li a {
-   color: white;
-}
-
-#login {
-  color: white;
-  font-size: 15px;
-  position: relative;
-  top: 15px;
-}
-
-#iconsRight li:hover, #iconsRight li a:hover, {
-   color: hsl(24, 98%, 16%);
-}
-
 #shopPanel, #userPanel {
    @include shopPanelGradient;
    border: solid 1px hsl(240, 6%, 30%);

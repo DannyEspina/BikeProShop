@@ -1,8 +1,8 @@
 
 <% provide(:title, @user.name) %>
- <%= render 'shared/navbar_no_yt' %>
+ <%= render 'shared/navbarTrans' %>
 <div class="container-fluid showBody">
-  
+
  <%= render 'shared/flash' %>
 <div class="row ">
   <aside class="col-md-4">
@@ -15,7 +15,7 @@
   </aside>
   <div class="col-md-8">
      <%= image_tag('Users/Profile.png', alt:'profile title', class: 'profileTitle') %>
-     
+
     <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">

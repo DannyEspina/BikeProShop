@@ -1,3 +1,57 @@
-<h1>Shop#accessories</h1>
-<%= render 'shared/flash' %>
-<p>Find me in app/views/shop/accessories.html.erb</p>
+<% provide(:title, "Shop Accessories") %>
+
+<div  class="container-fluid" style="padding:0">
+  <div class= "youtubeBox">
+  </div>
+    <iframe id="ytplayer"
+      src="https://www.youtube.com/embed/HereF6ee0Fc?autoplay=1&loop=1&list=PL1Qm-Ugsa8xXAy1G0tUQZWH0lsPDruDNN&controls=0&modestbranding=1&showinfo=0&autohide=1&disablekb=1&rel=0&index=4"
+      frameborder="0" allowfullscreen>
+      </iframe>
+       <div class="logo2"></div>
+       <div class="logo1"></div>
+     </div>
+
+  <%= render 'shared/navbarTrans' %>
+
+<div class="container-fluid headerContain fix-contain">
+  <%= render 'shared/flash' %>
+  <br>
+  <%= image_tag('Shop/AccessorTitle', alt: 'accessories title', class:'accessorTitle') %>
+  <br>
+  <!-- row 1 -->
+  <div class="row">
+    <div class="col-md-3">
+      <%= image_tag('Accessories/bell.jpg', alt:"Bicycle bell", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Accessories/bottle cage.JPG', alt:"Bottle cage", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Accessories/computer.JPG', alt:"Bicycle computer", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Accessories/handlebar tape.JPG', alt:"Handlebar tape", class: "partsPic") %>
+    </div>
+  </div>
+  <!-- row 2 -->
+  <div class="row">
+    <div class="col-md-3">
+      <%= image_tag('Accessories/locks.JPG', alt:"Lock", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Accessories/pegs1.JPG', alt:"Pegs", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Accessories/tail light.JPG', alt:"Tail light", class: "partsPic") %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag('Accessories/waterBottle.JPG', alt:"water Bottle", class: "partsPic") %>
+    </div>
+  </div>
+  <!-- row 3 -->
+  <div class="row">
+    <div class="col-md-3">
+      <%= image_tag('Accessories/repairKit.JPG', alt:"repairKit", class: "partsPic") %>
+    </div>
+</div>
+<%= render 'shared/footer' %>

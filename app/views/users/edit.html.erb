@@ -1,8 +1,8 @@
 <% provide(:title, "Edit User") %>
 <% provide(:button_text, 'Save changes') %>
 
-
 <div class ="container-fluid fix-contain editForm">
+   <%= render 'shared/navbarTrans' %>
 <%= render 'shared/flash' %>
 <%= image_tag("Login & Sign up/Update.png", alt:"update title", class:"updateTitle") %>
 
@@ -12,10 +12,10 @@
             <div class="change"><a href="http://gravatar.com/emails" target="_blank">change</a></div>
       </div>
     </div>
-    
+
 <%= render "shared/form_layout", path: edit_path %>
 
 
-      
+
 
 </div>
