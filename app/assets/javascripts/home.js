@@ -8,26 +8,29 @@ $(document).on('turbolinks:load', function() {
     });
 
     $('.dropdown-toggle').removeClass('active');
-    /*logo parallax
-     *listening to a window scroll event */
-
+    /*listening to a window scroll event */
+     if (this.hash !== "" && location.pathname == "/index"
+         ||this.hash !== "" && location.pathname == "/") {
     $(window).scroll(function() {
 
         //how many pixels am i relation to the top of the page
-        var wScroll = $(this).scrollTop();
-        //landing effect on logo
+        var wScroll1 = $(this).scrollTop();
+        //max distance the bicycle should travel
+        var maxDistance = $(window).width()*0.35;
+        //restart wScroll to 0 at the start of the animation
+        var wScroll2 = wScroll1-($('.Header').offset().top - ($(window).height() / 3));
+          if (wScroll1 > $('.Header').offset().top - ($(window).height() / 3) && wScroll1 <= 790 && wScroll2<maxDistance) {
 
-          if (wScroll > $('.Header').offset().top - ($(window).height() / 3) && wScroll <= 790) {
-          console.log("hi");
           $('.cust_bicycle').css({
-              'left': '0%',
-              'transform': 'translate(' + wScroll / 3.2 + '%, 0px)'
+              //keep the bicycle next to the customer.
+              'left': ($(window).width()-1440)/30+'%',
+              'transform': 'translate(' +wScroll1/2.9 + '%, 0px)'
           });
           }
     });
-
+}
     // Add smooth scrolling to all links in navbar + footer link
-    $(".mechanicLink, .contactLink, footer a[href='#top']").on('click', function(event) {
+    $(".mechanicLink, .contactLink, .locationLink, footer a[href='#top']").on('click', function(event) {
         // Make sure this.hash has a value before overriding default behavior
 
         if (this.hash !== "" && location.pathname == "/index"

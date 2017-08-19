@@ -17,19 +17,6 @@ $d: $t / 121;
    background-size: cover;
 }
 
-@mixin shopPanelGradient {
-   /* For browsers that do not support gradients */
-   background: hsl(24, 99%, 52%);
-   /* For Safari 5.1 to 6.0 */
-   background: -webkit-linear-gradient(hsl(24, 99%, 40%), hsl(24, 99%, 46%), hsl(24, 99%, 52%));
-   /* For Opera 11.1 to 12.0 */
-   background: -o-linear-gradient(hsl(24, 99%, 40%), hsl(24, 99%, 46%), hsl(24, 99%, 52%));
-   /* For Firefox 3.6 to 15 */
-   background: -moz-linear-gradient(hsl(24, 99%, 40%), hsl(24, 99%, 46%), hsl(24, 99%, 52%));
-   /* Standard syntax */
-   background: linear-gradient(hsl(24, 99%, 40%), hsl(24, 99%, 46%), hsl(24, 99%, 52%));
-}
-
 body,
 html {
    background: black;
@@ -105,38 +92,20 @@ html {
 }
 
 
-.affix {
-   top: 0;
-   width: 100%;
-}
-
-//makes the transition smoother
-.affix+.container-fluid {
-   padding-top: 60px;
-}
-#shopPanel, #userPanel {
-   @include shopPanelGradient;
-   border: solid 1px hsl(240, 6%, 30%);
-   border-top: solid 2px orange;
-   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4), inset 0 10px 15px -8px orange;
-   li a {
-       color: white;
-   }
-   .dropdown-header {
-       color: hsl(24, 99%, 20%);
-   }
-   .divider {
-       background-color: hsl(24, 98%, 40%);
-   }
-}
 .Header {
    width: 60%;
    position: relative;
    left: 20%;
 }
-
+.locationHeader {
+  width: 30%;
+  position: relative;
+  left: 35%;
+}
 .headerContain {
    margin: 0;
+   padding: 0;
+   width: 100%;
    background-color: rgb(252, 252, 252);
 }
 
@@ -145,6 +114,7 @@ html {
    font-family: 'Buenard', serif;
    font-size: 20px;
    width: 100%;
+   padding: 0;
    text-align: center;
 
    margin-bottom: 5%;
@@ -158,6 +128,7 @@ html {
 
 .customer {
    position: relative;
+   margin: 0;
    height: 180px;
    right: 10%;
 }
@@ -213,5 +184,48 @@ html {
    padding-bottom: 50px;
    width: 100%;
    height: 500px;
+   border: 1px solid;
+}
+.addressHeader{
+  position: relative;
+  left: 40%;
+  width: 22%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.contactHeader {
+  position: relative;
+  left: 40%;
+  width: 20%;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.address {
+  width: 80%;
+  margin: auto;
+ p{
 
+  font-size: 22px;
+  font-family: 'Signika Negative', sans-serif;
+}
+}
+#phone, #email{
+   font-size: 22px;
+   font-family: 'Signika Negative', sans-serif;
+}
+#email {
+  padding-bottom: 30px;
+}
+#line {
+  border-bottom: 1px solid;
+  width: 35%;
+  margin: auto;
+}
+.mechanicInfo{
+  width: 90%;
+  margin: auto;
+  div p {
+    font-family: 'Buenard', serif;
+    font-size: 20px;
+  }
 }

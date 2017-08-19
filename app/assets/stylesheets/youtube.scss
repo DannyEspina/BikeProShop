@@ -1,4 +1,4 @@
-navLogo, .loginImg1, #loginHeader, input::-webkit-input-placeholder, button {
+#navLogo, .loginImg1, #loginHeader, input::-webkit-input-placeholder, button {
   font-family: 'roboto', sans-serif;
   transition: all 0.275s ease-in-out;
 }
@@ -6,16 +6,16 @@ navLogo, .loginImg1, #loginHeader, input::-webkit-input-placeholder, button {
   position: absolute;
   top: -100px;
   background-color: black;
-  z-index: -1;
-  opacity: 0.45;
+  z-index: -2;
+  //opacity: 0.45;
   width: 100%;
   height: 830px;
 }
 #ytplayer {
    position: relative;
    top: -100px;
-   z-index: -2;
-   //opacity: 0.65;
+   z-index: -1;
+   opacity: 0.65;
    width: 100%;
    height: 830px;
    padding: 0;

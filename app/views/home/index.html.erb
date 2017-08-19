@@ -56,20 +56,62 @@
 
       <div id="mechanicBody"class="container-fluid headerContain">
         <%= image_tag('Home/mechanicHeader.png', alt: 'mechanic header', class:'Header') %>
-        <p></p>
-
-
+        <div class="row">
+          <div class="mechanicInfo">
+          <div class="col-md-6">
+          <p>Meet the mechanic, Miguel Espina. He has 30+ experience in repairing
+            and selling bicycles. Originally from Chile, Miguel moved to Miami in
+            1985 to live the American Dream. From then, along with his two brothers,
+            he began to learn his trade. In [date] he opened his first shop at [address]
+            and began his dream. </p>
+            <div class="col-md-6">
+            </div>
+          </div>
+          </div>
+          </div>
+          <div class="row">
+            <div class="mechanicInfo">
+            <div class="col-md-6">
+              </div>
+              <div class="col-md-6">
+	        <p>Miguel loved building bicycles for people especially his two loving kids
+            because he knows one thing: what better way to be healthy then by doing it
+            together with your family? </P>
+          </div>
+        </div>
+        </div>
       </div>
       <div id="contactUs" class="container-fluid headerContain">
         <%= image_tag("Home/contactHeader.png", alt:"contact header", class:"Header") %>
-        <div class="locationBody">
-          <p><span class="glyphicon glyphicon-phone"></span> (864) 285-8181</p>
-          <p><span class="glyphicon glyphicon-envelope"></span> bikeproshop@gmail.com</p>
-          <p><span class="glyphicon glyphicon-map-marker"></span> Barnyard Flea Market Greer, 2000 SC-101, Greer, SC 29651</p>
-          <p><span class="glyphicon glyphicon-wrench"></span> Located at J51 & J52</p>
+        <br><br>
+        <div class ="row">
+          <div class="col-md-6">
+
+          <%= image_tag("Home/address.png", alt:"address header", class:"addressHeader") %>
+          <div class="address">
+            <p> Barnyard Flea Market Greer</p>
+            <p>2000 SC-101, Greer, SC 29651</p>
+            <p> Look for <u>BikeProShop864</u> at <u>J51</u> & <u>J52</u></p>
+          </div>
+
+        <%= image_tag("Home/contact.png", alt:"contact header", class:"contactHeader") %>
+
+        <div id ="phone">
+          <p>Phone: (864) 285-8181</p>
         </div>
+        <div id="email">
+          <p>Email: bikeproshop@gmail.com</p>
+        </div>
+        <div id="line">
+        </div>
+          </div>
+      <div class="col-md-6">
+      <div id="map"></div>
     </div>
-    <div id="map"></div>
+    </div>
+    </div>
+
+
   <%= render 'shared/footer' %>
 
  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_Zu6BWfCvXHlP9HYcX0IeueqdToRVKRk&callback=myMap"></script>
