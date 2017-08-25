@@ -91,11 +91,11 @@ html {
 
 }
 
-
 .Header {
    width: 60%;
    position: relative;
    left: 20%;
+   margin-bottom: 1.5%
 }
 .locationHeader {
   width: 30%;
@@ -228,4 +228,11 @@ html {
     font-family: 'Buenard', serif;
     font-size: 20px;
   }
+}
+.oldPic {
+  width: 100%;
+  padding: 2.5%;
+  padding-top: 0;
+  padding-bottom: 5%;
+  margin: auto;
 }
