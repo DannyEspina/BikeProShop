@@ -10,7 +10,7 @@ $(document).on('turbolinks:load', function() {
     $('.dropdown-toggle').removeClass('active');
     /*listening to a window scroll event */
      if (this.hash !== "" && location.pathname == "/index"
-         ||this.hash !== "" && location.pathname == "/") {
+         ||this.hash !== "" && location.pathname == "/" && $(window).width()>700) {
     $(window).scroll(function() {
 
         //how many pixels am i relation to the top of the page
