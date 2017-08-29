@@ -128,15 +128,16 @@ html {
 
 .customer {
    position: relative;
-   margin: 0;
-   height: 180px;
+   height: 12.5vw;
+   margin-top: 1%;
    right: 10%;
+
 }
 
 .mechanic {
    position: relative;
-   margin-top: 2%;
-   height: 210px;
+   margin-top: 1.8%;
+   height: 15vw;
    left: 10%;
 }
 
@@ -145,7 +146,7 @@ html {
    z-index: 1;
    top: 7%;
    left: 24%;
-   height: 280px;
+   height: 19vw;
 }
 
 #window1 {
@@ -241,5 +242,5 @@ html {
   .windows {
     display: none;
   }
-  
+
 }
