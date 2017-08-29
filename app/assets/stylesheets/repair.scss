@@ -91,16 +91,22 @@ $slide-number: 3;
   &-title {
     font-size: 12vh;
     line-height: 1.4;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
   }
   &-medium {
     font-size: 7vh;
     line-height: 1.4;
+    -webkit-text-stroke-width: 2px;
+     -webkit-text-stroke-color: black;
   }
   &-list {
     font-size: 3.5vh;
     text-align: left;
     line-height: 1.4;
     list-style-type: circle;
+    -webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color: black;
   }
 }
 
@@ -147,7 +153,20 @@ $slide-number: 3;
 }
 
 th, td {
+    font-size: 3.5vh;
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    -webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color: black;
+}
+
+.content-list {
+  list-style: none;
+  li:before {
+  content: '✓';
+  color: #d82b16;
+  -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: #71170c;
+}
 }

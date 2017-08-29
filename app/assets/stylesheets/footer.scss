@@ -5,7 +5,7 @@ $body-theme: hsl(34, 100%, 95%);
     justify-content: center;
     align-items: center;
     align-content: center;
-    height: 200px;
+    height: calc(50vw * .29); //Used to calculate height for safari/firefox. problems arise when not used.
     width: 100%;
     font: 16px Roboto, sans-serif;
     background: rgb(252,252,252);
@@ -90,4 +90,14 @@ a {
 #socialRow{
     position: relative;
     top: -30px;
+}
+@media only screen and (max-width: 700px){
+  #footer {
+    position: relative!important;
+    height: calc(50vw * .5);
+  }
+  body,
+  html {
+    padding: 0!important;
+  }
 }
