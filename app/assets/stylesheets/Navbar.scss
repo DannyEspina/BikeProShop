@@ -49,12 +49,8 @@
 
 }
 
-.affix {
-   top: 0;
-   width: 100%;
-}
-
-//makes the transition smoother
-.affix+.container-fluid {
-   padding-top: 60px;
+.navbar {
+  position: -webkit-sticky;
+ position: sticky;
+ top: 0;
 }

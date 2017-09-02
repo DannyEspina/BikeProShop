@@ -1,11 +1,6 @@
 //fading dropdown menu when hover
 $(document).on('turbolinks:load', function() {
 
-    //edit gravatar
-    $(".zoomInGrav img, .change").hover(function(){
-        $(".change").toggleClass("displayChange");
-        $(".zoomInGrav img").toggleClass("zoomIn1");
-    });
 
     $('.dropdown-toggle').removeClass('active');
     /*listening to a window scroll event */
