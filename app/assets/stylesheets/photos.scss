@@ -1,8 +1,9 @@
 
-.galleryTitle{
-    width: 25%;
-    position: relative;
-    left: 36%;
+.GalleryLogo{
+    width: 50%;
+    position: absolute;
+    top: -2%;
+    left: 25%;
 }
 #galleryBody {
     margin: 0;
@@ -186,5 +187,5 @@
 }
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
-  
+
 }
