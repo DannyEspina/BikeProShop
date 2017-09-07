@@ -47,11 +47,6 @@ $(document).on('turbolinks:load', function() {
             });
         }
     });
-    setTimeout(function() {
-        $('.logo1').addClass('is-showing-logo');
-        $('.logo2').addClass('is-showing-logo');
-
-    }, 600);
 
 
     $("#shopDrop, #shopDropTrans").mouseenter(function() {

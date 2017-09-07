@@ -4,7 +4,7 @@ var countRight = 0;
 var targetID
 
 window.onclick = function(e) {
-if (event.target ==  document.getElementById("myModal")) {
+if (event.target ==  document.getElementById("closeModal")) {
      document.getElementById("myModal").style.display = "none";
      $("#tumbImg9").removeClass("appearTumb");
      countLeft = 10;

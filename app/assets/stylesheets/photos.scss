@@ -1,13 +1,13 @@
 
 .GalleryLogo{
-    width: 50%;
+    width: 60%;
     position: absolute;
-    top: -2%;
-    left: 25%;
+    top: -5%;
+    left: 20%;
 }
 #galleryBody {
     margin: 0;
-    padding-top: 20px;
+
     background: rgb(252,252,252);
 
 }
@@ -20,19 +20,31 @@
 
     }
 }
-
-.col-md-3 {
+.tumbArrow{
+  margin: auto;
+  position: relative;
+  top:2.7vh;
+  width: 8.2%;
+}
+.col-md-3{
     margin: 0;
     padding: 0;
 }
+#closeModal{
+  color: white;
+  opacity: 0.7;
+  font-size: 4.5em;
+  cursor: pointer;
+  position: absolute;
+  left: 94%;
 
+}
 #modalImg {
-    position: relative;
-    left: 25%;
-    width: 50%;
-    margin-top: 35px;
-    margin-bottom: 35px;
-
+    margin: auto;
+    width: 105vh;
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 2%;
     /* Add Animation */
 
     -webkit-animation-name: zoom;
@@ -49,16 +61,17 @@
   margin: auto;
   width: 90%;
 }
-#tumbLeft, #tumbRight {
 
+#tumbLeft, #tumbRight {
+  margin: auto;
+  display: inline-block;
   cursor: pointer;
   -webkit-user-select: none; /* Chrome/Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
   color: white;
-  position: relative;
-  top: 10px;
-  font-size: 29px;
+
+  font-size: 2em;
 }
 
 .tumbImgs{
@@ -79,6 +92,7 @@
 }
 /* The Modal (background) */
 .modal {
+    margin: auto;
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 99; /* Sit on top */
@@ -86,7 +100,7 @@
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    overflow:scroll; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
     -webkit-animation-name: appear;
@@ -110,10 +124,10 @@
 }
 
 .displayArrows {
-  -webkit-animation-name: arrowAnimation;
-  -webkit-animation-duration: 1s;
-  animation-name: arrowAnimation;
-  animation-duration: 1s;
+  // -webkit-animation-name: arrowAnimation;
+  // -webkit-animation-duration: 1s;
+  // animation-name: arrowAnimation;
+  // animation-duration: 1s;
 }
 //rotate tumb images to the left
 .moveTumbLeft {
@@ -185,7 +199,83 @@
   from{top: 55px; opacity: 0;}
   to {top: 10px; opacity: 1;}
 }
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
 
+@media only screen and (max-width: 1400px)
+{
+  #tumbImg9{
+    display: none;
+  }
+  #myTumb{
+    width: 80%;
+  }
+  .tumbImgs {
+    width: 11.2%;
+  }
 }
+
+@media only screen and (max-width: 1390px){
+  #tumbImg8{
+    display: none;
+  }
+  #myTumb{
+    width: 1008px;
+  }
+  .tumbImgs {
+    width: 120px;
+  }
+}
+@media only screen and (max-width: 1360px){
+  #tumbImg7{
+    display: none;
+  }
+  #myTumb{
+    width:820px;
+  }
+}
+@media only screen and (max-width:815px){
+  #modalImg {
+      width: 89%;
+    }
+    #myTumb{
+      width: 90%;
+    }
+    .tumbImgs {
+      width: 13.5%;
+    }
+  }
+// @media only screen and (max-width: 800px){
+//   #tumbImg6{
+//     display: none;
+//   }
+//   #myTumb{
+//     width: 50%;
+//   }
+
+//}
+// @media only screen and (max-width: 1158px){
+//   #tumbImg5{
+//     display: none;
+//   }
+//   #myTumb{
+//     width: 40%;
+//   }
+// }
+// @media only screen and (max-width: 1058px){
+//   #tumbImg4{
+//     display: none;
+//   }
+//   #myTumb{
+//     width: 30%;
+//   }
+//   #modalImg {
+//     width: 92%;
+//   }
+// }
+// @media only screen and (max-width: 958px){
+//   #tumbImg3{
+//     display: none;
+//   }
+//   #myTumb{
+//     width: 20%;
+//   }
+// }

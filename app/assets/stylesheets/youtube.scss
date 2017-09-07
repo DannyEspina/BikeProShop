@@ -22,7 +22,7 @@
 }
 .logo{
   position: absolute;
-  top: -0.7%;
+  top: -2%;
   left: 25%;
   width: 50%;
 
@@ -30,11 +30,6 @@
 
 #navLogo:hover {
     transform: translateY(-3px);
-}
-.is-showing-logo {
-   transition: all 0.8s ease-in-out;
-   opacity: 1;
-   transform: translatex(0px);
 }
 
 @media only screen and (max-width: 700px){
