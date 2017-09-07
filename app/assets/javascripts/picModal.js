@@ -28,7 +28,22 @@ $(".galleryImage").click(function(e){
    //add animations
    $("#tumbImg1").fadeOut(300);
    $(".notFirst").addClass("moveTumbLeft");
+   if(window.innerWidth>1400)
+   {
    $("#tumbImg9").addClass("appearTumb");
+   }
+   else if(window.innerWidth > 1390)
+   {
+     $("#tumbImg8").addClass("appearTumb");
+   }
+   else if(window.innerWidth > 1360)
+   {
+     $("#tumbImg7").addClass("appearTumb");
+   }
+   else if(window.innerWidth > 815)
+   {
+     $("#tumbImg6").addClass("appearTumb");
+   }
    setTimeout(function(){
    $("#tumbImg1").css("opacity", "1");
 
@@ -65,9 +80,33 @@ $(".galleryImage").click(function(e){
  $("#tumbRight").click(function(e) {
    var tumbs= document.getElementsByClassName("tumbImgs");
    $(".tumbImgs").removeClass("displayTumb");
+    console.log(window.innerWidth)
+   if(window.innerWidth>1400)
+   {
+     console.log("1400")
    $("#tumbImg9").fadeOut(300);
    $(".notLast").addClass("moveTumbRight");
-   $("#tumbImg1").addClass("appearTumb").css("opacity", "1");
+   }
+   else if(window.innerWidth > 1390)
+   {
+      console.log("1390")
+     $("#tumbImg8").fadeOut(300);
+     $(".1thru7").addClass("moveTumbRight");
+   }
+   else if(window.innerWidth > 1360)
+   {
+      console.log("1360")
+     $("#tumbImg7").fadeOut(300);
+     $(".1thru6").addClass("moveTumbRight");
+   }
+   else if(window.innerWidth > 815)
+  {
+     console.log("815")
+     $("#tumbImg6").fadeOut(300);
+     $(".1thru5").addClass("moveTumbRight");
+   }
+
+   $("#tumbImg1").addClass("appearTumb");
 
    setTimeout(function(){
    id = parseInt(targetID) - countRight;
@@ -94,7 +133,23 @@ $(".galleryImage").click(function(e){
    }
 
    //had issues when tumbImg9 not reappearing. This worked
-   $("#tumbImg9").fadeIn(1).stop().show();
+
+   if(window.innerWidth>1400)
+   {
+  $("#tumbImg9").fadeIn(1).stop().show();
+   }
+   else if(window.innerWidth > 1390)
+   {
+    $("#tumbImg8").fadeIn(1).stop().show();
+   }
+   else if(window.innerWidth > 1360)
+   {
+    $("#tumbImg7").fadeIn(1).stop().show();
+   }
+   else if(window.innerWidth > 815)
+  {
+    $("#tumbImg6").fadeIn(1).stop().show();
+   }
 
    $(".notLast").removeClass("moveTumbRight");
    }, 280);

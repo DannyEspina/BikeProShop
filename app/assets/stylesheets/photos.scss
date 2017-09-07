@@ -233,49 +233,17 @@
   }
 }
 @media only screen and (max-width:815px){
+  #tumbImg6{
+    display: none;
+  }
   #modalImg {
-      width: 89%;
+      margin-top: calc(815px/20vw);
+      width: 97%;
     }
     #myTumb{
       width: 90%;
     }
     .tumbImgs {
-      width: 13.5%;
+      width: 16%;
     }
   }
-// @media only screen and (max-width: 800px){
-//   #tumbImg6{
-//     display: none;
-//   }
-//   #myTumb{
-//     width: 50%;
-//   }
-
-//}
-// @media only screen and (max-width: 1158px){
-//   #tumbImg5{
-//     display: none;
-//   }
-//   #myTumb{
-//     width: 40%;
-//   }
-// }
-// @media only screen and (max-width: 1058px){
-//   #tumbImg4{
-//     display: none;
-//   }
-//   #myTumb{
-//     width: 30%;
-//   }
-//   #modalImg {
-//     width: 92%;
-//   }
-// }
-// @media only screen and (max-width: 958px){
-//   #tumbImg3{
-//     display: none;
-//   }
-//   #myTumb{
-//     width: 20%;
-//   }
-// }
