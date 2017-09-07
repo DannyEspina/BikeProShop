@@ -27,22 +27,29 @@ $(".galleryImage").click(function(e){
    $(".tumbImgs").removeClass("displayTumb");
    //add animations
    $("#tumbImg1").fadeOut(300);
-   $(".notFirst").addClass("moveTumbLeft");
+
    if(window.innerWidth>1400)
    {
    $("#tumbImg9").addClass("appearTumb");
+   $(".notFirst").addClass("moveTumbLeft");
    }
    else if(window.innerWidth > 1390)
    {
      $("#tumbImg8").addClass("appearTumb");
+     $(".notFirst").addClass("moveTumbLeft");
    }
    else if(window.innerWidth > 1360)
    {
      $("#tumbImg7").addClass("appearTumb");
+     $(".notFirst").addClass("moveTumbLeft");
    }
    else if(window.innerWidth > 815)
    {
      $("#tumbImg6").addClass("appearTumb");
+     $(".notFirst").addClass("moveTumbLeft");
+   }
+   else {
+     $(".notFirst").addClass("moveTumbLeftSmall");
    }
    setTimeout(function(){
    $("#tumbImg1").css("opacity", "1");
@@ -73,6 +80,7 @@ $(".galleryImage").click(function(e){
    }
    $("#tumbImg1").stop().show();
    $(".notFirst").removeClass("moveTumbLeft");
+   $(".notFirst").removeClass("moveTumbLeftSmall");
  }, 280);
 
  });
@@ -105,7 +113,11 @@ $(".galleryImage").click(function(e){
      $("#tumbImg6").fadeOut(300);
      $(".1thru5").addClass("moveTumbRight");
    }
-
+   else
+   {
+     $("#tumbImg5").fadeOut(300);
+     $(".1thru4").addClass("moveTumbRightSmall");
+   }
    $("#tumbImg1").addClass("appearTumb");
 
    setTimeout(function(){
@@ -150,7 +162,11 @@ $(".galleryImage").click(function(e){
   {
     $("#tumbImg6").fadeIn(1).stop().show();
    }
-
+   else
+   {
+     $("#tumbImg5").fadeIn(1).stop().show();
+     $(".notLast").removeClass("moveTumbRightSmall");
+   }
    $(".notLast").removeClass("moveTumbRight");
    }, 280);
  });

@@ -63,14 +63,12 @@
 }
 
 #tumbLeft, #tumbRight {
-  margin: auto;
-  display: inline-block;
+
   cursor: pointer;
   -webkit-user-select: none; /* Chrome/Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
   color: white;
-
   font-size: 2em;
 }
 
@@ -81,7 +79,7 @@
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
   display: inline-block;
-  width: 10%;
+  width: 120px;
   margin-left: 5px;
   &:hover {
       cursor: pointer;
@@ -124,10 +122,10 @@
 }
 
 .displayArrows {
-  // -webkit-animation-name: arrowAnimation;
-  // -webkit-animation-duration: 1s;
-  // animation-name: arrowAnimation;
-  // animation-duration: 1s;
+  -webkit-animation-name: arrowAnimation;
+  -webkit-animation-duration: 1s;
+  animation-name: arrowAnimation;
+  animation-duration: 1s;
 }
 //rotate tumb images to the left
 .moveTumbLeft {
@@ -136,7 +134,13 @@
  animation-name: moveLeft;
  animation-duration: 0.3s;
 }
-
+//rotate tumb images to the left
+.moveTumbLeftSmall {
+ -webkit-animation-name: moveLeftSmall;
+ -webkit-animation-duration: 0.3s;
+ animation-name: moveLeftSmall;
+ animation-duration: 0.3s;
+}
 //rotate tumb images to the right
 .moveTumbRight {
   -webkit-animation-name: moveRight;
@@ -144,7 +148,12 @@
   animation-name: moveRight;
   animation-duration: 0.3s;
 }
-
+.moveTumbRightSmall {
+  -webkit-animation-name: moveRightSmall;
+  -webkit-animation-duration: 0.3s;
+  animation-name: moveRightSmall;
+  animation-duration: 0.3s;
+}
 @-webkit-keyframes zoom {
     from {-webkit-transform:scale(0)}
     to {-webkit-transform:scale(1)}
@@ -164,23 +173,40 @@
     from {opacity:0}
     to {opacity:1}
 }
+@keyframes moveLeftSmall {
+  from{left: 0px}
+  to {left: -16vw}
+}
+@-webkit-keyframes moveLeftSmall{
+  from{left: 0px}
+  to {left: -16vw}
+}
 
 @keyframes moveLeft {
   from{left: 0px}
-  to {left: -150px}
+  to {left: -125px}
 }
 @-webkit-keyframes moveLeft {
   from{left: 0px}
-  to {left: -150px}
+  to {left: -125px}
+}
+@keyframes moveRightSmall {
+  from{left: 0px}
+  to {left: 16vw}
+}
+
+@-webkit-keyframes moveRightSmall {
+  from{left: 0px}
+  to {left: 16vw}
 }
 @keyframes moveRight {
   from{left: 0px}
-  to {left: 150px}
+  to {left: 125px}
 }
 
 @-webkit-keyframes moveRight {
   from{left: 0px}
-  to {left: 150px}
+  to {left: 125px}
 }
 @keyframes tumbAnimation {
   from{top: 55px; opacity: 0;}
@@ -208,9 +234,6 @@
   #myTumb{
     width: 80%;
   }
-  .tumbImgs {
-    width: 11.2%;
-  }
 }
 
 @media only screen and (max-width: 1390px){
@@ -219,9 +242,6 @@
   }
   #myTumb{
     width: 1008px;
-  }
-  .tumbImgs {
-    width: 120px;
   }
 }
 @media only screen and (max-width: 1360px){
@@ -237,7 +257,7 @@
     display: none;
   }
   #modalImg {
-      margin-top: calc(815px/20vw);
+
       width: 97%;
     }
     #myTumb{
@@ -247,3 +267,8 @@
       width: 16%;
     }
   }
+  @media only screen and (max-width:500px){
+    #tumbLeft, #tumbRight {
+      font-size: 1em;
+    }
+    }
