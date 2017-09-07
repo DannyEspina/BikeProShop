@@ -21,6 +21,8 @@ $(".galleryImage").click(function(e){
    var modalImg = document.getElementById("modalImg");
    modalImg.setAttribute("src", imgSrc);
  });
+
+ $("#modalImg").css({'transform': 'translate( 0px , 1)'})
 // rotate to the previous image left
  $("#tumbLeft").click(function(e) {
    var tumbs= document.getElementsByClassName("tumbImgs");
@@ -88,7 +90,7 @@ $(".galleryImage").click(function(e){
  $("#tumbRight").click(function(e) {
    var tumbs= document.getElementsByClassName("tumbImgs");
    $(".tumbImgs").removeClass("displayTumb");
-    console.log(window.innerWidth)
+    console.log(screen.height)
    if(window.innerWidth>1400)
    {
      console.log("1400")
@@ -113,10 +115,15 @@ $(".galleryImage").click(function(e){
      $("#tumbImg6").fadeOut(300);
      $(".1thru5").addClass("moveTumbRight");
    }
-   else
+   else if(window.innerWidth > 480)
    {
      $("#tumbImg5").fadeOut(300);
      $(".1thru4").addClass("moveTumbRightSmall");
+   }
+   else
+   {
+     $("#tumbImg4").fadeOut(300);
+     $(".1thru3").addClass("moveTumbRightSmall");
    }
    $("#tumbImg1").addClass("appearTumb");
 
@@ -162,9 +169,14 @@ $(".galleryImage").click(function(e){
   {
     $("#tumbImg6").fadeIn(1).stop().show();
    }
-   else
+   else if(window.innerWidth > 480)
    {
      $("#tumbImg5").fadeIn(1).stop().show();
+     $(".notLast").removeClass("moveTumbRightSmall");
+   }
+   else
+   {
+     $("#tumbImg4").fadeIn(1).stop().show();
      $(".notLast").removeClass("moveTumbRightSmall");
    }
    $(".notLast").removeClass("moveTumbRight");

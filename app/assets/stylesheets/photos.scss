@@ -33,11 +33,12 @@
 #closeModal{
   color: white;
   opacity: 0.7;
-  font-size: 4.5em;
+  font-size: 5em;
   cursor: pointer;
   position: absolute;
-  left: 94%;
-
+  left: 90vw;
+  -webkit-text-stroke-width: 2px;
+ -webkit-text-stroke-color: black;
 }
 #modalImg {
     margin: auto;
@@ -257,18 +258,29 @@
     display: none;
   }
   #modalImg {
-
-      width: 97%;
+      width: 100%;
     }
     #myTumb{
+
       width: 90%;
     }
     .tumbImgs {
       width: 16%;
     }
   }
-  @media only screen and (max-width:500px){
+  @media only screen and (max-width:491px){
+    #tumbImg5{
+      display: none;
+    }
+
+    #myTumb{
+
+      width: 80%;
+    }
     #tumbLeft, #tumbRight {
       font-size: 1em;
+    }
+    .tumbImgs {
+      width: 20%;
     }
     }
