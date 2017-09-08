@@ -48,7 +48,7 @@ $(document).on('turbolinks:load', function() {
         }
     });
 
-
+    if(window.innerWidth > 991){
     $("#shopDrop, #shopDropTrans").mouseenter(function() {
 
         $("#shopPanel, #shopPanelTrans").fadeIn("fast");
@@ -73,6 +73,7 @@ $(document).on('turbolinks:load', function() {
         });
 
     });
+  }
 });
 
 //google maps
