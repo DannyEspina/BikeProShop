@@ -4,7 +4,7 @@ var countRight = 0;
 var targetID
 
 window.onclick = function(e) {
-if (event.target ==  document.getElementById("closeModal")) {
+if (event.target ==  document.getElementById("closeModal") || event.target ==  document.getElementById("myModal")) {
      document.getElementById("myModal").style.display = "none";
      $("#tumbImg9").removeClass("appearTumb");
      countLeft = 10;
@@ -184,7 +184,7 @@ $(".galleryImage").click(function(e){
  });
 //for top 10 bicycle page
 var modal3 = document.getElementById("myModal3");
-var span = document.getElementsByClassName("close")[0]
+var closeModal = document.getElementById("closeModalShop")
 
 // Get the image and insert it inside the modal
 $('.topTenPic, strong').click(function(e){
@@ -216,7 +216,8 @@ $('.topTenPic, strong').click(function(e){
   }, 530);
 
   // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
+  //reset animation when the user clicks on another item.
+  closeModal.onclick = function() {
       modal3.style.display = "none";
       p[1].style.bottom ="62%";
       p[1].style.opacity="0";

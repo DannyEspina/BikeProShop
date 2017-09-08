@@ -1,5 +1,9 @@
-  $body-theme: hsl(34, 100%, 95%);
-  $bike-theme: hsl(24, 99%, 52%);
+
+  .featuredTitle{
+    position: relative ;
+    top: 0;
+    width: 100vw;
+  }
   .fix-contain {
             padding:0;
             margin:0;
@@ -92,7 +96,7 @@
 .bicycleInfo {
   z-index: 97;
   width: 48%;
-  font-size: 32px;
+  font-size: 2.5em;
   font-family: 'Signika Negative', sans-serif;
   color: white;
   display: none;
@@ -121,13 +125,16 @@
 
 }
 /* The Close Button */
-.close {
-    color: #aaa;
-    position: relative;
-    top: -60px;
-    right: 30px;
-    font-weight: bold;
-
+#closeModalShop{
+  color: white;
+  opacity: 0.7;
+  font-size: 5em;
+  cursor: pointer;
+  position: absolute;
+  left: 93vw;
+  top: 0;
+  -webkit-text-stroke-width: 2px;
+ -webkit-text-stroke-color: black;
 }
 .close:hover,
 .close:focus {
@@ -143,58 +150,7 @@
     animation-name: zoom1;
     animation-duration: 0.4s;
 }
-//awesome buttons
-// #shopBtn {
 
-//   position: relative;
-// 	display: inline-block;
-// 	padding: 1.2em 2em;
-// 	text-decoration: none;
-// 	text-align: center;
-// 	cursor: pointer;
-// 	user-select: none;
-// 	color: white;
-
-//     &::before {
-//         content: '';
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         bottom: 0;
-//         right: 0;
-//         background: linear-gradient(135deg, #6e8efb, #a777e3);
-//         border-radius: 4px;
-//         transition: box-shadow .5s ease, transform .2s ease;
-//         box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
-
-//         will-change: transform;
-//         transform:
-//             translateY(var(--ty, 0))
-//             rotateX(var(--rx, 0))
-//             rotateY(var(--ry, 0))
-//             translateZ(var(--tz, -12px));
-//     }
-
-//     &:hover::before {
-//         box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
-//     }
-
-//     &::after {
-//         position: relative;
-//         display: inline-block;
-
-//         transition: transform .2s ease;
-//         font-weight: bold;
-//         letter-spacing: .01em;
-
-
-//         will-change: transform;
-//         transform:
-//             translateY(var(--ty, 0))
-//             rotateX(var(--rx, 0))
-//             rotateY(var(--ry, 0));
-//     }
-// }
 
 
 @-webkit-keyframes zoom1 {
@@ -210,9 +166,18 @@
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
     #shopModalImg {
+      position: absolute;
+       top:0;
+       margin: auto;
         width: 100%;
     }
-    .bicycleInfo {
-      height: 200px;
+    #infoBox {
+      top: 55vw;
+      width: 100%;
+      margin: auto;
+      left: 20vw;
+    }
+    .bicycleInfo{
+      font-size: 4.2vw;
     }
 }

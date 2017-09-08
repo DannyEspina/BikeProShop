@@ -1,21 +1,22 @@
 <% provide(:title, "Shop") %>
 
 <div  class="container-fluid" style="padding:0">
+  <div class="titleBox">
+    <%= image_tag("Shop/FeaturedTitle.png", class:"featuredTitle")%>
+  </div>
   <div class= "youtubeBox">
   </div>
     <iframe id="ytplayer"
       src="https://www.youtube.com/embed/HereF6ee0Fc?autoplay=1&loop=1&list=PL1Qm-Ugsa8xXAy1G0tUQZWH0lsPDruDNN&controls=0&modestbranding=1&showinfo=0&autohide=1&disablekb=1&rel=0&index=3"
       frameborder="0" allowfullscreen>
       </iframe>
-       <%= image_tag("Home/BikeProShop-Logo.png", class: "logo")%>
+
      </div>
 
   <%= render 'shared/navbarTrans' %>
 
 <div class="container-fluid headerContain fix-contain">
   <%= render 'shared/flash' %>
-  <%= image_tag('Shop/topTenTitle.png', alt: 'top 10 title', class:'Header') %>
-  <br><br>
   <div class="row">
     <div class="col-md-6 zoomIn">
       <%= image_tag('Shop/topTen1.JPG', alt:"Top ten bicycle", id:"1", class:'topTenPic') %>
@@ -129,7 +130,7 @@
 </div>
 <%= render 'shared/footer' %>
  <div id="myModal3" class="modal3">
-   <i class="material-icons close" style="font-size:50px">close</i>
+   <span id="closeModalShop">&times;</span>
       <%= image_tag("", id:"shopModalImg") %>
       <div id="infoBox"></div>
   </div>
