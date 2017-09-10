@@ -1,5 +1,6 @@
 $body-theme: hsl(34, 100%, 95%);
 #footer {
+  padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -12,7 +13,7 @@ $body-theme: hsl(34, 100%, 95%);
     position: fixed;
     bottom: 0;
     z-index: -999;
-
+    
 }
 
 a {

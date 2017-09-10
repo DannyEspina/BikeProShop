@@ -24,11 +24,11 @@
             <%= image_tag("Home/customer.png", class: "customer")%>
             <%= image_tag("Home/bicycle.png",  class: "cust_bicycle") %>
             <%= image_tag("Home/mechanic.png", class: "mechanic") %>
-
-          <p>Tell us your problems and we'll do the rest!
+            <%= image_tag("Home/mobileCusMech.png", class: "mobileCusMech") %>
+          <p style="display:block">Tell us your problems and we'll do the rest!
               If the repair isn't too severe you can walk around the Flea market and pick up your bicyle after you're done!
-              Since we are at the flea market you won't find a better price anywhere else!<br><br>
-                Want to learn more?</p>
+              Since we are at the flea market you won't find a better price anywhere else!</p><br>
+                <p>Want to learn more?</p>
           <div id ="clickMe">
             <div class="cont">
                 <a href="/repair"> Click Here</a>
@@ -55,6 +55,7 @@
 
       <div id="mechanicBody"class="container-fluid headerContain">
         <%= image_tag('Home/mechanicHeader.png', alt: 'mechanic header', class:'Header') %>
+        <div id="desktopVersion">
         <div class="row">
           <div class="mechanicInfo">
           <div class="col-md-6">
@@ -85,21 +86,57 @@
         </div>
         </div>
       </div>
+
+        <div id ="mobileVersion">
+          <div class="row">
+            <div class="mechanicInfo">
+            <div class="col-md-6">
+            <p>Meet The Mechanic, Miguel Espina. He has 30+ experience in repairing
+              and selling bicycles. Originally from Chile, Miguel loved riding his bicycle
+              on the mountainside of chile for miles with his friends and family. In 1985 he moved to
+              Miami to live the American Dream along with his family. Since then he began learning
+              his trade by respoking wheels after wheels along with his 3 brothers
+              in a small home in Miami. In 1995 he opened his first bicycle shop called Best Bike
+              at SW 137th avenue and began his dream. </p>
+              </div>
+              <div class="col-md-6">
+          <p>Miguel loves to build bicycles for people including his two loving kids
+            because he knows one thing: what better way to be healthy then by doing it
+            together with your family? </P>
+          </div>
+
+            </div>
+            </div>
+            <div class="row">
+              <div class="mechanicInfo">
+              <div class="col-md-6">
+                <%= image_tag('Home/oldPicture1.jpg', alt: 'old shop', class:'oldPic') %>
+                </div>
+
+            <div class="col-md-6">
+              <%= image_tag('Home/oldpicture2.jpg', alt: 'old shop', class:'oldPic') %>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
       <div id="contactUs" class="container-fluid headerContain">
         <%= image_tag("Home/contactHeader.png", alt:"contact header", class:"Header") %>
-        <br><br>
+        
         <div class ="row">
           <div class="col-md-6">
 
-          <%= image_tag("Home/address.png", alt:"address header", class:"addressHeader") %>
-          <div class="address">
+
+          <div id="address">
+            <%= image_tag("Home/address.png", alt:"address header", class:"addressHeader") %>
             <p> Barnyard Flea Market Greer</p>
             <p>2000 SC-101, Greer, SC 29651</p>
             <p> Look for <u>BikeProShop864</u> at <u>J51</u> & <u>J52</u></p>
           </div>
 
+          <div id="phoneEmail">
         <%= image_tag("Home/contact.png", alt:"contact header", class:"contactHeader") %>
-
         <div id ="phone">
           <p>Phone: (864) 285-8181</p>
         </div>
@@ -109,6 +146,7 @@
         <div id="line">
         </div>
           </div>
+        </div>
       <div class="col-md-6">
       <div id="map"></div>
     </div>

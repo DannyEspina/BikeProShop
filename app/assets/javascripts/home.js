@@ -4,8 +4,9 @@ $(document).on('turbolinks:load', function() {
 
     $('.dropdown-toggle').removeClass('active');
     /*listening to a window scroll event */
-     if (this.hash !== "" && location.pathname == "/index"
-         ||this.hash !== "" && location.pathname == "/" && $(window).width()>700) {
+     if ((this.hash !== "" && location.pathname == "/index")
+         ||(this.hash !== "" && location.pathname == "/")) {
+
     $(window).scroll(function() {
 
         //how many pixels am i relation to the top of the page
@@ -14,7 +15,9 @@ $(document).on('turbolinks:load', function() {
         var maxDistance = $(window).width()*0.35;
         //restart wScroll to 0 at the start of the animation
         var wScroll2 = wScroll1-($('.Header').offset().top - ($(window).height() / 3));
-          if (wScroll1 > $('.Header').offset().top - ($(window).height() / 3) && wScroll1 <= 790 && wScroll2<maxDistance) {
+          if (wScroll1 > $('.Header').offset().top - ($(window).height() / 3) &&
+          wScroll1 <= 790 && wScroll2<maxDistance && window.innerWidth > 991) {
+            console.log(window.innerWidth);
 
           $('.cust_bicycle').css({
               //keep the bicycle next to the customer.
@@ -29,7 +32,7 @@ $(document).on('turbolinks:load', function() {
         // Make sure this.hash has a value before overriding default behavior
 
         if (this.hash !== "" && location.pathname == "/index"
-            ||this.hash !== "" && location.pathname == "/") {
+            ||this.hash !== "" && location.pathname == "/" && window.innerWidth > 700) {
             // Prevent default anchor click behavior
             event.preventDefault();
 

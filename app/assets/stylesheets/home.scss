@@ -24,13 +24,16 @@ html {
    margin: 0;
    z-index: 4;
    padding-bottom: 7%;
-
 }
-
+#mobileVersion {
+  display: none;
+}
 //fancy button
 #clickMe {
   display: block;
-  margin-top: 30px
+  position: relative;
+  top: 30px;
+  left: 1vw
 }
 .cont, .cont > a {
   position: absolute;
@@ -68,7 +71,6 @@ html {
 
 #fancyBtn {
   overflow: visible;
-
   #line{
     stroke: $bike-theme;
     stroke-width: 1px;
@@ -93,9 +95,9 @@ html {
 
 .Header {
    width: 60%;
-   position: relative;
-   left: 20%;
-   margin-bottom: 1.5%
+   padding: 0;
+   display: block;
+   margin: auto;
 }
 .locationHeader {
   width: 30%;
@@ -107,6 +109,7 @@ html {
    padding: 0;
    width: 100%;
    background-color: rgb(252, 252, 252);
+   overflow: hidden;
 }
 
 #tuneInfo {
@@ -121,11 +124,14 @@ html {
 
    padding-bottom: 30px;
    p {
-       padding-left: 20%;
+      margin: auto;
        width: 80%;
    }
 }
-
+.mobileCusMech {
+  display: none;
+  margin: auto;
+}
 .customer {
    position: relative;
    height: 12.5vw;
@@ -184,48 +190,50 @@ html {
    padding-top: 50px;
    padding-bottom: 50px;
    width: 100%;
-   height: 500px;
+   height: 70vh;
    border: 1px solid;
 }
 .addressHeader{
-  position: relative;
-  left: 40%;
-  width: 22%;
+  width: 30%;
+  display: block;
+  margin: auto;
   margin-top: 30px;
   margin-bottom: 10px;
 }
 .contactHeader {
-  position: relative;
-  left: 40%;
-  width: 20%;
+  width: 23%;
+  display: block;
+  margin: auto;
   margin-top: 50px;
   margin-bottom: 10px;
 }
-.address {
+#address {
   width: 80%;
   margin: auto;
  p{
-
-  font-size: 22px;
+     margin: auto;
+  font-size: 1.6em;
   font-family: 'Signika Negative', sans-serif;
 }
 }
 #phone, #email{
-   font-size: 22px;
+   font-size: 1.6em;
    font-family: 'Signika Negative', sans-serif;
 }
-#email {
-  padding-bottom: 30px;
+#email{
+  margin-bottom: 50px;
 }
 #line {
   border-bottom: 1px solid;
   width: 35%;
   margin: auto;
+  margin-bottom: 30px;
 }
 .mechanicInfo{
   width: 90%;
   margin: auto;
   div p {
+    padding-top: 20px;
     font-family: 'Buenard', serif;
     font-size: 20px;
   }
@@ -238,17 +246,67 @@ html {
   margin: auto;
 }
 
+@media only screen and (max-width: 991px) {
+  #desktopVersion{
+    display: none;
+  }
+  #mobileVersion{
+    display:block;
+  }
+  .customer {
+    height: 25vw;
+    margin-left: 3vw;
+    display: none;
+  }
+  .mechanic {
+    height: 32vw;
+    margin-right: 3vw;
+    display: none;
+  }
+  .cust_bicycle {
+    height: 35vw;
+    position: relative;
+    margin: 0;
+    display: none;
+  }
+  .mobileCusMech {
+    display: block;
+    height: 15vw;
+  }
+  #line {
+    display: none;
+  }
+}
 @media only screen and (max-width: 700px) {
   .windows {
     display: none;
   }
-  .customer {
-    height: 25vw;
+  .mobileCusMech {
+    height: 25vw!important;
   }
-  .mechanic {
-    height: 32vw;
+    #tuneInfo{
+      font-size: 1.3em;
+      p {
+        margin: auto;
+        width: 90%;
+        padding: 0;
+      }
+    }
+    .mechanicInfo div p {
+      font-size: 1.3em;
+    }
+    .Header{
+      margin-top: 10%;
+      width: 80%;
+    }
+    #map {
+      height: 70vw;
+    }
+    #address p{
+      font-size: 1.2em;
+    }
+    #phone, #email{
+       font-size: 1.2em;
+
+    }
   }
-  .cust_bicycle {
-    height: 35vw;
-  }
-}
