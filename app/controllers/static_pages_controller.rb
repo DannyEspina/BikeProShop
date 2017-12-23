@@ -1,7 +1,22 @@
-class HomeController < ApplicationController
-    def index
-    end
-    
+class StaticPagesController < ApplicationController
+  def home
+  end
+
+  def topBikes
+  end
+
+  def parts
+  end
+
+  def accessories
+  end
+
+  def gallery
+  end
+
+  def repair
+  end
+  
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
@@ -20,10 +35,10 @@ class HomeController < ApplicationController
       render 'index'
     end
   end
-  
+
   def destroy
     log_out if logged_in?
     redirect_to root_url
   end
-  
+
 end
