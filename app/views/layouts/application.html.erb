@@ -3,7 +3,11 @@
 <html lang="en">
 <head>
   <title><%= yield(:title) %> | BikeProShop</title>
-
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+    </script>
+  <![endif]-->
+  
   <%= favicon_link_tag 'Favicon/favicon.ico' %>
     <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
