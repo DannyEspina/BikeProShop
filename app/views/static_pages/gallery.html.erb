@@ -1,5 +1,5 @@
 <% provide(:title, "Gallery") %>
-<div  class="container-fluid" style="padding:0">
+<div  class="container-fluid yt" style="padding:0">
   <%= render 'shared/flash' %>
   <div class= "youtubeBox">
   </div>
@@ -11,7 +11,9 @@
      </div>
 
  <%= render 'shared/navbarTrans' %>
-
+ <div class="mobilePicContainer" class="container-fluid" style="padding:0">
+   <%= image_tag("Mobile/GalleryPage", class: "topPic") %>
+ </div>
 <div class="container-fluid fix-contain" id="galleryBody">
   <div class="row" style="margin: 0">
     <div class="col-md-3">

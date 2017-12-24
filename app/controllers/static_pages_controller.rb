@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-  def topBikes
+  def featured
   end
 
   def parts
@@ -16,7 +16,7 @@ class StaticPagesController < ApplicationController
 
   def repair
   end
-  
+
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])

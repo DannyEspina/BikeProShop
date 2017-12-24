@@ -1,32 +1,42 @@
 //fading dropdown menu when hover
 $(document).on('turbolinks:load', function() {
 
-
     $('.dropdown-toggle').removeClass('active');
-    /*listening to a window scroll event */
-     if ((this.hash !== "" && location.pathname == "/index")
-         ||(this.hash !== "" && location.pathname == "/")) {
+    // Listening to a window scroll event.
+     if(this.hash !== "" && location.pathname == "/") {
+       // Store top position
+       var postion = $(this).scrollTop();
 
-    $(window).scroll(function() {
+       $(window).scroll(function() {
 
-        //how many pixels am i relation to the top of the page
-        var wScroll1 = $(this).scrollTop();
-        //max distance the bicycle should travel
-        var maxDistance = $(window).width()*0.35;
-        //restart wScroll to 0 at the start of the animation
-        var wScroll2 = wScroll1-($('.Header').offset().top - ($(window).height() / 3));
-          if (wScroll1 > $('.Header').offset().top - ($(window).height() / 3) &&
-          wScroll1 <= 790 && wScroll2<maxDistance && window.innerWidth > 991) {
-            console.log(window.innerWidth);
+        // How many pixels am I relation to the top of the page.
+        var wScroll = $(this).scrollTop();
 
+        /* Start animation after the user scrolls pass 1/3 of the page and stop
+        at 790 pixels down. If the window width is samller than 991 pixels then
+        don't do the animation. */
+      
+        if (wScroll > $('.Header').offset().top - ($(window).height() / 3) &&
+            wScroll <= 790) {
+            var start = wScroll - 450;
+            var move = (start/340) * 100;
+            // console.log(start);
+            // console.log(move);
           $('.cust_bicycle').css({
-              //keep the bicycle next to the customer.
-              'left': ($(window).width()-1440)/30+'%',
-              'transform': 'translate(' +wScroll1/2.9 + '%, 0px)'
+              /* As the user scroll down I want to move/translate the bibycle
+              to the mechanic.
+
+              Find the difference between the start and the end
+              790-450 = 340
+
+              start%/340 * 100 = the distance from the customer as you scroll.
+              */
+
+              'transform': 'translate( '+move+'%, 0px)'
           });
-          }
-    });
-}
+            }
+        });
+      }
     // Add smooth scrolling to all links in navbar + footer link
     $(".mechanicLink, .contactLink, .locationLink, footer a[href='#top']").on('click', function(event) {
         // Make sure this.hash has a value before overriding default behavior

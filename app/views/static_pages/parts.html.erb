@@ -1,6 +1,6 @@
 <% provide(:title, "Shop Parts") %>
 
-<div  class="container-fluid" style="padding:0">
+<div  class="container-fluid yt" style="padding:0">
   <div class= "youtubeBox">
   </div>
     <iframe id="ytplayer"
@@ -11,7 +11,9 @@
      </div>
 
   <%= render 'shared/navbarTrans' %>
-
+  <div class="mobilePicContainer" class="container-fluid" style="padding:0">
+    <%= image_tag("Mobile/PartsPage", class: "topPic") %>
+  </div>
 <div class="container-fluid headerContain fix-contain">
   <%= render 'shared/flash' %>
   <!-- row 1 -->

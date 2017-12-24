@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/edit', to: 'users#edit'
   get '/new', to: 'users#new'
   post '/new',  to: 'users#create'
-  get '/topBikes', to: 'static_pages#topBikes'
+  get '/featured', to: 'static_pages#featured'
   get '/parts', to: 'static_pages#parts'
   get '/accessories', to: 'static_pages#accessories'
   get '/repair', to: 'static_pages#repair'
