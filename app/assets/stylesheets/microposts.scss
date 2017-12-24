@@ -1,10 +1,10 @@
 /* microposts */
-$bike-theme: hsl(24, 99%, 52%); 
-$bg: #313841; 
-$red: #F34541; 
-$black: #1D242B; 
-$green: #38B87C; 
-$blue: #2492FF; 
+$bike-theme: hsl(24, 99%, 52%);
+$bg: #313841;
+$red: #F34541;
+$black: #1D242B;
+$green: #38B87C;
+$blue: #2492FF;
 
 .microposts {
   list-style: none;
@@ -81,7 +81,7 @@ span.picture {
 //delete button
 // Setting up
 
-#deleteBtn {
+.deleteBtn {
     margin-top: 1%;
     margin-left: 1.5%;
     display: flex;
@@ -192,4 +192,3 @@ span.picture {
     0% { opacity: 0; transform: scale(.7); }
     100% { opacity: 1; transform: scale(1); }
 }
-
