@@ -15,7 +15,7 @@ $(document).on('turbolinks:load', function() {
         /* Start animation after the user scrolls pass 1/3 of the page and stop
         at 790 pixels down. If the window width is samller than 991 pixels then
         don't do the animation. */
-      
+
         if (wScroll > $('.Header').offset().top - ($(window).height() / 3) &&
             wScroll <= 790) {
             var start = wScroll - 450;
@@ -62,6 +62,7 @@ $(document).on('turbolinks:load', function() {
     });
 
     if(window.innerWidth > 991){
+      console.log(window.innerWidth);
     $("#shopDrop, #shopDropTrans").mouseenter(function() {
 
         $("#shopPanel, #shopPanelTrans").fadeIn("fast");
