@@ -1,14 +1,14 @@
-//fading dropdown menu when hover
+
 $(document).on('turbolinks:load', function() {
 
     $('.dropdown-toggle').removeClass('active');
-    // Listening to a window scroll event.
-     if(this.hash !== "" && location.pathname == "/") {
+
        // Store top position
        var postion = $(this).scrollTop();
 
        $(window).scroll(function() {
-
+           // Checks if page is root/home.html before executes code.
+         if(top.location.pathname == "/") {
         // How many pixels am I relation to the top of the page.
         var wScroll = $(this).scrollTop();
 
@@ -20,8 +20,6 @@ $(document).on('turbolinks:load', function() {
             wScroll <= 790) {
             var start = wScroll - 450;
             var move = (start/340) * 100;
-            // console.log(start);
-            // console.log(move);
           $('.cust_bicycle').css({
               /* As the user scroll down I want to move/translate the bibycle
               to the mechanic.
@@ -35,8 +33,10 @@ $(document).on('turbolinks:load', function() {
               'transform': 'translate( '+move+'%, 0px)'
           });
             }
+          }
         });
-      }
+
+
     // Add smooth scrolling to all links in navbar + footer link
     $(".mechanicLink, .contactLink, .locationLink, footer a[href='#top']").on('click', function(event) {
         // Make sure this.hash has a value before overriding default behavior
@@ -62,7 +62,7 @@ $(document).on('turbolinks:load', function() {
     });
 
     if(window.innerWidth > 991){
-      console.log(window.innerWidth);
+
     $("#shopDrop, #shopDropTrans").mouseenter(function() {
 
         $("#shopPanel, #shopPanelTrans").fadeIn("fast");
