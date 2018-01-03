@@ -1,4 +1,7 @@
-#navBarRepair, #navBarTrans {
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+#navBar {
    border: none;
    margin-bottom: 0;
    z-index: 98;
@@ -6,92 +9,68 @@
    background-color: rgba(0,0,0,0.5);
    transition: all 0.3s ease-in-out;
 }
-#navListRepair>li>a , #navListTrans>li>a{
-   font-family: 'Buenard', serif;
-   letter-spacing: 3px;
-   font-size: 12px;
+#navLogo {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+#navList>li>a{
+   font-family: 'Righteous', cursive;
+   font-size: 15px;
    display: block;
-   padding: 16px 20px;
-   color: rgb(230,230,230);
+
+   color: rgb(210, 210, 210);
    text-decoration: none;
 }
-#navListRepair>li a:hover, #navListTrans>li a:hover {
+ #navList>li a:hover {
    color: white;
 }
-#iconsRightRepair li a {
- color: rgb(230,230,230);
-}
 
-#loginRepair {
-  color: rgb(230,230,230);
+#login {
+  color: rgb(210, 210, 210);
   font-size: 15px;
   position: relative;
   top: 15px;
+  font-family: 'Righteous', cursive;
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
 }
-
-#iconsRightRepair li:hover, #iconsRightRepair li a:hover, #iconsRightTrans li:hover, #iconsRightTrans li a:hover{
+#sigin a{
+  color: rgb(210, 210, 210);
+  font-size: 15px;
+  font-family: 'Righteous', cursive;
+  &:hover {
+    color: white;
+  }
+}
+#iconsRight li:hover, #iconsRight li a:hover{
    color: white;
 }
-#shopPanelRepair, #userPanelRepair, #shopPanelTrans, #userPanelTrans {
-    top: 51px;
-    background-color: rgba(0,0,0,0.5);
+#featured {
+  padding-bottom: 7px;
+}
+#shopPanel, #userPanel{
+    top: 49px;
 
+    background-color: rgba(0,0,0,0.8);
    li a {
        color: white;
-      &:hover, {
-        background-color: rgba(63, 63, 63,0.5);
+       font-family: 'Open Sans', sans-serif;
 
+      &:hover, {
+        background-color: rgba(63, 63, 63,0.8);
       }
    }
    .dropdown-header {
-       color: rgb(230,230,230);
+       color: rgb(150,150,150);
+       font-family: 'Open Sans', sans-serif;
+       font-weight: bold;
    }
 
 }
-
 .navbar {
  position: -webkit-sticky;
  position: sticky;
  top: -1px;
-}
-@media (max-width: 991px) {
-  .navbar {
-   position: fixed;
-   top:0;
-   width: 100%;
-  }
-  .navbar-header {
-      float: none;
-  }
-  .navbar-left,.navbar-right {
-      float: none !important;
-  }
-  .navbar-toggle {
-      display: block;
-  }
-  .navbar-collapse {
-      border-top: 1px solid transparent;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  }
-  .navbar-fixed-top {
-      top: 0;
-      border-width: 0 0 1px;
-  }
-  .navbar-collapse.collapse {
-      display: none!important;
-  }
-  .navbar-nav {
-      float: none!important;
-      margin-top: 7.5px;
-  }
-  .navbar-nav>li {
-      float: none;
-  }
-  .navbar-nav>li>a {
-      padding-top: 10px;
-      padding-bottom: 10px;
-  }
-  .collapse.in{
-      display:block !important;
-  }
 }
