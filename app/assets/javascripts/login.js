@@ -1,6 +1,6 @@
 $(document).on('turbolinks:load', function() {
      var modal2 = document.getElementById("myModal2");
-  $("#login, #loginRepair").click(function(){
+  $("#navLogin, #sideLogin").click(function(){
          modal2.style.display = "block";
 
         window.onclick = function(event) {

@@ -57,13 +57,22 @@ html {
 }
 
 #sidebarLogo {
-  margin-left: 35%;
-  height: 43px;
-  width: 43px;
+
+  height: 60px;
+  width: 150px;
 }
 
 #partsHeader::before {
   background-color: #1a1a1a;
+}
+
+#sideFeatured::before, #sideParts::before, #sideAccessories::before {
+  background-color: #ec5b0e;
+}
+
+#sideMechanic::before, #sideContact::before, #sideLocation::before,
+#sideFacebook::before {
+  background-color: #ff233c;
 }
 /*-------------------------------*/
 /*           Wrappers            */
@@ -231,7 +240,12 @@ a:focus {
 /*       Hamburger-Cross         */
 /*-------------------------------*/
 #hamburgerButton {
+  position: fixed;
   display: none;
+  height: 42px;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
 }
 .hamburger {
 
@@ -241,7 +255,7 @@ a:focus {
   height: 32px;
   margin-left: 15px;
   position: fixed;
-  top: 20px;
+  top: 3px;
   width: 32px;
   z-index: 999;
   &:hover {
@@ -365,7 +379,7 @@ a:focus {
     z-index: 1;
 }
 
-@media only screen and (max-width: 1073px) {
+@media only screen and (max-width: 770px) {
   #hamburgerButton {
     display: block;
   }
