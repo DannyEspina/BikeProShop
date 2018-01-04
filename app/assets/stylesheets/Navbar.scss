@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 $orange: rgb(238, 89, 17);
-
+$text-color: rgb(210, 210, 210);
 #navBar {
    border: none;
    margin-bottom: 0;
@@ -16,6 +16,10 @@ $orange: rgb(238, 89, 17);
    position: sticky;
    top: -1px;
 }
+.dropdown {
+  cursor: pointer;
+}
+
 #navLogo {
   margin-top: 5px;
   margin-right: 5px;
@@ -25,18 +29,16 @@ $orange: rgb(238, 89, 17);
    font-size: 15px;
    display: block;
 
-   color: rgb(210, 210, 210);
+   color: $text-color;
    text-decoration: none;
 
    &:hover{
     color: white;
    }
-
 }
 
-
 #login {
-  color: rgb(210, 210, 210);
+  color: $text-color;
   font-size: 15px;
   position: relative;
   top: 15px;
@@ -47,7 +49,7 @@ $orange: rgb(238, 89, 17);
   }
 }
 #sigin a{
-  color: rgb(210, 210, 210);
+  color: $text-color;
   font-size: 15px;
   font-family: 'Righteous', cursive;
   &:hover {
@@ -56,9 +58,6 @@ $orange: rgb(238, 89, 17);
 }
 #iconsRight li:hover, #iconsRight li a:hover{
    color: white;
-}
-#featured {
-  padding-bottom: 7px;
 }
 #shopPanel, #userPanel{
     background-color: rgba(0,0,0,0.8);

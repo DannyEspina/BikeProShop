@@ -13,25 +13,29 @@
           <ul class="nav navbar-nav" id="navList">
             <!-- dropdown for shop -->
             <li><%= link_to "Home", root_path %></li>
-            <li id="shopDrop" class="dropdown">
+            <li class="dropdown" id="shopDrop">
                     <a class="dropdown-toggle" data-toggle="dropdown" id="shopLink">Shop<span class="caret"></span></a>
                       <ul id="shopPanel" class="dropdown-menu">
                         <li class="dropdown-header">Bicycles</li>
-
                         <li id="featured"><%= link_to "Featured Bicycles", featured_path %></li>
-
                         <li class="dropdown-header">Parts & Accessories</li>
-
-                        <li><a href="/parts">Shop Parts</a></li>
-                        <li><a href="/accessories">Shop Accessories</a></li>
+                        <li><%= link_to "Bicycle Parts", parts_path %></li>
+                        <li><%= link_to "Bicycle Accessories", accessories_path %></li>
                       </ul>
-                </li>
+            </li>
 
             <li><%= link_to "Repairs", repair_path %></li>
             <li><%= link_to "Gallery", gallery_path %></li>
-            <li><%= link_to "About The Mechanic", "/#mechanicBody", class: "mechanicLink" %></li>
-            <li><%= link_to "Contact Us", "/#contactUs", class: "contactLink" %></li>
-            <li><%= link_to "Store Location", "/#contactUs", class: "locationLink" %></li>
+            <li class="dropdown" id="infoDrop">
+                    <a class="dropdown-toggle" data-toggle="dropdown" id="infoLink">Information<span class="caret"></span></a>
+                      <ul id="shopPanel" class="dropdown-menu">
+                        <li><%= link_to "About The Mechanic", "/#mechanicBody", class: "mechanicLink" %></li>
+                        <li><%= link_to "Contact Us", "/#contactUs", class: "contactLink" %></li>
+                        <li><%= link_to "Store Location", "/#contactUs", class: "locationLink" %></li>
+                        <li><a href="https://www.facebook.com/bikeproshop864/">Like us on Facebook</a></li>
+                      </ul>
+            </li>
+
           </ul>
           <ul id="iconsRightRepair" class="nav navbar-nav navbar-right navLightItem">
             <% if logged_in? %>

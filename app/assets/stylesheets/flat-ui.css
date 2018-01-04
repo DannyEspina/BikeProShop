@@ -4639,8 +4639,8 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   border-bottom-color: #ffffff;
 }
 .navbar-inverse .navbar-nav > .dropdown > a .caret {
-  border-top-color: #4b6075;
-  border-bottom-color: #4b6075;
+  border-top-color: rgb(210, 210, 210);
+  border-bottom-color: rgb(210, 210, 210);
 }
 .navbar-inverse .navbar-nav > .open > .dropdown-menu {
   background-color: #34495e;

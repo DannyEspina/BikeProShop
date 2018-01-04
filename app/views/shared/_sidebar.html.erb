@@ -1,0 +1,59 @@
+<div id="wrapper">
+      <div class="overlay"></div>
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+          <ul class="nav sidebar-nav" id="sideNav">
+              <li class="sidebar-brand">
+                  <a href="/">
+                     <%= image_tag("Home/LogoPart1.png", alt: "BikeProShop logo", height: 40, width: 40, id:"sidebarLogo") %>
+                  </a>
+              </li>
+              <li>
+                  <a href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-shopping-cart"></i> Shop <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu" id="dropdown-menu-sidebar">
+                  <li class="dropdown-header ">Bicycles</li>
+                  <li><%= link_to "Featured Bicycles", featured_path %></li>
+                  <li id="partsHeader" class="dropdown-header">Parts & Accessories</li>
+                  <li><%= link_to "Bicycle Parts", parts_path %></li>
+                  <li><%= link_to "Bicycle Accessories", accessories_path %></li>
+                </ul>
+              </li>
+              <li>
+                  <a href="/repair"><i class="fas fa-wrench"></i> Repair</a>
+              </li>
+              <li>
+                  <a href="/gallery"><i class="fas fa-images"></i> Gallery</a>
+              </li>
+              <li>
+                  <a href="/#mechanicBody"><i class="fa fa-fw fa-cog"></i> About The Mechanic</a>
+              </li>
+
+              <li>
+                  <a href="/#contactUs"><i class="fas fa-phone"></i> Contact Us</a>
+              </li>
+              <li>
+                  <a href="/#contactUs"><i class="fas fa-thumbtack"></i> Store Location</a>
+              </li>
+          </ul>
+      </nav>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div id="hamburgerButton">
+        <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+          <span class="hamb-top"></span>
+          <span class="hamb-middle"></span>
+          <span class="hamb-bottom"></span>
+        </button>
+      </div>
+        <!-- content here -->
+        <%= yield %>
+      </div>
+      <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->

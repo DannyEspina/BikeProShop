@@ -61,15 +61,7 @@ $(document).on('turbolinks:load', function() {
         }
     });
 
-    var shop = $('#shopDrop');
-    shop.click(function() {
-      $('#shopLink').css({
-        'color': 'white'
-      });
-      $('#shopCaret').css({
-        'color': 'white'
-      });
-    });
+  
 });
 
 //google maps

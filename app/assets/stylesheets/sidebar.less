@@ -1,5 +1,4 @@
 
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
 @import "https://daneden.github.io/animate.css/animate.min.css";
 /*-------------------------------*/
 /*           VARIABLES           */
@@ -13,14 +12,13 @@
 
 // SIDEBAR LINK COLOR VARIABLES
 @side-color-1: #1a1a1a;
-@side-color-2: darken(@side-color-3, 5%);
-@side-color-3: darken(@side-color-4, 5%);
-@side-color-4: red;
-@side-color-5: lighten(@side-color-4, 5%);
-@side-color-6: lighten(@side-color-5, 5%);
-@side-color-7: lighten(@side-color-6, 5%);
-@side-color-8: lighten(@side-color-7, 5%);
-@side-color-9: lighten(@side-color-8, 5%);
+@side-color-2: #e16603;
+@side-color-3: #e85f0a;
+@side-color-4: #ef5811;
+@side-color-5: #ff4821;
+@side-color-6: #ff2f33;
+@side-color-7: #ff1745;
+@side-color-8: #ff1745;
 
 // HAMBURGER COLOR
 @hamburger-color-closed: fadeout(@text-color, 30);
@@ -58,6 +56,15 @@ html {
   }
 }
 
+#sidebarLogo {
+  margin-left: 35%;
+  height: 43px;
+  width: 43px;
+}
+
+#partsHeader::before {
+  background-color: #1a1a1a;
+}
 /*-------------------------------*/
 /*           Wrappers            */
 /*-------------------------------*/
@@ -128,6 +135,7 @@ html {
       width: 3px;
       z-index: -1;
     }
+
     &:first-child {
       a {
         background-color: @side-color-1;
@@ -169,11 +177,6 @@ html {
         background-color: @side-color-8;
       }
     }
-    &:nth-child(9) {
-      &:before {
-        background-color: @side-color-9;
-      }
-    }
     &:hover {
       &:before {
         transition: width .2s ease-in;
@@ -204,6 +207,12 @@ html {
     padding: 0;
     position: relative;
     width: @full-width;
+
+    .dropdown-header {
+        color: rgb(150,150,150);
+
+        font-weight: bold;
+    }
   }
 }
 .sidebar-nav li a:hover, .sidebar-nav li a:active, .sidebar-nav li a:focus,
@@ -313,7 +322,7 @@ a:focus {
   .hamb-bottom {
     -webkit-transform: rotate(-45deg);
     -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
-    // background-color: #1a1a1a;
+
     background-color: @hamburger-color-open;
     margin-top: -2px;
     top: 50%;
