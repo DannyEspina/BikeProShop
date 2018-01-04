@@ -1,4 +1,4 @@
-@import "https://designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css";
+
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
 @import "https://daneden.github.io/animate.css/animate.min.css";
 /*-------------------------------*/
@@ -6,7 +6,7 @@
 /*-------------------------------*/
 
 // BACKGROUND COLOR
-@bg-color: #583e7e;
+@bg-color: #fcfcfc;
 
 // TEXT COLOR
 @text-color: #fff;
@@ -15,7 +15,7 @@
 @side-color-1: #1a1a1a;
 @side-color-2: darken(@side-color-3, 5%);
 @side-color-3: darken(@side-color-4, 5%);
-@side-color-4: @bg-color;
+@side-color-4: red;
 @side-color-5: lighten(@side-color-4, 5%);
 @side-color-6: lighten(@side-color-5, 5%);
 @side-color-7: lighten(@side-color-6, 5%);
@@ -41,10 +41,12 @@ body {
 body,
 html {
   height: @full-height;
-  background-color: @bg-color;
+  background: @bg-color;
+  position: relative;
+  margin: 0;
+  z-index: 4;
 }
-
-.nav {
+#sideNav {
   .open>a {
     background-color: transparent;
     &:hover {
@@ -78,6 +80,7 @@ html {
   }
 }
 #sidebar-wrapper {
+
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -95,7 +98,6 @@ html {
   }
 }
 #page-content-wrapper {
-  padding-top: 70px;
   width: @full-width;
 }
 
@@ -193,7 +195,7 @@ html {
       }
     }
   }
-  .dropdown-menu {
+  #dropdown-menu-sidebar {
     background-color: #222222;
     border-radius: 0;
     border: none;
@@ -204,7 +206,9 @@ html {
     width: @full-width;
   }
 }
-.sidebar-nav li a:hover, .sidebar-nav li a:active, .sidebar-nav li a:focus, .sidebar-nav li.open a:hover, .sidebar-nav li.open a:active, .sidebar-nav li.open a:focus {
+.sidebar-nav li a:hover, .sidebar-nav li a:active, .sidebar-nav li a:focus,
+.sidebar-nav li.open a:hover, .sidebar-nav li.open a:active, .sidebar-nav li.open
+a:focus {
   background-color: transparent;
   color: #ffffff;
   text-decoration: none;
@@ -214,12 +218,14 @@ html {
   height: 65px;
   line-height: 44px;
 }
-
 /*-------------------------------*/
 /*       Hamburger-Cross         */
 /*-------------------------------*/
-
+#hamburgerButton {
+  display: none;
+}
 .hamburger {
+
   background: transparent;
   border: none;
   display: block;
@@ -284,7 +290,9 @@ html {
     bottom: 5px;
   }
 }
-.hamburger.is-closed .hamb-top, .hamburger.is-closed .hamb-middle, .hamburger.is-closed .hamb-bottom, .hamburger.is-open .hamb-top, .hamburger.is-open .hamb-middle, .hamburger.is-open .hamb-bottom  {
+.hamburger.is-closed .hamb-top, .hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom, .hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle, .hamburger.is-open .hamb-bottom  {
   height: 4px;
   left: 0;
   position: absolute;
@@ -331,7 +339,6 @@ html {
     }
   }
 }
-
 /*-------------------------------*/
 /*          Dark Overlay         */
 /*-------------------------------*/
@@ -347,4 +354,13 @@ html {
     bottom: 0;
     background-color: rgba(0,0,0,.4);
     z-index: 1;
+}
+
+@media only screen and (max-width: 1073px) {
+  #hamburgerButton {
+    display: block;
+  }
+  #navBar {
+    display: none;
+  }
 }

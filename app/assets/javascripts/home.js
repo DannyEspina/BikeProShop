@@ -61,33 +61,15 @@ $(document).on('turbolinks:load', function() {
         }
     });
 
-    if(window.innerWidth > 991){
-
-    $("#shopDrop, #shopDropTrans").mouseenter(function() {
-
-        $("#shopPanel, #shopPanelTrans").fadeIn("fast");
-
-        $("#shopDrop, #shopDropTrans").mouseleave(function() {
-
-            $("#shopPanel, #shopPanelTrans").fadeOut("fast");
-
-
-        });
-
+    var shop = $('#shopDrop');
+    shop.click(function() {
+      $('#shopLink').css({
+        'color': 'white'
+      });
+      $('#shopCaret').css({
+        'color': 'white'
+      });
     });
-    $("#userDrop, #userDropTrans").mouseenter(function() {
-
-        $("#userPanel, #userPanelTrans").fadeIn("fast");
-
-        $("#userDrop, #userDropTrans").mouseleave(function() {
-
-            $("#userPanel, #userPanelTrans").fadeOut("fast");
-
-
-        });
-
-    });
-  }
 });
 
 //google maps

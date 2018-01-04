@@ -1,6 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Righteous);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+$orange: rgb(238, 89, 17);
+
 #navBar {
    border: none;
    margin-bottom: 0;
@@ -8,6 +11,10 @@
    border-radius: 0;
    background-color: rgba(0,0,0,0.5);
    transition: all 0.3s ease-in-out;
+
+   position: -webkit-sticky;
+   position: sticky;
+   top: -1px;
 }
 #navLogo {
   margin-top: 5px;
@@ -20,10 +27,13 @@
 
    color: rgb(210, 210, 210);
    text-decoration: none;
+
+   &:hover{
+    color: white;
+   }
+
 }
- #navList>li a:hover {
-   color: white;
-}
+
 
 #login {
   color: rgb(210, 210, 210);
@@ -51,15 +61,13 @@
   padding-bottom: 7px;
 }
 #shopPanel, #userPanel{
-    top: 49px;
-
     background-color: rgba(0,0,0,0.8);
    li a {
        color: white;
        font-family: 'Open Sans', sans-serif;
 
-      &:hover, {
-        background-color: rgba(63, 63, 63,0.8);
+      &:hover {
+        background-color: rgb(238, 89, 17);
       }
    }
    .dropdown-header {
@@ -69,8 +77,6 @@
    }
 
 }
-.navbar {
- position: -webkit-sticky;
- position: sticky;
- top: -1px;
+.addOrange {
+  background: $orange;
 }
