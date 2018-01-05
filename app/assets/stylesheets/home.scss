@@ -1,10 +1,7 @@
-$body-theme: hsl(34, 100%, 95%);
-$bike-theme: hsl(24, 99%, 52%);
-$c1: #035e7b;
-$c2: #fff;
-$c3: #eff1c5;
-$t: 0.3s;
-$d: $t / 121;
+$thick : 3px;
+$pad : 0.2em;
+$extra : calc(#{$pad} * 1.2);
+$orange : #f26522;
 
 @import url('https://fonts.googleapis.com/css?family=Signika+Negative:700');
 
@@ -16,145 +13,186 @@ $d: $t / 121;
    background-attachment: fixed;
    background-size: cover;
 }
-
-// body,
-// html {
-//    background: #fcfcfc;
-//    position: relative;
-//    margin: 0;
-//    z-index: 4;
-//    //padding-bottom: 7%;
-// }
+.container-fluid {
+  padding: 0;
+}
 #mobileVersion {
   display: none;
 }
-//fancy button
-#clickMe {
-  display: block;
+
+// Underline button
+#underlineButton {
   position: relative;
-  top: 30px;
-  left: 1vw
-}
-.cont, .cont > a {
-  position: absolute;
-  height: 40px;
-  width: 120px;
-}
-.cont {
-  left: 49vw;
-  margin: -20px 0 0 -60px;
-  a{
-     font-family: 'Signika Negative', sans-serif;
-    z-index: 2;
+  margin-top: 2%;
+  left: 6.5%;
+  cursor: pointer;
+  color: black;
+  transform: translate3d(-50%,-50%,0);
+  padding: $pad $extra;
+  display: inline-block;
+  border: $thick solid transparent;
+  position: relative;
+  font-size: 1.5em;
+  letter-spacing: 0.07em;
+
+  .text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    transform: translate3d(0,$pad,0);
     display: block;
-    line-height: 40px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    color: rgb(252, 252, 252);
-    transition: all $t;
+    transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
+  }
 
-    &:hover {
-      ~ #fancyBtn > #line:nth-child(odd){
-        transform: scaleY(1.2);
-        opacity: 0.2;
-      }
-      ~ #fancyBtn > #line:nth-child(even) {
-        transform: scaleY(-0.2) translateX(-1px);
-        opacity: 0.2;
-      }
-      transform: scale(1.1);
-      color: $bike-theme;
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: -$thick;
+    left: $extra;
+    right: $extra;
+    height: $thick;
+    background: $orange;
+    z-index: -1;
+    transition:
+      transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
+      right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
+      left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
+    transform-origin: left;
+  }
+
+}
+
+.line {
+  position: absolute;
+  background: $orange;
+
+  &.-right,
+  &.-left {
+    width: $thick;
+    bottom: -$thick;
+    top: -$thick;
+    transform: scale3d(1,0,1);
+  }
+
+  &.-top,
+  &.-bottom {
+    height: $thick;
+    left: -$thick;
+    right: -$thick;
+    transform: scale3d(0,1,1);
+  }
+
+  &.-right {
+    right: -$thick;
+    transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.23s;
+    transform-origin: top;
+  }
+
+  &.-top {
+    top: -$thick;
+    transition: transform 0.08s linear 0.43s;
+    transform-origin: left;
+  }
+
+  &.-left {
+    left: -$thick;
+    transition: transform 0.08s linear 0.51s;
+    transform-origin: bottom;
+  }
+
+  &.-bottom {
+    bottom: -$thick;
+    transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
+    transform-origin: right;
+  }
+}
+
+#underlineButton:hover,
+#underlineButton:active {
+
+  .text {
+    transform: translate3d(0,0,0);
+    transition: transform 0.6s cubic-bezier(.2,0,0,1) 0.4s;
+  }
+
+  &:after {
+    transform: scale3d(0,1,1);
+    right: -$thick;
+    left: -$thick;
+    transform-origin: right;
+    transition:
+      transform 0.2s cubic-bezier(1,0,.65,1.01) 0.17s,
+      right 0.2s cubic-bezier(1,0,.65,1.01),
+      left 0s 0.3s;
+  }
+
+  .line {
+    transform: scale3d(1,1,1);
+
+    &.-right {
+      transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.2s;
+      transform-origin: bottom;
+    }
+
+    &.-top {
+      transition: transform 0.08s linear 0.4s;
+      transform-origin: right;
+    }
+
+    &.-left {
+      transition: transform 0.08s linear 0.48s;
+      transform-origin: top;
+    }
+
+    &.-bottom {
+      transition: transform 0.5s cubic-bezier(0,.53,.29,1) 0.56s;
+      transform-origin: left;
     }
   }
-}
 
-#fancyBtn {
-  overflow: visible;
-  #line{
-    stroke: $bike-theme;
-    stroke-width: 1px;
-    transition: all $t;
-    transform-origin: 50% 0%;
-  }
-  @for $i from 1 through 121{
-    #line:nth-child(#{$i}){
-      transition-delay: $i * $d;
-  }
-  }
-  &:hover {
-    #line:nth-child(odd){
-      transform: scaleY(1.2);
-    }
-    #line:nth-child(even){
-      transform: scaleY(-0.2);
-    }
-  }
-
-}
-
-.Header {
-   width: 60%;
-   padding: 0;
-   display: block;
-   margin: auto;
-}
-.locationHeader {
-  width: 30%;
-  position: relative;
-  left: 35%;
-}
-.headerContain {
-   margin: 0;
-   padding: 0;
-   width: 100%;
-   background-color: rgb(252, 252, 252);
-   overflow: hidden;
 }
 
 #tuneInfo {
    position: relative;
-   font-family: 'Buenard', serif;
-   font-size: 20px;
+   top: -3.9vh;
+   font-family: 'Raleway', serif;
    width: 100%;
-   padding: 0;
+   margin: auto;
    text-align: center;
-
-   margin-bottom: 5%;
-
-   padding-bottom: 30px;
-   p {
-      margin: auto;
-       width: 80%;
-   }
+   background-color: #fcfcfc;
+}
+#TuneUpHeader {
+  h1{
+    padding-top: 4%;
+  }
+  h1,h2 {
+    font-family: 'Oleo Script', sans-serif;
+    color: #ff4722;
+    font-size: 9vw;
+  }
 }
 .mobileCusMech {
   display: none;
   margin: auto;
 }
-.customer {
-   position: relative;
-   height: 12.5vw;
-   margin-top: 1%;
-   right: 10%;
 
+#tuneUpAnimation {
+  display: inline-block;
+  margin: 3%;
+  position: relative;
+  width: 35vw;
 }
-
+.customer, .mechanic, .customBicycle  {
+   height: 11vw;
+}
+.customer, .customBicycle {
+  position: absolute;
+  left: 0; //74.5
+  //transform: translate( 26vw, 0);
+}
 .mechanic {
-   position: relative;
-   margin-top: 1.8%;
-   height: 15vw;
-   left: 5%;
+  position: relative;
+  left: 40%;
 }
-
-.cust_bicycle {
-   position: absolute;
-   z-index: 1;
-   top: 7%;
-   left: 30%;
-   height: 19vw;
-}
-
 #window1 {
    background-image: url('Home/repair3.JPG');
    border-bottom: black solid 4px;
@@ -182,30 +220,12 @@ $d: $t / 121;
    @include windowCSS;
 }
 
-.locationBody {
-   padding-left: 50px;
-}
-
 #map {
    padding-top: 50px;
    padding-bottom: 50px;
    width: 100%;
    height: 70vh;
    border: 1px solid;
-}
-.addressHeader{
-  width: 30%;
-  display: block;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-.contactHeader {
-  width: 23%;
-  display: block;
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 10px;
 }
 #address {
   width: 80%;
@@ -265,58 +285,31 @@ $d: $t / 121;
   .yt {
     display: none;
   }
-  .customer {
-    height: 25vw;
-    margin-left: 3vw;
-    display: none;
-  }
-  .mechanic {
-    height: 32vw;
-    margin-right: 3vw;
-    display: none;
-  }
-  .cust_bicycle {
-    height: 35vw;
-    position: relative;
-    margin: 0;
-    display: none;
-  }
-  .mobileCusMech {
-    display: block;
-    height: 15vw;
-  }
-
-}
-@media only screen and (max-width: 700px) {
   .windows {
     display: none;
   }
-  .mobileCusMech {
-    height: 25vw!important;
-  }
-    #tuneInfo{
-      font-size: 1.3em;
-      p {
-        margin: auto;
-        width: 90%;
-        padding: 0;
-      }
-    }
-    .mechanicInfo div p {
-      font-size: 1.3em;
-    }
-    .Header{
-      margin-top: 10%;
-      width: 80%;
-    }
-    #map {
-      height: 70vw;
-    }
-    #address p{
-      font-size: 1.2em;
-    }
-    #phone, #email{
-       font-size: 1.2em;
 
-    }
+  .mechanicInfo div p {
+    font-size: 1.3em;
   }
+  #map {
+    height: 70vw;
+  }
+  #address p{
+    font-size: 1.2em;
+  }
+  #phone, #email{
+     font-size: 1.2em;
+
+  }
+}
+
+
+    // #tuneInfo{
+    //   font-size: 1.3em;
+    //   p {
+    //     margin: auto;
+    //     width: 90%;
+    //     padding: 0;
+    //   }
+    // }

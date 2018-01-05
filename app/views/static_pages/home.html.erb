@@ -12,37 +12,37 @@
   <div class="mobilePicContainer" class="container-fluid" style="padding:0">
     <%= image_tag("Mobile/HomePage", class: "topPic") %>
   </div>
+  <div class="header"></div>
   <%= render 'shared/navbar' %>
     <!--tune up section -->
 
-    <div class="container-fluid headerContain">
+    <div class="container-fluid">
       <%= render 'shared/flash' %>
-      <%= image_tag("Home/tuneUpHeader.png", class: "Header")%>
-
       <div id="tuneInfo">
+        <div id="TuneUpHeader">
+          <h1> Need a Tune Up? </h1>
+          <h2> We can Help. </h2>
+        </div>
         <!-- a animation of someone giving the bike to the mechanic -->
-        <%= image_tag("Home/customer.png", class: "customer")%>
-        <%= image_tag("Home/bicycle.png",  class: "cust_bicycle") %>
-        <%= image_tag("Home/mechanic.png", class: "mechanic") %>
-        <%= image_tag("Mobile/mobileCusMech.png", class: "mobileCusMech") %>
+        <div id="tuneUpAnimation">
+          <%= image_tag("Home/customer.png", class: "customer")%>
+          <%= image_tag("Home/bicycle.png",  class: "customBicycle") %>
+          <%= image_tag("Home/mechanic.png", class: "mechanic") %>
+        </div>
+
 
         <p style="display:block">
           Tell us your problems and we'll do the rest!
-          If the repair isn't too severe you can walk around the Flea market and pick up your bicyle after you're done!
-          Since we are at the flea market you won't find a better price anywhere else!
         </p>
-        <br>
-        <p>Want to learn more?</p>
-        <div id ="clickMe">
-          <div class="cont">
-              <a href="/repair"> Click Here</a>
-              <svg id="fancyBtn" height="40" width="120">
-                <% (1..120).each do |i| %>
-                  <line id="line" x1=<%=i%> y1="0" x2=<%=i%> y2="40"/>
-                <% end %>
-              </svg>
-          </div>
-        </div>
+
+        <a id="underlineButton">
+          <span class="text">Learn More</span>
+          <span class="line -right"></span>
+          <span class="line -top"></span>
+          <span class="line -left"></span>
+          <span class="line -bottom"></span>
+        </a>
+
       </div>
     </div> <!-- container-fluid end -->
 
