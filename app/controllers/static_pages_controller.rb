@@ -32,7 +32,7 @@ class StaticPagesController < ApplicationController
       end
     else
       flash.now[:danger] = 'Invalid email/password combination'
-      render 'index'
+      render 'home'
     end
   end
 

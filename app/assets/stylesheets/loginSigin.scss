@@ -1,16 +1,72 @@
 
 $body-theme: hsl(34, 100%, 95%);
 $bike-theme: hsl(24, 99%, 52%);
-
-.signUpTitle {
-  width: 30%;
-  margin-top: 20px;
-  margin-bottom: 30px;
+@import url('https://fonts.googleapis.com/css?family=Raleway:700');
+#signUpText {
+  color: #ff4821;
+  text-shadow: 5px 5px 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
+label {
 
+  display: block;
+  letter-spacing: 1px;
+  text-align: center;
+
+  .label-text {
+      position: relative;
+      top: -99px;
+      color: white;
+      font-size: 28px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      margin-top: 30px;
+
+      line-height: 20px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+ }
+  input {
+
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid white;
+    -webkit-text-fill-color: white;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+    font-size: 36px;
+    letter-spacing: -1px;
+    outline: 0;
+    margin-top: 20px;
+    padding: 5px 20px;
+    text-align: center;
+    transition: all 0.3s;
+    width: 300px;
+
+    &:focus {
+      max-width: 100%;
+      width: 500px;
+
+      & + .label-text {
+
+        font-size: 35px;
+        top: -135px ;
+
+
+      }
+    }
+    &:not(:focus) {
+      font-size: 27px;
+
+    }
+
+  }
+
+}
 .form{
-  height: 140%;
-
+  height: 950px;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -18,10 +74,9 @@ $bike-theme: hsl(24, 99%, 52%);
 .form:before {
   position: absolute;
   z-index: -1;
-  height: 135vh;
+  height: 100%;
   width: 100%;
-  background: url('Login & Sign up/sparks.JPG');
-  opacity: 0.45;
+  background: url('Login & Sign up/sparks.jpg');
   background-position: right center;
   background-attachment: fixed;
   background-size: cover;
@@ -81,7 +136,7 @@ $bike-theme: hsl(24, 99%, 52%);
   span {
     margin-left: 18px;
     font-weight: normal;
-    font-family: 'roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 11px;
   }
 }
@@ -99,7 +154,7 @@ $bike-theme: hsl(24, 99%, 52%);
   color: #0645AD;
   margin-left: 25px;
   font-weight: normal;
-  font-family: 'roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 12px;
   padding-bottom: 20px;
 
@@ -140,11 +195,9 @@ $bike-theme: hsl(24, 99%, 52%);
 }
 #loginForm {
   box-sizing: border-box;
-
   width: 260px;
   margin: -20px auto 0;
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
-
   border-radius: 3px;
   h1 {
     box-sizing: border-box;

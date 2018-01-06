@@ -35,21 +35,20 @@ $orange : #ef5811;
 // Underline button
 #underlineButton {
   position: relative;
-  margin-top: 2%;
-  left: 6.5%;
+  margin-top: 2.5%;
+  left: 5vw;
   cursor: pointer;
   color: black;
   transform: translate3d(-50%,-50%,0);
   padding: $pad $extra;
   display: inline-block;
   border: $thick solid transparent;
-  position: relative;
-  font-size: 1.5em;
   letter-spacing: 0.07em;
 
   .text {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
+    font-size: 20px;
     transform: translate3d(0,$pad,0);
     display: block;
     transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
@@ -163,14 +162,18 @@ $orange : #ef5811;
 
 }
 
-#tuneInfo {
+#tuneDiv {
    position: relative;
    top: -3.9vh;
    font-family: 'Raleway', serif;
    width: 100%;
    margin: auto;
-   text-align: center;
    background-color: #fcfcfc;
+   text-align: center;
+   p {
+     display: block;
+
+   }
 }
 
 .mobileCusMech {
@@ -257,8 +260,9 @@ $orange : #ef5811;
   margin: auto;
   div p {
     padding-top: 20px;
-    font-family: 'Buenard', serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
+    text-align: left;
   }
 }
 .oldPic {
@@ -305,8 +309,29 @@ $orange : #ef5811;
      font-size: 1.2em;
 
   }
+  #underlineButton {
+    left: 10vw;
+  }
+  .customer, .mechanic, .customBicycle  {
+     height: 14vw;
+  }
 }
-
+@media only screen and (max-width: 570px) {
+  #underlineButton {
+    left: 14vw;
+  }
+  .customer, .mechanic, .customBicycle  {
+     height: 16vw;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #underlineButton {
+    left: 19vw;
+  }
+  .customer, .mechanic, .customBicycle  {
+     height: 18vw;
+  }
+}
 
     // #tuneInfo{
     //   font-size: 1.3em;
