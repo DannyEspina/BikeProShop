@@ -1,7 +1,7 @@
 $thick : 3px;
 $pad : 0.2em;
 $extra : calc(#{$pad} * 1.2);
-$orange : #f26522;
+$orange : #ef5811;
 
 @import url('https://fonts.googleapis.com/css?family=Signika+Negative:700');
 
@@ -19,7 +19,19 @@ $orange : #f26522;
 #mobileVersion {
   display: none;
 }
-
+.divHeader {
+  h1{
+    font-size: 9vw;
+  }
+  h2 {
+    font-size: 6vw;
+  }
+  h1,h2 {
+    font-family: 'Oleo Script', sans-serif;
+    color: black;
+    text-align: center;
+  }
+}
 // Underline button
 #underlineButton {
   position: relative;
@@ -160,16 +172,7 @@ $orange : #f26522;
    text-align: center;
    background-color: #fcfcfc;
 }
-#TuneUpHeader {
-  h1{
-    padding-top: 4%;
-  }
-  h1,h2 {
-    font-family: 'Oleo Script', sans-serif;
-    color: #ff4722;
-    font-size: 9vw;
-  }
-}
+
 .mobileCusMech {
   display: none;
   margin: auto;
