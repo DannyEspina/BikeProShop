@@ -1,0 +1,119 @@
+
+$body-theme: hsl(34, 100%, 95%);
+$bike-theme: hsl(24, 99%, 52%);
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+#signUpText {
+  color: white;
+  text-shadow: 5px 5px 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+label {
+
+  display: block;
+  letter-spacing: 1px;
+  text-align: center;
+
+  .label-text {
+      position: relative;
+      top: -99px;
+      color: white;
+      font-size: 28px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      margin-top: 30px;
+
+      line-height: 20px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+ }
+  input {
+
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid white;
+    -webkit-text-fill-color: white;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+    font-size: 36px;
+    letter-spacing: -1px;
+    outline: 0;
+    margin-top: 20px;
+    padding: 5px 20px;
+    text-align: center;
+    transition: all 0.3s;
+    width: 300px;
+
+    &:focus {
+      max-width: 100%;
+      width: 500px;
+
+      & + .label-text {
+
+        font-size: 35px;
+        top: -135px ;
+
+
+      }
+    }
+    &:not(:focus) {
+      font-size: 27px;
+
+    }
+
+  }
+
+}
+.form{
+  height: 1000px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.form:before {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: url('Login & Sign up/sparks.jpg');
+  background-position: right center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sumbit{
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 27px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  transition: all 200ms;
+
+  &:hover, &:focus {
+    background-color: white;
+    color: #333333;
+    outline: 0;
+  }
+}
+#error_explanation {
+  background: hsl(0, 43%, 96%);
+  width: 50%;
+  position: relative;
+  left: 25%;
+  top: -20px;
+
+  ul {
+    color: red;
+    margin-top: -10px;
+    padding: 10px;
+    list-style-type: circle;
+    text-align: left;
+    position: relative;
+    left: 25%;
+  }
+}
