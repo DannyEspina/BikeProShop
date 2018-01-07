@@ -24,7 +24,8 @@ $(".galleryImage").click(function(e){
 
  $("#modalImg").css({'transform': 'translate( 0px , 1)'})
 // rotate to the previous image left
- $("#tumbLeft").click(function(e) {
+ $("#tumbRight").click(function(e) {
+   console.log("tumb");
    var tumbs= document.getElementsByClassName("tumbImgs");
    $(".tumbImgs").removeClass("displayTumb");
    //add animations
@@ -87,7 +88,7 @@ $(".galleryImage").click(function(e){
 
  });
 //rotate to the next image right
- $("#tumbRight").click(function(e) {
+ $("#tumbLeft").click(function(e) {
    var tumbs= document.getElementsByClassName("tumbImgs");
    $(".tumbImgs").removeClass("displayTumb");
     console.log(screen.height)
