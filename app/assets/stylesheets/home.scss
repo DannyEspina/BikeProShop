@@ -3,8 +3,6 @@ $pad : 0.2em;
 $extra : calc(#{$pad} * 1.2);
 $orange : #ef5811;
 
-@import url('https://fonts.googleapis.com/css?family=Signika+Negative:700');
-
 @mixin windowCSS {
    margin: 0;
    padding: 0;
@@ -21,10 +19,11 @@ $orange : #ef5811;
 }
 .divHeader {
   h1{
-    font-size: 9vw;
+    font-size: 8vw;
+    padding-bottom: 3%
   }
   h2 {
-    font-size: 6vw;
+    font-size: 5vw;
   }
   h1,h2 {
     font-family: 'Oleo Script', sans-serif;

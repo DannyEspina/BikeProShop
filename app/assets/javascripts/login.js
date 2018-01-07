@@ -9,4 +9,7 @@ $(document).on('turbolinks:load', function() {
     }
 }
     });
+    $(".closeLogin").click(function() {
+      modal2.style.display = "none";
+    });
 });
