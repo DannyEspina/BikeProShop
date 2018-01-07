@@ -22,6 +22,7 @@ $(document).on('turbolinks:load', function() {
       }
   }
 
+
   $('[data-toggle="offcanvas"]').click(function () {
         $('#wrapper').toggleClass('toggled');
   });

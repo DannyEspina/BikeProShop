@@ -12,8 +12,8 @@
                   <a href="/"><i class="fa fa-fw fa-home"></i> Home</a>
               </li>
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-shopping-cart"></i> Shop <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu" id="dropdown-menu-sidebar">
+                <a class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-shopping-cart"></i> Shop<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
                   <li class="dropdown-header ">Shop</li>
                   <li id="sideFeatured"><%= link_to "Featured Bicycles", featured_path %></li>
                   <li id="sideParts"><%= link_to "Bicycle Parts", parts_path %></li>
@@ -27,8 +27,8 @@
                   <a href="/gallery"><i class="fas fa-images"></i> Gallery</a>
               </li>
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-info-circle"></i> Infomation <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu" id="dropdown-menu-sidebar">
+                <a class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-info-circle"></i> Infomation<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
                   <li class="dropdown-header ">Information</li>
                   <li id="sideMechanic"><a href="/#mechanicBody">Meet The Mechanic</a></li>
                   <li id="sideContact"><a href="/#contactUs"> Contact Us</a></li>
@@ -36,12 +36,28 @@
                   <li id="sideFacebook"><a href="https://www.facebook.com/bikeproshop864/"> Like us on Facebook</a></li>
                 </ul>
               </li>
+              <% if logged_in? %>
+              <li><a href="/users"><i class="fas fa-users"></i> Users</a></li>
+              <li><a href="/mircoposts"><i class="fas fa-comments"></i> Blog</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                 <i class="fas fa-cogs"></i> Account<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="dropdown-header ">Account</li>
+                  <li id="sideProfile"><%= link_to "Profile", current_user %></li>
+                  <li id="sideSetting"><%= link_to "Settings", edit_user_path(current_user) %></li>
+                  <li id="sideLogOut"><%= link_to "Log Out", logout_path, method: "delete" %></li>
+                </ul>
+              </li>
+              <% else %>
               <li>
                   <a href="/new"><i class="fas fa-user"></i> Sign Up</a>
               </li>
               <li id="sideLogin">
                   <a><i class="fas fa-sign-in-alt"></i>  Login</a>
               </li>
+              <% end %>
           </ul>
       </nav>
       <!-- /#sidebar-wrapper -->

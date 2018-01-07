@@ -17,9 +17,9 @@
 @side-color-4: #ef5811;
 @side-color-5: #ff4821;
 @side-color-6: #ff2f33;
-@side-color-7: #ff1745;
-@side-color-8: #ff1745;
-
+@side-color-7: #ff2939;
+@side-color-8: #ff253c;
+@side-color-9: #ff1745;
 // HAMBURGER COLOR
 @hamburger-color-closed: fadeout(@text-color, 30);
 @hamburger-color-open: @text-color;
@@ -62,17 +62,21 @@ html {
   width: 150px;
 }
 
-#partsHeader::before {
+#partsHeader:before {
   background-color: #1a1a1a;
 }
 
-#sideFeatured::before, #sideParts::before, #sideAccessories::before {
-  background-color: #ec5b0e;
+#sideFeatured:before, #sideParts:before, #sideAccessories:before {
+  background-color: @side-color-3;
 }
 
-#sideMechanic::before, #sideContact::before, #sideLocation::before,
-#sideFacebook::before {
-  background-color: #ff233c;
+#sideMechanic:before, #sideContact:before, #sideLocation:before,
+#sideFacebook:before {
+  background-color: @side-color-6;
+}
+
+#sideProfile:before, #sideSetting:before, #sideLogOut:before {
+  background-color: @side-color-9
 }
 /*-------------------------------*/
 /*           Wrappers            */
@@ -186,6 +190,11 @@ html {
         background-color: @side-color-8;
       }
     }
+    &:nth-child(9) {
+      &:before {
+        background-color: @side-color-9;
+      }
+    }
     &:hover {
       &:before {
         transition: width .2s ease-in;
@@ -207,7 +216,7 @@ html {
       }
     }
   }
-  #dropdown-menu-sidebar {
+  .dropdown-menu{
     background-color: #222222;
     border-radius: 0;
     border: none;

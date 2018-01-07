@@ -27,13 +27,7 @@ $text-color: rgb(210, 210, 210);
    font-family: 'Righteous', cursive;
    font-size: 15px;
    display: block;
-
-   color: $text-color;
    text-decoration: none;
-
-   &:hover{
-    color: white;
-   }
 }
 
 #navLogin {
