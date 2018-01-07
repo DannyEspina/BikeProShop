@@ -11,11 +11,12 @@
      </div>
 
  <%= render 'shared/navbar' %>
- <div class="mobilePicContainer" class="container-fluid" style="padding:0">
+ <div class="mobilePicContainer" class="container-fluid">
    <%= image_tag("Mobile/GalleryPage", class: "topPic") %>
  </div>
-<div class="container-fluid fix-contain" id="galleryBody">
-  <div class="row" style="margin: 0">
+<div class="container-fluid">
+  <div id="galleryBody">
+  <div class="row">
     <div class="col-md-3">
       <%= image_tag("Gallery/accounting.JPG", alt:"accounting", id:"1", class:"galleryImage") %>
     </div>
@@ -29,7 +30,8 @@
       <%= image_tag("Gallery/bicycleRim2.JPG", alt:"bicycle rims", id:"4", class:"galleryImage") %>
     </div>
   </div>
-  <div class="row" style="margin: 0">
+
+  <div class="row">
     <div class="col-md-3 galleryModal">
       <%= image_tag("Gallery/gallery1.JPG", alt:"red bicycle", id:"5", class:"galleryImage") %>
     </div>
@@ -44,7 +46,7 @@
     </div>
   </div>
 
-  <div class="row" style="margin: 0">
+  <div class="row">
     <div class="col-md-3">
       <%= image_tag("Gallery/gallery5.JPG", alt:"wall of kids bicycles", id:"9",class:"galleryImage") %>
     </div>
@@ -58,7 +60,7 @@
       <%= image_tag("Gallery/gallery8.JPG", alt:"bicycle finishing getting repaired", id:"12",class:"galleryImage") %>
     </div>
   </div>
-  <div class="row" style="margin: 0">
+  <div class="row">
     <div class="col-md-3">
       <%= image_tag("Gallery/gallery9.JPG", alt:"wall of kids bicycles", id:"13",class:"galleryImage") %>
     </div>
@@ -72,7 +74,7 @@
       <%= image_tag("Gallery/headerBike1.JPG", alt:"a red bicycle", id:"16",class:"galleryImage") %>
     </div>
   </div>
-  <div class="row" style="margin: 0">
+  <div class="row">
     <div class="col-md-3">
       <%= image_tag("Gallery/inventory1.JPG", alt:"line up of bicycles", id:"17",class:"galleryImage") %>
     </div>
@@ -86,7 +88,7 @@
       <%= image_tag("Gallery/repair2.JPG", alt:"mechanic repairing", id:"20",class:"galleryImage") %>
     </div>
     </div>
-  <div class="row" style="margin: 0">
+  <div class="row">
     <div class="col-md-3">
       <%= image_tag("Gallery/repair5.JPG", alt:"mechanic repairing", id:"21",class:"galleryImage") %>
     </div>
@@ -100,7 +102,7 @@
       <%= image_tag("Gallery/smallParts.JPG", alt:"small parts", id:"24",class:"galleryImage") %>
     </div>
     </div>
-  <div class="row" style="margin: 0">
+  <div class="row">
     <div class="col-md-3">
       <%= image_tag("Gallery/store3.JPG", alt:"the store", id:"25",class:"galleryImage") %>
     </div>
@@ -112,6 +114,7 @@
     </div>
     <div class="col-md-3">
       <%= image_tag("Gallery/tuneUp1.JPG", alt:"repair bicycle for customers", id:"28",class:"galleryImage") %>
+    </div>
     </div>
     </div>
 </div>
@@ -134,7 +137,7 @@
         <%= image_tag("", id:"tumbImg9", class:"tumbImgs notFirst") %>
 
           <i id="tumbRight" class="far fa-arrow-alt-circle-right"></i>
-        
+
   </div>
 </div>
 </div>
