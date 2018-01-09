@@ -66,10 +66,9 @@ $body-theme: rgb(252, 252, 252);
 .editForm:before {
   position: absolute;
   z-index: -1;
-  height: 160vh;
+  height: 1150px;
   width: 100%;
-  background: url('Gallery/accounting.JPG');
-  opacity: 0.45;
+  background: url('Login & Sign up/accounting.jpg');
   background-position: center;
   background-attachment: fixed;
   background-size: cover;

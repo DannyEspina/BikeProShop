@@ -55,15 +55,21 @@ span.picture {
 }
 #gravPost img, #gravShow img{
     width: 17%;
-    border-radius: 40px;
-}
+    border-radius: 40vw;
 
+}
+#gravShow, #blogH1 {
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 50px;
+}
 #gravFeed img {
     width: 6%;
     border-radius: 30px;
 }
 #gravName {
+    color: black;
     font-family: 'Signika Negative', sans-serif;
+    font-weight: bold;
 }
 #micropost_content {
     border-radius: 5px;
