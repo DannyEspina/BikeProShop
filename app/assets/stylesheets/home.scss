@@ -20,7 +20,6 @@ $orange : #ef5811;
 .divHeader {
   h1{
     font-size: 8vw;
-    padding-bottom: 3%
   }
   h2 {
     font-size: 5vw;
@@ -30,6 +29,17 @@ $orange : #ef5811;
     color: black;
     text-align: center;
   }
+}
+#homeImage {
+  position: relative;
+  background-image: url('Home/sparks.jpg');
+  background-size: cover;
+  background-position: center;
+  //background-image:  url('Home/accounting.jpg');
+  //background-position: 50% 33%;
+
+
+
 }
 // Underline button
 #underlineButton {
@@ -226,32 +236,23 @@ $orange : #ef5811;
 }
 
 #map {
-  margin: auto;
-  margin-bottom: 50px;
    width: 100%;
-   height: 70vh;
+   height: 500px;
 }
 #address {
   width: 80%;
   margin: auto;
  p{
-     margin: auto;
-  font-size: 1.6em;
-  font-family: 'Signika Negative', sans-serif;
+  font-size: 1.3em;
+  font-family: 'Roboto', sans-serif;
 }
 }
-#phone, #email{
-   font-size: 1.6em;
-   font-family: 'Signika Negative', sans-serif;
+#phone p, #email p{
+   font-size: 1.3em;
+   font-family: 'Roboto', sans-serif;
 }
-#email{
-  margin-bottom: 50px;
-}
-#line {
-  border-bottom: 1px solid;
-  width: 35%;
-  margin: auto;
-  margin-bottom: 30px;
+#storeInfo {
+  margin-bottom: 5%;
 }
 .mechanicInfo{
   width: 90%;
@@ -297,9 +298,7 @@ $orange : #ef5811;
   .mechanicInfo div p {
     font-size: 1.3em;
   }
-  #map {
-    height: 70vw;
-  }
+
   .marker {
   background-image: url('Home/facebook.png');
   background-size: cover;

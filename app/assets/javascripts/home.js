@@ -58,37 +58,17 @@ $(document).on('turbolinks:load', function() {
             }
           }
         });
-
-
-    // Add smooth scrolling to all links in navbar + footer link
-    $(".mechanicLink, .contactLink, .locationLink, footer a[href='#top']").on('click', function(event) {
-        // Make sure this.hash has a value before overriding default behavior
-
-        if (this.hash !== "" && location.pathname == "/index"
-            ||this.hash !== "" && location.pathname == "/" && window.innerWidth > 700) {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 900, function() {
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-        }
-    });
-
-
+        /*
+        Loads google maps after each page direct. This fixes a bug where
+        the map won't load if you go to a direct page and don't refresh.
+        we need it to be inside $(document).on('turbolinks:load', function()
+        */
+        if (this.hash !== "" && location.pathname == "/" ) {
+          myMap();
+      }
 });
-
 //google maps
-function initMap() {
+function myMap() {
     //centers the map to the adress of the barnyard flea market
     var myCenter = new google.maps.LatLng(34.882067, -82.150943);
     //selects element to place the map which in this case is the map div
@@ -96,7 +76,7 @@ function initMap() {
     //adds the options
     var mapOptions = {
         center: myCenter,
-        zoom: 17,
+        zoom: 15,
         scrollwheel: false,
         styles: [
   {
