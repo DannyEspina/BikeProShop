@@ -1,21 +1,19 @@
 <% provide(:title, "Edit User") %>
-<% provide(:button_text, 'Save changes') %>
+  <% provide(:button_text, 'Save') %>
 
-<div class ="container-fluid editForm">
-   <%= render 'shared/navbar' %>
-<%= render 'shared/flash' %>
-<%= image_tag("Login & Sign up/Update.png", alt:"update title", class:"updateTitle") %>
+    <div class="container-fluid">
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flash' %>
 
-<div class="gravatar_edit">
-      <div class="zoomInGrav">
-            <%= link_to gravatar_for(@user, size: 600), 'http://gravatar.com/emails', target:'_blank'%>
-            <div class="change"><a href="http://gravatar.com/emails" target="_blank">change</a></div>
+      <div class="gravatar_edit">
+
+          <%= link_to gravatar_for(@user, size: 600), 'http://gravatar.com/emails', target:'_blank'%>
+
+            <a class="change" href="http://gravatar.com/emails" target="_blank">change</a>
       </div>
+
+      <div id="editForm">
+      <%= render "shared/form_layout", path: edit_path %>
+
     </div>
-
-<%= render "shared/form_layout", path: edit_path %>
-
-
-
-
-</div>
+  </div>

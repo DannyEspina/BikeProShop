@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class HomeHelperTest < ActionView::TestCase
+  include StaticPagesHelper
 
   def setup
     @user = users(:michael)

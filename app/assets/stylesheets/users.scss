@@ -1,5 +1,10 @@
 $body-theme: rgb(252, 252, 252);
 
+#editForm {
+  width: 500px;
+  margin: auto;
+}
+
 .userTitle {
    width: 35%;
     position: relative;
@@ -51,82 +56,59 @@ $body-theme: rgb(252, 252, 252);
     width: 40%;
     margin-top: 30px;
     margin-left: 22%;
-
     opacity: 0.8;
 }
 
-// Edit Users
-
-.editForm{
-  height: 130%;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-.editForm:before {
-  position: absolute;
-  z-index: -1;
-  height: 1150px;
-  width: 100%;
-  background: url('Login & Sign up/accounting.jpg');
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
 .gravatar_edit{
+  width: 230px;
+  height: 230px;
   margin: auto;
-  padding: 20px;
-  img {
-    width: 16%;
-    border-radius: 115px;
-  }
-}
-
-.updateTitle{
-   width: 40%;
-  margin-top: 20px;
-
-}
-
-.zoomInGrav {
+  margin-top: 30px;
   position: relative;
-  img{
-  z-index: 100;
-  cursor: pointer;
-  overflow: hidden;
-  background: black;
+  img {
   transition: all 0.45s ease-in-out;
-}
+  display: block;
+  margin: auto;
+  width: 230px;
+  border-radius: 135px;
+ }
 }
 .change{
-  z-index: 101;
+  z-index: 1000;
   color: white;
   position: absolute;
-
-  padding-left: 10px;
-  padding-right: 10px;
-  padding: 5px;
-  left: 46.6%;
-  bottom: 10%;
+  left: 35%;
+  bottom: 15%;
+  margin: auto;
   font-size: 27px;
-  font-family: 'Signika Negative', sans-serif;
+  font-family: 'Oleo Script', sans-serif;
   opacity: 0;
   transition: all 0.45s ease-in-out;
-   a{
-    color: white;
-    text-decoration: none;
-  }
+  text-decoration: none;
+  &:hover {
+    color: white
+}
 }
 .displayChange {
-   opacity: 0.9;
+   opacity: 1;
    transition: all 0.45s ease-in-out;
-
 }
-.zoomIn1 {
+.darken {
   filter: brightness(70%);
-    position: relative;
-    transform: scale(1.05);
-    transition: all 0.45s ease-in-out;
+}
+@media only screen and (max-width: 950px) {
+  .gravatar_edit img {
+    margin-top: 73px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #editForm {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 450px) {
+   #editForm {
+    width: 300px;
+  }
 }

@@ -87,7 +87,7 @@ $bike-theme: hsl(24, 99%, 52%);
   }
 }
 @media only screen and (max-width: 600px) {
-  #signUpForm {
+  #signUpForm, #editForm {
     width: 400px;
   }
   .progress-bar_wrap {
@@ -98,7 +98,7 @@ $bike-theme: hsl(24, 99%, 52%);
   }
 }
 @media only screen and (max-width: 450px) {
-  #signUpForm {
+  #signUpForm, #editForm {
     width: 300px;
   }
   .progress-bar_wrap {
