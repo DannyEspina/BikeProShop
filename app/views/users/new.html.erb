@@ -1,11 +1,12 @@
 <% provide(:title, "Sign up") %>
-<% provide(:button_text, 'Create my account') %>
 
-<div class ="container-fluid form ">
+<div class ="container-fluid">
   <%= render 'shared/navbar' %>
   <%= render 'shared/flash' %>
   <div class="divHeader">
     <h1 id="signUpText">Sign Up</h1>
   </div>
+<div id="signUpForm">
   <%= render "shared/form_layout", path: new_path %>
+</div>
 </div>

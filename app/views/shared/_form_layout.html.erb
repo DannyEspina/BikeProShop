@@ -1,34 +1,36 @@
-<%= form_for(@user, url: @path) do |f| %>
+<%= form_for(@user, html: {class: "form-1"}) do |f|%>
+<%= render 'shared/error_messages', object: f.object %>
 
-      <%= render 'shared/error_messages', object: f.object %>
+<%= f.label :name %>
+<%= f.text_field :name, class: 'form-control' %>
 
-      <%= f.label :name do%>
+<%= f.label :email %>
+<%= f.email_field :email, class: 'form-control' %>
 
-        <%= f.text_field :name  %>
-        <div class="label-text">Name</div>
+<label>Enter password
+  <input class="input-1 form-control" type="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" name="user[password]" id="user_password">
+  <i class="fas fa-eye-slash"></i>
+</label>
+<div class="progress-bar_wrap">
+  <div class="progress-bar_item1 progress-bar_item-1-1"></div>
+  <div class="progress-bar_item1 progress-bar_item-2-1"></div>
+  <div class="progress-bar_item1 progress-bar_item-3-1"></div>
+</div>
+<span class="progress-bar_text1">Password is blank</span>
 
-      <% end %>
+<label>Password Confirmation
+  <input class="input-2 form-control" type="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" name="user[password_confirmation]" id="user_password_confirmation">
+  <i class="fas fa-eye-slash"></i>
+</label>
+<div class="progress-bar_wrap">
+  <div class="progress-bar_item2 progress-bar_item-1-2"></div>
+  <div class="progress-bar_item2 progress-bar_item-2-2"></div>
+  <div class="progress-bar_item2 progress-bar_item-3-2"></div>
+</div>
+<span class="progress-bar_text2">Password is blank</span>
 
-      <%= f.label :email do%>
+<!-- <%= f.label :password %> <%= f.password_field :password, class: 'form-control' %> -->
+<!-- <%= f.label :password_confirmation, "Confirmation" %> <%= f.password_field :password_confirmation, class: 'form-control' %> -->
 
-        <%= f.email_field :email  %>
-        <div class="label-text">Email</div>
-      <% end %>
-
-      <%= f.label :password do%>
-
-        <%= f.password_field  :password  %>
-        <div class="label-text">Password</div>
-      <% end %>
-
-
-
-      <%= f.label :password_confirmation, "Confirmation" do%>
-
-        <%= f.password_field  :password_confirmation %>
-        <div class="label-text">Confirmation</div>
-      <% end %>
-
-      <%= f.submit yield(:button_text), class:"sumbit" %>
-
-    <% end %>
+<%= f.submit "Register", class: "btn btn-primary register" %>
+<% end %>

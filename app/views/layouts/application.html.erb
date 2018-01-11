@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <!-- lang="en" specify the language to be english -->
 <html lang="en">
-<head>
-  <title><%= yield(:title) %> | BikeProShop</title>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-    </script>
-  <![endif]-->
+  <head>
+    <title><%= yield(:title) %>
+      | BikeProShop</title>
+    <!--[if lt IE 9]> <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"> </script> <![endif]-->
 
-  <%= favicon_link_tag 'Favicon/favicon.ico' %>
+    <%= favicon_link_tag 'Favicon/favicon.ico' %>
     <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <!-- throttle for JS. Needed for repair.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+    <!-- throttle for JS. Needed for repair.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
 
-  <!--- angularJS library-->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <!--- angularJS library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-  <!-- Add icon library -->
-  <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+    <!-- Add font awesome icon library -->
+    <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
 
-<!-- Google fonts -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<!-- Google maps -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7yJrbl-M3wlaFxBVhMcQDm1si7AwClCo&callback=myMap"
-type="text/javascript"></script>
+    <!-- Google maps -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7yJrbl-M3wlaFxBVhMcQDm1si7AwClCo&callback=myMap" type="text/javascript"></script> -->
 
-  <%= csrf_meta_tag %>
-</head>
-<body>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
 
-  <%= render 'shared/sidebar'%>
-  <%= render 'shared/login_modal'%>
+    <%= render 'shared/sidebar'%>
+    <%= render 'shared/login_modal'%>
 
-</body>
+  </body>
 </html>

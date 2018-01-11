@@ -1,119 +1,110 @@
-
 $body-theme: hsl(34, 100%, 95%);
 $bike-theme: hsl(24, 99%, 52%);
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
 #signUpText {
-  color: white;
-  text-shadow: 5px 5px 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  color: black;
+  font-size: 100px;
 }
-label {
 
-  display: block;
-  letter-spacing: 1px;
-  text-align: center;
-
-  .label-text {
-      position: relative;
-      top: -99px;
-      color: white;
-      font-size: 28px;
-      font-family: 'Raleway', sans-serif;
-      font-weight: bold;
-      margin-top: 30px;
-
-      line-height: 20px;
-      text-transform: uppercase;
-      transition: all 0.3s;
-
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: black;
- }
-  input {
-
-    background-color: transparent;
-    border: 0;
-    border-bottom: 2px solid white;
-    -webkit-text-fill-color: white;
-   -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: black;
-    font-size: 36px;
-    letter-spacing: -1px;
-    outline: 0;
-    margin-top: 20px;
-    padding: 5px 20px;
-    text-align: center;
-    transition: all 0.3s;
-    width: 300px;
-
-    &:focus {
-      max-width: 100%;
-      width: 500px;
-
-      & + .label-text {
-
-        font-size: 35px;
-        top: -135px ;
-
-
-      }
-    }
-    &:not(:focus) {
-      font-size: 27px;
-
-    }
-
-  }
-
+#signUpForm {
+  width: 500px;
+  margin: auto;
 }
-.form{
-  height: 1000px;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-.form:before {
-  position: absolute;
-  z-index: -1;
-  height: 100%;
+
+input[type='password'],
+input[type="email"],
+input[type="text"] {
   width: 100%;
-  background: url('Login & Sign up/sparks.jpg');
-  background-position: right center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
+  box-sizing: border-box;
+  height: 55px;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin: 10px 0;
 }
-.sumbit{
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 27px;
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-  margin-top: 20px;
-  padding: 15px 30px;
-  text-transform: uppercase;
-  transition: all 200ms;
 
-  &:hover, &:focus {
-    background-color: white;
-    color: #333333;
-    outline: 0;
+.fa-eye-slash {
+  color: #aaa;
+  font-size: 22px;
+  position: absolute;
+  right: 25px;
+  top: 60px;
+}
+
+.progress-bar_wrap {
+  width: 300px;
+  height: 5px;
+  background: #F6F6FA;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.form-1 .progress-bar_item1,
+.form-1 .progress-bar_item2 {
+  display: inline-block;
+  height: 100%;
+  width: 33.33%;
+  float: left;
+  visibility: hidden;
+  transition: background-color 0.2s, visisility 0.1s;
+}
+
+.form-1 .active1,
+.form-1 .active2 {
+  visibility: visible;
+}
+
+.form-1 label {
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.progress-bar_text1,
+.progress-bar_text2 {
+  display: inline-block;
+  color: #aaa;
+  margin-left: 5px;
+  transition: 0.2s;
+}
+
+.register {
+  width: 50%;
+  display: block;
+  margin: 7% auto 10%;
+
+  &:hover {
+    background-color: hsl(19, 96%, 40%);
   }
 }
-#error_explanation {
-  background: hsl(0, 43%, 96%);
-  width: 50%;
-  position: relative;
-  left: 25%;
-  top: -20px;
-
-  ul {
-    color: red;
-    margin-top: -10px;
-    padding: 10px;
-    list-style-type: circle;
-    text-align: left;
-    position: relative;
-    left: 25%;
+@media only screen and (max-width: 950px) {
+  #signUpText {
+    margin-top: 83px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #signUpForm {
+    width: 400px;
+  }
+  .progress-bar_wrap {
+    width: 200px;
+  }
+  #signUpText {
+    font-size: 80px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #signUpForm {
+    width: 300px;
+  }
+  .progress-bar_wrap {
+    width: 100px;
+  }
+  #signUpText {
+    font-size: 60px;
   }
 }
