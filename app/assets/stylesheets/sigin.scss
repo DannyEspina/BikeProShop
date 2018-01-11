@@ -12,9 +12,9 @@ $bike-theme: hsl(24, 99%, 52%);
   margin: auto;
 }
 
-input[type='password'],
-input[type="email"],
-input[type="text"] {
+.form-1 input[type='password'],
+.form-1 input[type="email"],
+ .form-1 input[type="text"] {
   width: 100%;
   box-sizing: border-box;
   height: 55px;

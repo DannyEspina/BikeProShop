@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/accessories', to: 'static_pages#accessories'
   get '/repair', to: 'static_pages#repair'
   get '/gallery', to:'static_pages#gallery'
-  post '/index',   to: 'static_pages#create'
+  post '/login',   to: 'static_pages#create'
   delete '/logout',  to: 'static_pages#destroy'
 
   resources :users

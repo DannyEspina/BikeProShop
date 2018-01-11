@@ -170,3 +170,13 @@
     </div>
 
   </div>
+<script>
+/*
+Loads google maps after each page direct. This fixes a bug where
+the map won't load if you go to a direct page and don't refresh.
+*/
+$.getScript('/assets/maps.js',function(){
+                $(document).ready(ready);
+                $(document).on('page:load',ready);
+              });
+</script>

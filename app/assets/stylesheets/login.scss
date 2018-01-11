@@ -16,11 +16,13 @@ $bike-theme: hsl(24, 99%, 52%);
 
 .checkbox {
   margin: 0;
-  padding: 20px 0 30px 0;
+  padding: 20px 0 30px 27px;
   span {
-    margin-left: 18px;
+    margin-left: 15px;
     font-family: 'Raleway', sans-serif;
-    font-size: 11px;
+    font-size: 12px;
+    position: relative;
+    top: -2px;
   }
 }
 

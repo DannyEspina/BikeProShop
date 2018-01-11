@@ -30,8 +30,11 @@ $text-color: rgb(210, 210, 210);
    text-decoration: none;
 }
 
-#navLogin, navSigin {
+#navLogin, #navSigin {
   font-family: 'Righteous', cursive;
+}
+#navLogin:hover {
+  cursor: pointer;
 }
 #shopPanel, #userPanel{
     background-color: rgba(0,0,0,0.8);
