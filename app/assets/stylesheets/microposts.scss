@@ -6,6 +6,16 @@ $black: #1D242B;
 $green: #38B87C;
 $blue: #2492FF;
 
+.field {
+  margin-top: 5%;
+  textarea {
+    display: block;
+    margin:auto;
+  }
+}
+.gravatar {
+  border-radius: 50%;
+}
 .microposts {
   list-style: none;
   padding: 0;
@@ -19,7 +29,6 @@ $blue: #2492FF;
   }
   .content {
     display: block;
-    margin-left: 60px;
     img {
       display: block;
       padding: 5px 0;
@@ -31,7 +40,7 @@ $blue: #2492FF;
     display: block;
     margin-right: 0;
     margin-left: 0px;
-    width: 50%;
+    width: 100%;
   }
   .gravatar {
     float: left;
@@ -53,18 +62,48 @@ span.picture {
     border: 0;
   }
 }
-#gravPost img, #gravShow img{
-    width: 17%;
-    border-radius: 40vw;
-
+.user_info {
+   text-align: center;
 }
-#gravShow, #blogH1 {
+#gravShow {
+  display: inline-block;
+  text-align: center;
+  margin-top: 65px;
+  margin-bottom: 50px;
+}
+#gravShow img{
+    width: 150px;
+    border-radius: 75px;
+}
+#gravShow, #bloggerName {
   font-family: 'Signika Negative', sans-serif;
   font-size: 50px;
 }
+#blogInfo {
+  display: flex;
+ img {
+  width: 100px;
+  flex: 0 0 10%;
+  position: relative;
+  top: 25%;
+}
+}
+#bloggerName {
+  flex: 1;
+}
+
+.insideFeed {
+  display: flex;
+}
+.gravImgDiv {
+  flex: 0 0 20%;
+}
+.contentDiv{
+  flex: 1;
+}
+
 #gravFeed img {
-    width: 6%;
-    border-radius: 30px;
+  width: 100px;
 }
 #gravName {
     color: black;
@@ -89,7 +128,6 @@ span.picture {
 
 .deleteBtn {
     margin-top: 1%;
-    margin-left: 1.5%;
     display: flex;
     cursor: pointer;
     border: 0;
@@ -193,8 +231,31 @@ span.picture {
         }
     }
 }
+.mircopostsDiv {
 
-@keyframes fadeInZoom {
-    0% { opacity: 0; transform: scale(.7); }
-    100% { opacity: 1; transform: scale(1); }
+  h3 {
+    text-align: center;
+  }
+  ol li {
+    width: 50%;
+    display: block;
+    margin: auto;
+    }
+}
+.postBtn {
+  width: 50%;
+  margin: auto;
+  margin-top: 5%;
+  display: block;
+&:hover {
+    background-color: hsl(19, 96%, 40%);
+}
+}
+@media only screen and (max-width: 570px) {
+  .mircopostsDiv {
+  ol li {
+    padding: 10px;
+    width: 100%;
+    }
+  }
 }

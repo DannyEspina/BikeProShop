@@ -44,8 +44,8 @@
             <li><a href="/users"><i class="fas fa-users"></i> Users</a></li>
             <li><a href="/microposts"><i class="fas fa-comments"></i> Blog</a></li>
               <li id="userDrop" class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                 <i class="fas fa-cogs"></i> Account<span class="caret"></span>
+                <a id="account" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                 <%= gravatar_for @user, size: 60 %><span class="caret"></span>
                </a>
                 <ul id="userPanel" class="dropdown-menu">
                   <li><%= link_to "Profile", current_user %></li>

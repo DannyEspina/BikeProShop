@@ -11,12 +11,6 @@ $body-theme: rgb(252, 252, 252);
     left: 30%;
     padding: 20px;
 }
-.showBody {
-    padding-top: 8px;
-    background-color:  $body-theme;
-    min-height: 800px;
-    margin: 0;
-}
 
 .userContain{
     padding-top: 8px;
@@ -26,17 +20,6 @@ $body-theme: rgb(252, 252, 252);
     background: $body-theme;
 
 }
-.feedTitle{
-    width: 60%;
-    margin-left: 13%;
-    padding: 10px;
-}
-.profileTitle{
-    width: 32%;
-    margin-left: 25%;
-    padding: 10px;
-}
-
 .users {
   list-style: none;
   margin: 0;
@@ -46,12 +29,6 @@ $body-theme: rgb(252, 252, 252);
     border-bottom: 1px solid gray;
   }
 }
-
-.titleContain{
-    background: $body-theme;
-
-}
-
 .noPost {
     width: 40%;
     margin-top: 30px;
@@ -71,7 +48,6 @@ $body-theme: rgb(252, 252, 252);
   display: block;
   margin: auto;
   width: 230px;
-  border-radius: 135px;
  }
 }
 .change{
@@ -101,6 +77,12 @@ $body-theme: rgb(252, 252, 252);
   .gravatar_edit img {
     margin-top: 73px;
   }
+  .divHeader {
+    h1 {
+      font-size: 80px;
+    }
+  }
+
 }
 @media only screen and (max-width: 600px) {
   #editForm {
@@ -110,5 +92,13 @@ $body-theme: rgb(252, 252, 252);
 @media only screen and (max-width: 450px) {
    #editForm {
     width: 300px;
+  }
+  .divHeader {
+    h1 {
+      font-size: 50px;
+    }
+    h2 {
+      font-size: 35px;
+    }
   }
 }

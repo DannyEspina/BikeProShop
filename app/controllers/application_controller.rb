@@ -3,7 +3,12 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   include StaticPagesHelper
-
+before_action :access_user
+def access_user
+  if logged_in?
+    @user = current_user
+  end
+end
  private
 
     # Confirms a logged-in user.

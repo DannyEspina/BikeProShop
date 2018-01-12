@@ -3,17 +3,16 @@
 <div class="container-fluid showBody">
 
  <%= render 'shared/flash' %>
-<div class="row ">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1 id="gravShow">
-        <%= gravatar_for @user, size: 150 %>
+    <div class="user_info">
+      <div id="gravShow">
+        <%= gravatar_for @user, size: 300 %>
+        <h1>
         <%= @user.name %>
       </h1>
-      </section>
-  </aside>
-  <div class="col-md-8">
-     <%= image_tag('Users/Profile.png', alt:'profile title', class: 'profileTitle') %>
+      </div>
+    </div>
+
+<div class="mircopostsDiv">
 
     <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
@@ -26,5 +25,4 @@
      <%= image_tag('Users/noPost.png', alt:"no post", class:"noPost") %>
     <% end %>
   </div>
-</div>
 </div>

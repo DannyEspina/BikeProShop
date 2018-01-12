@@ -1,6 +1,6 @@
-
-<h1 id="blogH1">
-    <%= link_to gravatar_for(current_user, size: 150), current_user, id: "gravPost"%>
+<div id="blogInfo">
+  <%= link_to gravatar_for(current_user, size: 300), current_user%>
+  <h1 id="bloggerName">
     <%= current_user.name %>
-</h1>
-<span><%= pluralize(current_user.microposts.count, "micropost") %></span>
+  </h1>
+</div>
