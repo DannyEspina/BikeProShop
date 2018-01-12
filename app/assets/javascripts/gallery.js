@@ -241,7 +241,6 @@ $('.topTenPic, strong').click(function(e){
 }
 });
 
-
 });
 
 // Get the image and insert it inside the modal
