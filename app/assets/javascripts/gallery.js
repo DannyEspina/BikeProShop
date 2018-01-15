@@ -61,12 +61,12 @@ $(".galleryImage").click(function(e){
 
    countLeft++
    countRight--;
-   if(id > 28) {
-     id -= 28;
-     countLeft -= 28;
+   if(id > 24) {
+     id -= 24;
+     countLeft -= 24;
      countRight = 0;
    }
-   if(targetID - countRight > 28){
+   if(targetID - countRight > 24){
      countRight = 0;
    }
    var next = document.getElementById(id).src;
@@ -133,12 +133,12 @@ $(".galleryImage").click(function(e){
    countRight++;
    countLeft--;
    if(id == 0) {
-     id = 28;
-     countLeft += 28;
-     countRight = targetID - 27;
+     id = 24;
+     countLeft += 24;
+     countRight = targetID - 23;
    }
    if(targetID - countLeft < 0){
-     countLeft = 28;
+     countLeft = 24;
    }
    var next = document.getElementById(id).src;
 
@@ -255,14 +255,14 @@ function displayModal(e){
   var tumbImgSrc;
   var tumbModal;
   var id;
-  var maxid = 28;
+  var maxid = 24;
 
   //adds 9 additional images for the lightbox. starting from the image after the source
   for (i = 1; i <= 9; i++) {
     id = parseInt(e.target.id) + i;
     //wraps back to the first image
     if(id > maxid) {
-      id -= 28;
+      id -= 24;
     }
     tumbImgSrc = document.getElementById(id).src;
     tumbModal = document.getElementById("tumbImg" + i);

@@ -12,7 +12,6 @@ class StaticPagesController < ApplicationController
   end
 
   def gallery
-    ImageOptimizer.new('/Users/dannyespina/Sites/www/BikeProShop/app/assets/images/Gallery/accounting.JPG', quality: 80).optimize
   end
 
   def repair
