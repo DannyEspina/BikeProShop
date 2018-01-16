@@ -30,6 +30,7 @@
 }
 #closeModal {
   position: absolute;
+  color: #ff2f33;
   top: 2vw;
   left: 95vw;
   font-size: 2.5em;
@@ -48,9 +49,9 @@
     /* Add Animation */
 
     -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.4s;
+    -webkit-animation-duration: 0.5s;
     animation-name: zoom;
-    animation-duration: 0.4s;
+    animation-duration: 0.5s;
 
     -webkit-user-select: none; /* Chrome/Safari */
     -moz-user-select: none; /* Firefox */
@@ -58,6 +59,7 @@
 }
 #myTumb
 {
+  position: relative;
   margin: auto;
   width: 90%;
 }
@@ -76,13 +78,12 @@
 }
 
 .tumbImgs{
-
   position: relative;
   -webkit-user-select: none; /* Chrome/Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
   display: inline-block;
-  width: 120px;
+  width: 9.5%;
   margin-left: 5px;
   &:hover {
       cursor: pointer;
@@ -109,54 +110,20 @@
     animation-name: appear;
     animation-duration: 0.3s;
 }
-//This is for displaying new tumb image appearing when you rotate
-.appearTumb {
-  -webkit-animation-name: appear;
-  -webkit-animation-duration: 0.3s;
-  animation-name: appear;
-  animation-duration: 0.3s;
-}
 //animation for displaying and move tumbs up when an image is clicked on
 .displayTumb {
   -webkit-animation-name: tumbAnimation;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 0.8s;
   animation-name: tumbAnimation;
-  animation-duration: 1s;
+  animation-duration: 0.8s;
 }
-
 .displayArrows {
   -webkit-animation-name: arrowAnimation;
   -webkit-animation-duration: 1s;
   animation-name: arrowAnimation;
   animation-duration: 1s;
 }
-//rotate tumb images to the left
-.moveTumbLeft {
- -webkit-animation-name: moveLeft;
- -webkit-animation-duration: 0.3s;
- animation-name: moveLeft;
- animation-duration: 0.3s;
-}
-//rotate tumb images to the left
-.moveTumbLeftSmall {
- -webkit-animation-name: moveLeftSmall;
- -webkit-animation-duration: 0.3s;
- animation-name: moveLeftSmall;
- animation-duration: 0.3s;
-}
-//rotate tumb images to the right
-.moveTumbRight {
-  -webkit-animation-name: moveRight;
-  -webkit-animation-duration: 0.3s;
-  animation-name: moveRight;
-  animation-duration: 0.3s;
-}
-.moveTumbRightSmall {
-  -webkit-animation-name: moveRightSmall;
-  -webkit-animation-duration: 0.3s;
-  animation-name: moveRightSmall;
-  animation-duration: 0.3s;
-}
+
 @-webkit-keyframes zoom {
     from {-webkit-transform:scale(0)}
     to {-webkit-transform:scale(1)}
@@ -167,50 +134,6 @@
     to {transform:scale(1)}
 }
 
-@-webkit-keyframes appear{
-    from {opacity:0}
-    to {opacity:1}
-}
-
-@keyframes appear {
-    from {opacity:0}
-    to {opacity:1}
-}
-@keyframes moveLeftSmall {
-  from{left: 0px}
-  to {left: -16vw}
-}
-@-webkit-keyframes moveLeftSmall{
-  from{left: 0px}
-  to {left: -16vw}
-}
-
-@keyframes moveLeft {
-  from{left: 0px}
-  to {left: -125px}
-}
-@-webkit-keyframes moveLeft {
-  from{left: 0px}
-  to {left: -125px}
-}
-@keyframes moveRightSmall {
-  from{left: 0px}
-  to {left: 16vw}
-}
-
-@-webkit-keyframes moveRightSmall {
-  from{left: 0px}
-  to {left: 16vw}
-}
-@keyframes moveRight {
-  from{left: 0px}
-  to {left: 125px}
-}
-
-@-webkit-keyframes moveRight {
-  from{left: 0px}
-  to {left: 125px}
-}
 @keyframes tumbAnimation {
   from{top: 7vw; opacity: 0;}
   to {top: 0px; opacity: 1;}
@@ -228,33 +151,56 @@
   from{top: 7vw; opacity: 0;}
   to {top: 0.5vw; opacity: 1;}
 }
+@-webkit-keyframes appear{
+    from {opacity:0}
+    to {opacity:1}
+}
 
-@media only screen and (max-width: 1400px)
-{
+@keyframes appear {
+    from {opacity:0}
+    to {opacity:1}
+}
+
+@media only screen and (max-width: 1360px){
   #tumbImg9{
     display: none;
   }
   #myTumb{
-    width: 80%;
+    left: 60px;
   }
 }
-
-@media only screen and (max-width: 1390px){
+@media only screen and (max-width:1200px){
   #tumbImg8{
     display: none;
   }
-  #myTumb{
-    width: 1008px;
+    #myTumb{
+      left: 45px
+    }
+    .tumbImgs {
+      width: 11%;
+    }
   }
-}
-@media only screen and (max-width: 1360px){
-  #tumbImg7{
-    display: none;
-  }
-  #myTumb{
-    width:820px;
-  }
-}
+@media only screen and (max-width:1100px){
+    .tumbImgs {
+      width: 12%;
+    }
+    #myTumb{
+      left: 15px
+    }
+    }
+@media only screen and (max-width:1000px){
+      #tumbImg7{
+        display: none;
+      }
+      #myTumb{
+        left: 45px
+      }
+      }
+@media only screen and (max-width:860px){
+      #myTumb{
+        left: 15px
+      }
+      }
 @media only screen and (max-width:815px){
   #tumbImg6{
     display: none;
@@ -262,27 +208,23 @@
   #modalImg {
       width: 100%;
     }
-    #myTumb{
-
-      width: 90%;
-    }
     .tumbImgs {
       width: 16%;
     }
+  #closeModal {
+    left: 90vw;
   }
-  @media only screen and (max-width:491px){
+  }
+  @media only screen and (max-width:695px){
     #tumbImg5{
       display: none;
     }
-
     #myTumb{
-
-      width: 80%;
+      left: 25px
     }
-    #tumbLeft, #tumbRight {
-      font-size: 1em;
     }
-    .tumbImgs {
-      width: 20%;
+  @media only screen and (max-width:491px){
+    #myTumb{
+      left: 0px
     }
     }

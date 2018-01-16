@@ -1,246 +1,183 @@
 $(document).on('turbolinks:load', function() {
 var countLeft = 10;
 var countRight = 0;
-var targetID
+var targetID;
 
-window.onclick = function(e) {
-if (event.target ==  document.getElementById("closeModal") || event.target ==  document.getElementById("myModal")) {
-     document.getElementById("myModal").style.display = "none";
-     $("#tumbImg9").removeClass("appearTumb");
-     countLeft = 10;
-     countRight = 0;
-}
-}
+// displays modal with the imaged clicked enlarged. saves id for tumb images.
 $(".galleryImage").click(function(e){
     targetID = e.target.id;
     displayModal(e);
-
 });
+
+// displays picture that is in the tumb images row.
  $(".tumbImgs").click(function(e) {
    var imgSrc = document.getElementById(e.target.id).src;
    var modalImg = document.getElementById("modalImg");
    modalImg.setAttribute("src", imgSrc);
  });
 
- $("#modalImg").css({'transform': 'translate( 0px , 1)'})
 // rotate to the previous image left
  $("#tumbRight").click(function(e) {
-   console.log("tumb");
-   var tumbs= document.getElementsByClassName("tumbImgs");
-   $(".tumbImgs").removeClass("displayTumb");
-   //add animations
-   $("#tumbImg1").fadeOut(300);
+   var tumbs = document.getElementsByClassName("tumbImgs");
+   var elementToFade = $("#tumbImg1");
+   var elementsToMove = $(".notFirst");
+   var moveUnit;
 
-   if(window.innerWidth>1400)
+   if(window.innerWidth>1360)
    {
-   $("#tumbImg9").addClass("appearTumb");
-   $(".notFirst").addClass("moveTumbLeft");
+     moveUnit = 10;
    }
-   else if(window.innerWidth > 1390)
+   else if(window.innerWidth > 1200)
    {
-     $("#tumbImg8").addClass("appearTumb");
-     $(".notFirst").addClass("moveTumbLeft");
+     moveUnit = 10
    }
-   else if(window.innerWidth > 1360)
+   else if(window.innerWidth > 1000)
    {
-     $("#tumbImg7").addClass("appearTumb");
-     $(".notFirst").addClass("moveTumbLeft");
+     moveUnit = 12;
    }
    else if(window.innerWidth > 815)
    {
-     $("#tumbImg6").addClass("appearTumb");
-     $(".notFirst").addClass("moveTumbLeft");
+     moveUnit = 13;
    }
-   else {
-     $(".notFirst").addClass("moveTumbLeftSmall");
-   }
-   setTimeout(function(){
-   $("#tumbImg1").css("opacity", "1");
-
-   id = parseInt(targetID) + countLeft;
-
-   countLeft++
-   countRight--;
-   if(id > 24) {
-     id -= 24;
-     countLeft -= 24;
-     countRight = 0;
-   }
-   if(targetID - countRight > 24){
-     countRight = 0;
-   }
-   var next = document.getElementById(id).src;
-
-   //exchanges image source to the left
-   for(i = 0; i<tumbs.length; i++)
+   else if(window.innerWidth > 695)
    {
-     if(i<8){
-     tumbs[i].setAttribute("src", tumbs[i+1].src);
-     }
-     else {
-       tumbs[i].setAttribute("src", next);
-     }
+     moveUnit = 17;
    }
-   $("#tumbImg1").stop().show();
-   $(".notFirst").removeClass("moveTumbLeft");
-   $(".notFirst").removeClass("moveTumbLeftSmall");
- }, 280);
+   else if(window.innerWidth > 500)
+   {
+     moveUnit = 18;
+   }
+  else if(window.innerWidth > 450)
+   {
+     moveUnit = 18.5;
+   }
+   else
+   {
+     moveUnit = 18.7;
+   }
+   elementsToMove.animate({right: "+="+moveUnit+"%"},300,'swing', function() {
+     $(this).removeAttr('style');
+   });
+   elementToFade.fadeTo(300 , 0, function() {
+     $(this).fadeTo(0, 1);
 
+     id = parseInt(targetID) + countLeft;
+     countLeft++
+     countRight--;
+     if(id > 24) {
+       id -= 24;
+       countLeft -= 24;
+       countRight = 0;
+     }
+     if(targetID - countRight > 24){
+       countRight = 0;
+     }
+     var next = document.getElementById(id).src;
+
+     //exchanges image source to the left
+     for(i = 0; i<tumbs.length; i++)
+     {
+       if(i<8){
+       tumbs[i].setAttribute("src", tumbs[i+1].src);
+       }
+       else {
+         tumbs[i].setAttribute("src", next);
+       }
+     }
+ });
  });
 //rotate to the next image right
  $("#tumbLeft").click(function(e) {
-   var tumbs= document.getElementsByClassName("tumbImgs");
-   $(".tumbImgs").removeClass("displayTumb");
-    console.log(screen.height)
-   if(window.innerWidth>1400)
+   var elementToFade, elementsToMove, moveUnit;
+   var tumbs = document.getElementsByClassName("tumbImgs");
+   if(window.innerWidth>1360)
    {
-     console.log("1400")
-   $("#tumbImg9").fadeOut(300);
-   $(".notLast").addClass("moveTumbRight");
+     elementToFade = $("#tumbImg9");
+     elementsToMove = $(".notLast");
+     moveUnit = 10;
    }
-   else if(window.innerWidth > 1390)
+   else if(window.innerWidth > 1200)
    {
-      console.log("1390")
-     $("#tumbImg8").fadeOut(300);
-     $(".1thru7").addClass("moveTumbRight");
+     elementToFade = $("#tumbImg8");
+     elementsToMove = $(".1thru7");
+     moveUnit = 10
    }
-   else if(window.innerWidth > 1360)
+   else if(window.innerWidth > 1000)
    {
-      console.log("1360")
-     $("#tumbImg7").fadeOut(300);
-     $(".1thru6").addClass("moveTumbRight");
+     elementToFade = $("#tumbImg7");
+     elementsToMove = $(".1thru6");
+     moveUnit = 12;
    }
    else if(window.innerWidth > 815)
   {
-     console.log("815")
-     $("#tumbImg6").fadeOut(300);
-     $(".1thru5").addClass("moveTumbRight");
+     elementToFade = $("#tumbImg6");
+     elementsToMove = $(".1thru5");
+     moveUnit = 13;
    }
-   else if(window.innerWidth > 480)
+   else if(window.innerWidth > 695)
    {
-     $("#tumbImg5").fadeOut(300);
-     $(".1thru4").addClass("moveTumbRightSmall");
+     elementToFade = $("#tumbImg5");
+     elementsToMove = $(".1thru4");
+     moveUnit = 17;
    }
-   else
+   else if(window.innerWidth > 500)
    {
-     $("#tumbImg4").fadeOut(300);
-     $(".1thru3").addClass("moveTumbRightSmall");
+     elementToFade = $("#tumbImg4");
+     elementsToMove = $(".1thru3");
+     moveUnit = 18;
    }
-   $("#tumbImg1").addClass("appearTumb");
-
-   setTimeout(function(){
-   id = parseInt(targetID) - countRight;
-   countRight++;
-   countLeft--;
-   if(id == 0) {
-     id = 24;
-     countLeft += 24;
-     countRight = targetID - 23;
-   }
-   if(targetID - countLeft < 0){
-     countLeft = 24;
-   }
-   var next = document.getElementById(id).src;
-
-   for(i = 0; i<tumbs.length; i++)
-   {
-     if(i<8){
-     tumbs[8-i].setAttribute("src", tumbs[8-i-1].src);
-     }
-     else {
-     tumbs[0].setAttribute("src", next);
-     }
-   }
-
-   //had issues when tumbImg9 not reappearing. This worked
-
-   if(window.innerWidth>1400)
-   {
-  $("#tumbImg9").fadeIn(1).stop().show();
-   }
-   else if(window.innerWidth > 1390)
-   {
-    $("#tumbImg8").fadeIn(1).stop().show();
-   }
-   else if(window.innerWidth > 1360)
-   {
-    $("#tumbImg7").fadeIn(1).stop().show();
-   }
-   else if(window.innerWidth > 815)
+  else if(window.innerWidth > 450)
   {
-    $("#tumbImg6").fadeIn(1).stop().show();
-   }
-   else if(window.innerWidth > 480)
-   {
-     $("#tumbImg5").fadeIn(1).stop().show();
-     $(".notLast").removeClass("moveTumbRightSmall");
+    elementToFade = $("#tumbImg4");
+    elementsToMove = $(".1thru3");
+     moveUnit = 18.5;
    }
    else
    {
-     $("#tumbImg4").fadeIn(1).stop().show();
-     $(".notLast").removeClass("moveTumbRightSmall");
+     elementToFade = $("#tumbImg4");
+     elementsToMove = $(".1thru3");
+      moveUnit = 18.7;
    }
-   $(".notLast").removeClass("moveTumbRight");
-   }, 280);
+
+   elementsToMove.animate({left: "+="+moveUnit+"%"},300,'swing', function() {
+     $(this).removeAttr('style');
+   });
+   elementToFade.fadeTo(300 , 0, function() {
+      $(this).fadeTo(0, 1);
+
+      id = parseInt(targetID) - countRight;
+      countRight++;
+      countLeft--;
+      if(id == 0) {
+        id = 24;
+        countLeft += 24;
+        countRight = targetID - 23;
+      }
+      if(targetID - countLeft < 0){
+        countLeft = 24;
+      }
+      var next = document.getElementById(id).src;
+
+      for(i = 0; i<tumbs.length; i++)
+      {
+        if(i<8){
+        tumbs[8-i].setAttribute("src", tumbs[8-i-1].src);
+        }
+        else {
+        tumbs[0].setAttribute("src", next);
+        }
+      }
+   });
  });
-//for top 10 bicycle page
-var modal3 = document.getElementById("myModal3");
-var closeModal = document.getElementById("closeModalShop")
 
-// Get the image and insert it inside the modal
-$('.topTenPic, strong').click(function(e){
-
-    var imgSrc3 = document.getElementById(e.target.id).src;
-    var modalImg3 = document.getElementById("shopModalImg");
-    modal3.style.display = "block";
-    modalImg3.setAttribute("src", imgSrc3);
-
-    var info = document.getElementById("info"+e.target.id); //im a genius
-    var p =  document.getElementById("info"+e.target.id).childNodes;
-    //console.log(p[1]);
-
-    info.style.display = "block";
-    $("#infoBox").append(info);
-
-     setTimeout(function() {
-         p[1].style.bottom ="75%";
-         p[1].style.opacity="1";
-
-    }, 330);
-  setTimeout(function() {
-         p[3].style.bottom ="72%";
-         p[3].style.opacity="1";
-  }, 430);
-  setTimeout(function() {
-         p[5].style.bottom ="69%";
-         p[5].style.opacity="1";
-  }, 530);
-
-  // When the user clicks on <span> (x), close the modal
-  //reset animation when the user clicks on another item.
-  closeModal.onclick = function() {
-      modal3.style.display = "none";
-      p[1].style.bottom ="62%";
-      p[1].style.opacity="0";
-      p[3].style.bottom ="69%";
-      p[3].style.opacity="0";
-      p[5].style.bottom ="66%";
-      p[5].style.opacity="0";
-  }
-//when user clicks anywhere outside, close the modal
-    window.onclick = function(event) {
-    if (event.target == modal3) {
-        modal3.style.display = "none";
-        p[1].style.bottom ="62%";
-        p[1].style.opacity="0";
-        p[3].style.bottom ="69%";
-        p[3].style.opacity="0";
-        p[5].style.bottom ="66%";
-        p[5].style.opacity="0";
+// Closes the modal on either the close button or by clicking outside of the picture. It also resets tumb counters.
+ window.onclick = function(e) {
+ if (event.target ==  document.getElementById("closeModal") || event.target ==  document.getElementById("myModal")) {
+      document.getElementById("myModal").style.display = "none";
+      countLeft = 10;
+      countRight = 0;
     }
-}
-});
-
+ }
 });
 
 // Get the image and insert it inside the modal
@@ -271,25 +208,19 @@ function displayModal(e){
     $("#tumbLeft").css("opacity", "0");
     $("#tumbRight").css("opacity", "0");
   }
-  //adds animation for tumb images
 
-  /* By using a function we can have distinct values of i for setTimeout. In
-  other words, doScaledTimeout will be called mulitple times throughout the
-  loop with it's own private value i. Otherwise if we didn't have the function,
-  the loop will finish before the first timeout ends, thus all of the timer
-  handler functions will share the same value i, 9. */
-
+  //calls animation for each tumb. Each has a delay longer then it's last.
   for (i = 1; i <= 9; i++) {
     doScaledTimeout(i)
   }
 
 //remove classes to restart animation when the user exits out and reclick an image.
-$(".tumbImgs").removeClass("displayTumb")
+$(".tumbImgs").removeClass("displayTumb");
 $("#tumbLeft").removeClass("displayArrows");
 $("#tumbRight").removeClass("displayArrows");
 }
 
-//sets a delay on each tumb image as it appears
+//sets a delay on each tumb image animation as it appears.
 function doScaledTimeout(i) {
   setTimeout(function() {
     if(i == 1){
