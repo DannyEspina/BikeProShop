@@ -89,4 +89,7 @@ Rails.application.configure do
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
+
+  # config/environments/production.rb
+config.action_controller.asset_host = "	d2fwnvx8ltmc9c.cloudfront.net"
 end

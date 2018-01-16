@@ -19,6 +19,7 @@ gem 'jbuilder',                '2.4.1'
 gem 'rails_12factor'
 gem 'therubyracer'
 gem 'less-rails'
+gem 'rack-cors', :require => 'rack/cors'
 group :development, :test do
   gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.0', platform: :mri
