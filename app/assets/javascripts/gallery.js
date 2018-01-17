@@ -1,8 +1,10 @@
 $(document).on('turbolinks:load', function() {
+var tumbs = $(".tumbImgs");
+var close = $("#closeModal");
 var countLeft = 10;
 var countRight = 0;
 var targetID;
-
+var elementToFade, elementsToMove, moveUnit;
 // displays modal with the imaged clicked enlarged. saves id for tumb images.
 $(".galleryImage").click(function(e){
     targetID = e.target.id;
@@ -18,11 +20,8 @@ $(".galleryImage").click(function(e){
 
 // rotate to the previous image left
  $("#tumbRight").click(function(e) {
-   var tumbs = document.getElementsByClassName("tumbImgs");
-   var elementToFade = $("#tumbImg1");
-   var elementsToMove = $(".notFirst");
-   var moveUnit;
-
+   elementToFade = $("#tumbImg1");
+   elementsToMove = $(".notFirst");
    if(window.innerWidth>1360)
    {
      moveUnit = 10;
@@ -57,10 +56,11 @@ $(".galleryImage").click(function(e){
    }
    elementsToMove.animate({right: "+="+moveUnit+"%"},300,'swing', function() {
      $(this).removeAttr('style');
+
    });
+
    elementToFade.fadeTo(300 , 0, function() {
      $(this).fadeTo(0, 1);
-
      id = parseInt(targetID) + countLeft;
      countLeft++
      countRight--;
@@ -85,10 +85,10 @@ $(".galleryImage").click(function(e){
        }
      }
  });
+
  });
 //rotate to the next image right
  $("#tumbLeft").click(function(e) {
-   var elementToFade, elementsToMove, moveUnit;
    var tumbs = document.getElementsByClassName("tumbImgs");
    if(window.innerWidth>1360)
    {
