@@ -1,9 +1,10 @@
+$(document).on('turbolinks:load', function() {
 //for top 10 bicycle page
 var modal3 = document.getElementById("myModal3");
 var closeModal = document.getElementById("closeModalShop")
 
 // Get the image and insert it inside the modal
-$('.topTenPic, strong').click(function(e){
+$('.zoomIn').click(function(e){
 
     var imgSrc3 = document.getElementById(e.target.id).src;
     var modalImg3 = document.getElementById("shopModalImg");
@@ -53,4 +54,5 @@ $('.topTenPic, strong').click(function(e){
         p[5].style.opacity="0";
     }
 }
+});
 });
