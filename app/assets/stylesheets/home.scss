@@ -14,6 +14,14 @@ $orange : #ef5811;
 .container-fluid {
   padding: 0;
 }
+.col-md-3{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.whiteRow {
+  background-color: hsl(0, 0, 99%);
+}
 #mobileVersion {
   display: none;
 }

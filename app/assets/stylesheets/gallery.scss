@@ -7,9 +7,6 @@
 #galleryBody {
     background: black;
 }
-.col-md-3{
-  display: block;
-}
 .galleryImage {
     cursor: pointer;
     transition: 0.3s;
@@ -23,10 +20,6 @@
   position: relative;
   top:2.7vh;
   width: 8.2%;
-}
-.col-md-3{
-    margin: 0;
-    padding: 0;
 }
 #closeModal {
   position: absolute;
